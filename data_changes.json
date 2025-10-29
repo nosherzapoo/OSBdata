@@ -125,5 +125,24 @@
       "brands": 9,
       "changes": []
     }
+  },
+  {
+    "timestamp": "2025-10-29T19:30:12.550702",
+    "comparison": {
+      "is_new_data": false,
+      "total_records": 1543,
+      "date_range": "2022-04-03 00:00:00 to 2025-10-19 00:00:00",
+      "brands": 9,
+      "changes": [
+        {
+          "type": "significant_ggr_change",
+          "description": "Rush Street Interactive: GGR changed by 10002225.8% ($9 \u2192 $930,216)",
+          "brand": "Rush Street Interactive",
+          "change_percent": 10002225.805483654,
+          "previous_ggr": 9.3000000009,
+          "current_ggr": 930216.3000000007
+        }
+      ]
+    }
   }
 ]

@@ -48,5 +48,24 @@
       "brands": 9,
       "changes": []
     }
+  },
+  {
+    "timestamp": "2025-10-29T19:10:35.374756",
+    "comparison": {
+      "is_new_data": false,
+      "total_records": 1543,
+      "date_range": "2022-04-03 00:00:00 to 2025-10-19 00:00:00",
+      "brands": 9,
+      "changes": [
+        {
+          "type": "significant_ggr_change",
+          "description": "FanDuel: GGR changed by 42.3% ($8,000,000 \u2192 $11,382,628)",
+          "brand": "FanDuel",
+          "change_percent": 42.282855124999955,
+          "previous_ggr": 8000000.0,
+          "current_ggr": 11382628.409999996
+        }
+      ]
+    }
   }
 ]

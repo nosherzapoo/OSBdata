@@ -19,13 +19,39 @@ To enable email notifications, you need to configure the following secrets in yo
 
 ## Email Setup Instructions
 
-### For Gmail:
-1. Enable 2-Factor Authentication on your Google account
-2. Generate an App Password:
-   - Go to Google Account settings
-   - Security → 2-Step Verification → App passwords
-   - Generate a new app password for "Mail"
-   - Use this password as `EMAIL_PASS`
+### For Gmail (Most Common):
+**You MUST use an App Password, NOT your regular Gmail password!**
+
+#### Step-by-Step Gmail App Password Setup:
+1. **Enable 2-Factor Authentication** (Required):
+   - Go to https://myaccount.google.com/security
+   - Enable "2-Step Verification" if not already enabled
+
+2. **Generate App Password**:
+   - Go to https://myaccount.google.com/apppasswords
+   - Or: Google Account → Security → 2-Step Verification → App passwords
+   - Select app: "Mail"
+   - Select device: "Other (Custom name)" → Enter "GitHub Actions"
+   - Click "Generate"
+   - **Copy the 16-character password** (no spaces, formatted as: xxxx xxxx xxxx xxxx)
+
+3. **Add to GitHub Secrets**:
+   - Go to your repo: Settings → Secrets and variables → Actions
+   - Add `EMAIL_USER`: Your full Gmail address (e.g., `yourname@gmail.com`)
+   - Add `EMAIL_PASS`: The 16-character App Password (paste exactly as shown)
+   - Add `SMTP_SERVER`: `smtp.gmail.com`
+   - Add `SMTP_PORT`: `587`
+   - Add `NOTIFICATION_EMAIL`: `nosher-ali.khan@bernsteinsg.com`
+
+#### Troubleshooting Gmail Errors:
+- **Error 535 "Username and Password not accepted"**:
+  - ✅ Make sure you're using an App Password, not your regular password
+  - ✅ Verify 2-Factor Authentication is enabled
+  - ✅ Check that EMAIL_USER is your full email address
+  - ✅ Ensure EMAIL_PASS has no extra spaces (should be 16 characters)
+  
+- **If App Passwords option doesn't appear**:
+  - You must have 2-Factor Authentication enabled first
 
 ### For Other Email Providers:
 - **Outlook/Hotmail**: `smtp-mail.outlook.com`, port `587`

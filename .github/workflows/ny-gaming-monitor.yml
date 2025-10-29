@@ -58,6 +58,12 @@ jobs:
         cp ny_gaming_data.csv data_archive/$TIMESTAMP/
         cp -r NY_State_Reports_* data_archive/$TIMESTAMP/ 2>/dev/null || true
         
+        # Keep only the 10 most recent archives (delete older ones)
+        cd data_archive
+        if [ $(ls -d */ 2>/dev/null | wc -l) -gt 10 ]; then
+          ls -t -d */ | tail -n +11 | xargs rm -rf
+        fi
+        
     - name: Commit and push changes
       run: |
         git config --local user.email "action@github.com"

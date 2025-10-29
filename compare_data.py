@@ -209,15 +209,18 @@ class NYGamingDataMonitor:
                     )
                     msg.attach(part)
             
+            # Parse multiple recipients (comma-separated)
+            recipients = [email.strip() for email in self.notification_email.split(',')]
+            
             # Send email
             server = smtplib.SMTP(self.smtp_server, self.smtp_port)
             server.starttls()
             server.login(self.email_user, self.email_pass)
             text = msg.as_string()
-            server.sendmail(self.email_user, self.notification_email, text)
+            server.sendmail(self.email_user, recipients, text)
             server.quit()
             
-            logger.info(f"📧 Notification sent to {self.notification_email}")
+            logger.info(f"📧 Notification sent to {', '.join(recipients)}")
             
         except Exception as e:
             logger.error(f"Failed to send notification: {e}")

@@ -10,6 +10,10 @@ on:
     - cron: '0 13-23 * * 5'
   workflow_dispatch: # Allow manual triggers
 
+# Grant the workflow permission to push commits using GITHUB_TOKEN
+permissions:
+  contents: write
+
 jobs:
   monitor-gaming-data:
     runs-on: ubuntu-latest

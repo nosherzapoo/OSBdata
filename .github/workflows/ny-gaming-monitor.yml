@@ -48,7 +48,7 @@ jobs:
         EMAIL_PASS: ${{ secrets.EMAIL_PASS }}
         SMTP_SERVER: ${{ secrets.SMTP_SERVER }}
         SMTP_PORT: ${{ secrets.SMTP_PORT }}
-        NOTIFICATION_EMAIL: nosher-ali.khan@bernsteinsg.com
+        NOTIFICATION_EMAIL: ${{ secrets.NOTIFICATION_EMAIL1 }}, ${{ secrets.NOTIFICATION_EMAIL2 }}
         
     - name: Archive data
       run: |

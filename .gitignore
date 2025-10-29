@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+
+# Virtual environments
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Data files
+NY_State_Reports_*/
+*.xlsx
+*.xls
+
+# Keep the latest CSV
+!ny_gaming_data.csv
+
+# Logs
+*.log
+
+# Environment variables
+.env

@@ -1,0 +1,63 @@
+name: NY Gaming Data Monitor
+
+on:
+  schedule:
+    # Every 2 hours on Thursday (0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22)
+    - cron: '0 */2 * * 4'
+    # Every 15 minutes on Friday from 4AM to Noon (4:00, 4:15, 4:30, 4:45, 5:00, etc.)
+    - cron: '*/15 4-11 * * 5'
+    # Every hour on Friday from 1PM to 11PM
+    - cron: '0 13-23 * * 5'
+  workflow_dispatch: # Allow manual triggers
+
+jobs:
+  monitor-gaming-data:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+        
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install aiohttp aiofiles pandas openpyxl requests
+        
+    - name: Download current data
+      run: |
+        python download_reports.py
+        
+    - name: Extract data to CSV
+      run: |
+        python extract_to_csv_v2.py
+        
+    - name: Compare data and send notifications
+      run: |
+        python compare_data.py
+      env:
+        EMAIL_USER: ${{ secrets.EMAIL_USER }}
+        EMAIL_PASS: ${{ secrets.EMAIL_PASS }}
+        SMTP_SERVER: ${{ secrets.SMTP_SERVER }}
+        SMTP_PORT: ${{ secrets.SMTP_PORT }}
+        NOTIFICATION_EMAIL: nosher-ali.khan@bernsteinsg.com
+        
+    - name: Archive data
+      run: |
+        # Create timestamped directory
+        TIMESTAMP=$(date +%Y%m%d_%H%M%S)
+        mkdir -p data_archive/$TIMESTAMP
+        cp ny_gaming_data.csv data_archive/$TIMESTAMP/
+        cp -r NY_State_Reports_* data_archive/$TIMESTAMP/ 2>/dev/null || true
+        
+    - name: Commit and push changes
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add .
+        git diff --staged --quiet || git commit -m "Update NY gaming data - $(date)"
+        git push

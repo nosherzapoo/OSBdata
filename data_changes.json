@@ -462,5 +462,15 @@
       "brands": 9,
       "changes": []
     }
+  },
+  {
+    "timestamp": "2025-10-31T06:22:27.432523",
+    "comparison": {
+      "is_new_data": false,
+      "total_records": 1555,
+      "date_range": "2022-04-03 00:00:00 to 2025-10-26 00:00:00",
+      "brands": 9,
+      "changes": []
+    }
   }
 ]

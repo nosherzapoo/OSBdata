@@ -1,24 +1,5 @@
 [
   {
-    "timestamp": "2025-10-29T19:15:29.142455",
-    "comparison": {
-      "is_new_data": false,
-      "total_records": 1543,
-      "date_range": "2022-04-03 00:00:00 to 2025-10-19 00:00:00",
-      "brands": 9,
-      "changes": [
-        {
-          "type": "significant_ggr_change",
-          "description": "Rush Street Interactive: GGR changed by 930116.3% ($100 \u2192 $930,216)",
-          "brand": "Rush Street Interactive",
-          "change_percent": 930116.3000000007,
-          "previous_ggr": 100.0,
-          "current_ggr": 930216.3000000007
-        }
-      ]
-    }
-  },
-  {
     "timestamp": "2025-10-29T19:17:29.626042",
     "comparison": {
       "is_new_data": false,
@@ -1275,6 +1256,16 @@
   },
   {
     "timestamp": "2025-11-07T22:10:15.276684",
+    "comparison": {
+      "is_new_data": false,
+      "total_records": 1559,
+      "date_range": "2022-04-03 00:00:00 to 2025-11-02 00:00:00",
+      "brands": 9,
+      "changes": []
+    }
+  },
+  {
+    "timestamp": "2025-11-07T23:09:55.140223",
     "comparison": {
       "is_new_data": false,
       "total_records": 1559,

@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2025-10-31T05:40:48.864266",
-    "comparison": {
-      "is_new_data": false,
-      "total_records": 1555,
-      "date_range": "2022-04-03 00:00:00 to 2025-10-26 00:00:00",
-      "brands": 9,
-      "changes": []
-    }
-  },
-  {
     "timestamp": "2025-10-31T05:49:29.131195",
     "comparison": {
       "is_new_data": false,
@@ -1197,6 +1187,53 @@
           "brand": "BetMGM",
           "new_date": "2025-11-09 00:00:00",
           "previous_date": "2025-11-02 00:00:00"
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": "2025-11-13T21:23:31.147640",
+    "comparison": {
+      "is_new_data": false,
+      "total_records": 1567,
+      "date_range": "2022-04-03 00:00:00 to 2025-11-09 00:00:00",
+      "brands": 9,
+      "changes": [
+        {
+          "type": "record_count",
+          "description": "Total records changed from 1565 to 1567",
+          "previous": 1565,
+          "current": 1567
+        },
+        {
+          "type": "new_weekly_data",
+          "description": "DraftKings Sport Book: New weekly data available",
+          "brand": "DraftKings Sport Book",
+          "new_date": "2025-11-09 00:00:00",
+          "previous_date": "2025-11-02 00:00:00"
+        },
+        {
+          "type": "significant_ggr_change",
+          "description": "DraftKings Sport Book: GGR changed by -27.3% ($25,808,913 \u2192 $18,767,264)",
+          "brand": "DraftKings Sport Book",
+          "change_percent": -27.283789634857907,
+          "previous_ggr": 25808913.33,
+          "current_ggr": 18767263.709999997
+        },
+        {
+          "type": "new_weekly_data",
+          "description": "ESPN Bet: New weekly data available",
+          "brand": "ESPN Bet",
+          "new_date": "2025-11-09 00:00:00",
+          "previous_date": "2025-11-02 00:00:00"
+        },
+        {
+          "type": "significant_ggr_change",
+          "description": "ESPN Bet: GGR changed by -28.3% ($1,145,045 \u2192 $821,315)",
+          "brand": "ESPN Bet",
+          "change_percent": -28.272227349531654,
+          "previous_ggr": 1145044.9799999993,
+          "current_ggr": 821315.2600000002
         }
       ]
     }

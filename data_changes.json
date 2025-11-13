@@ -1,37 +1,5 @@
 [
   {
-    "timestamp": "2025-10-30T16:22:33.204280",
-    "comparison": {
-      "is_new_data": false,
-      "total_records": 1555,
-      "date_range": "2022-04-03 00:00:00 to 2025-10-26 00:00:00",
-      "brands": 9,
-      "changes": [
-        {
-          "type": "record_count",
-          "description": "Total records changed from 1554 to 1555",
-          "previous": 1554,
-          "current": 1555
-        },
-        {
-          "type": "new_weekly_data",
-          "description": "DraftKings Sport Book: New weekly data available",
-          "brand": "DraftKings Sport Book",
-          "new_date": "2025-10-26 00:00:00",
-          "previous_date": "2025-10-19 00:00:00"
-        },
-        {
-          "type": "significant_ggr_change",
-          "description": "DraftKings Sport Book: GGR changed by 32.3% ($11,659,023 \u2192 $15,427,440)",
-          "brand": "DraftKings Sport Book",
-          "change_percent": 32.32188612874099,
-          "previous_ggr": 11659023.439999992,
-          "current_ggr": 15427439.72000001
-        }
-      ]
-    }
-  },
-  {
     "timestamp": "2025-10-30T18:15:55.127094",
     "comparison": {
       "is_new_data": false,
@@ -1152,6 +1120,16 @@
   },
   {
     "timestamp": "2025-11-13T13:26:36.931732",
+    "comparison": {
+      "is_new_data": false,
+      "total_records": 1559,
+      "date_range": "2022-04-03 00:00:00 to 2025-11-02 00:00:00",
+      "brands": 9,
+      "changes": []
+    }
+  },
+  {
+    "timestamp": "2025-11-13T14:11:15.570936",
     "comparison": {
       "is_new_data": false,
       "total_records": 1559,

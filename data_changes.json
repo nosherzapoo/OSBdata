@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2025-11-07T07:49:11.444011",
-    "comparison": {
-      "is_new_data": false,
-      "total_records": 1559,
-      "date_range": "2022-04-03 00:00:00 to 2025-11-02 00:00:00",
-      "brands": 9,
-      "changes": []
-    }
-  },
-  {
     "timestamp": "2025-11-07T08:20:53.875526",
     "comparison": {
       "is_new_data": false,
@@ -1091,6 +1081,16 @@
   },
   {
     "timestamp": "2025-11-17T16:30:01.385476",
+    "comparison": {
+      "is_new_data": false,
+      "total_records": 1567,
+      "date_range": "2022-04-03 00:00:00 to 2025-11-09 00:00:00",
+      "brands": 9,
+      "changes": []
+    }
+  },
+  {
+    "timestamp": "2025-11-17T20:25:16.171012",
     "comparison": {
       "is_new_data": false,
       "total_records": 1567,

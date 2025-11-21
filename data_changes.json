@@ -1,78 +1,5 @@
 [
   {
-    "timestamp": "2025-11-13T21:10:13.384547",
-    "comparison": {
-      "is_new_data": false,
-      "total_records": 1565,
-      "date_range": "2022-04-03 00:00:00 to 2025-11-09 00:00:00",
-      "brands": 9,
-      "changes": [
-        {
-          "type": "record_count",
-          "description": "Total records changed from 1559 to 1565",
-          "previous": 1559,
-          "current": 1565
-        },
-        {
-          "type": "date_range",
-          "description": "Date range changed from 2022-04-03 00:00:00 to 2025-11-02 00:00:00 to 2022-04-03 00:00:00 to 2025-11-09 00:00:00",
-          "previous": "(Timestamp('2022-04-03 00:00:00'), Timestamp('2025-11-02 00:00:00'))",
-          "current": "(Timestamp('2022-04-03 00:00:00'), Timestamp('2025-11-09 00:00:00'))"
-        },
-        {
-          "type": "new_weekly_data",
-          "description": "Rush Street Interactive: New weekly data available",
-          "brand": "Rush Street Interactive",
-          "new_date": "2025-11-09 00:00:00",
-          "previous_date": "2025-11-02 00:00:00"
-        },
-        {
-          "type": "significant_ggr_change",
-          "description": "Rush Street Interactive: GGR changed by 41.9% ($828,900 \u2192 $1,176,232)",
-          "brand": "Rush Street Interactive",
-          "change_percent": 41.90267082666837,
-          "previous_ggr": 828900.2900000003,
-          "current_ggr": 1176231.65
-        },
-        {
-          "type": "new_weekly_data",
-          "description": "FanDuel: New weekly data available",
-          "brand": "FanDuel",
-          "new_date": "2025-11-09 00:00:00",
-          "previous_date": "2025-11-02 00:00:00"
-        },
-        {
-          "type": "new_weekly_data",
-          "description": "Bally Bet: New weekly data available",
-          "brand": "Bally Bet",
-          "new_date": "2025-11-09 00:00:00",
-          "previous_date": "2025-11-02 00:00:00"
-        },
-        {
-          "type": "new_weekly_data",
-          "description": "Caesars Sport Book: New weekly data available",
-          "brand": "Caesars Sport Book",
-          "new_date": "2025-11-09 00:00:00",
-          "previous_date": "2025-11-02 00:00:00"
-        },
-        {
-          "type": "new_weekly_data",
-          "description": "Fanatics: New weekly data available",
-          "brand": "Fanatics",
-          "new_date": "2025-11-09 00:00:00",
-          "previous_date": "2025-11-02 00:00:00"
-        },
-        {
-          "type": "new_weekly_data",
-          "description": "BetMGM: New weekly data available",
-          "brand": "BetMGM",
-          "new_date": "2025-11-09 00:00:00",
-          "previous_date": "2025-11-02 00:00:00"
-        }
-      ]
-    }
-  },
-  {
     "timestamp": "2025-11-13T21:23:31.147640",
     "comparison": {
       "is_new_data": false,
@@ -1192,6 +1119,16 @@
   },
   {
     "timestamp": "2025-11-21T06:51:28.294334",
+    "comparison": {
+      "is_new_data": false,
+      "total_records": 1575,
+      "date_range": "2022-04-03 00:00:00 to 2025-11-16 00:00:00",
+      "brands": 9,
+      "changes": []
+    }
+  },
+  {
+    "timestamp": "2025-11-21T07:15:34.709457",
     "comparison": {
       "is_new_data": false,
       "total_records": 1575,

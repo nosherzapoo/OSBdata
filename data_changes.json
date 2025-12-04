@@ -1,85 +1,5 @@
 [
   {
-    "timestamp": "2025-11-26T20:24:05.673064",
-    "comparison": {
-      "is_new_data": false,
-      "total_records": 1599,
-      "date_range": "2022-04-03 00:00:00 to 2025-11-23 00:00:00",
-      "brands": 9,
-      "changes": [
-        {
-          "type": "record_count",
-          "description": "Total records changed from 1575 to 1599",
-          "previous": 1575,
-          "current": 1599
-        },
-        {
-          "type": "date_range",
-          "description": "Date range changed from 2022-04-03 00:00:00 to 2025-11-16 00:00:00 to 2022-04-03 00:00:00 to 2025-11-23 00:00:00",
-          "previous": "(Timestamp('2022-04-03 00:00:00'), Timestamp('2025-11-16 00:00:00'))",
-          "current": "(Timestamp('2022-04-03 00:00:00'), Timestamp('2025-11-23 00:00:00'))"
-        },
-        {
-          "type": "new_weekly_data",
-          "description": "Rush Street Interactive: New weekly data available",
-          "brand": "Rush Street Interactive",
-          "new_date": "2025-11-23 00:00:00",
-          "previous_date": "2025-11-16 00:00:00"
-        },
-        {
-          "type": "new_weekly_data",
-          "description": "BetMGM: New weekly data available",
-          "brand": "BetMGM",
-          "new_date": "2025-11-23 00:00:00",
-          "previous_date": "2025-11-16 00:00:00"
-        },
-        {
-          "type": "new_weekly_data",
-          "description": "FanDuel: New weekly data available",
-          "brand": "FanDuel",
-          "new_date": "2025-11-23 00:00:00",
-          "previous_date": "2025-11-16 00:00:00"
-        },
-        {
-          "type": "new_weekly_data",
-          "description": "DraftKings Sport Book: New weekly data available",
-          "brand": "DraftKings Sport Book",
-          "new_date": "2025-11-23 00:00:00",
-          "previous_date": "2025-11-16 00:00:00"
-        },
-        {
-          "type": "new_weekly_data",
-          "description": "Caesars Sport Book: New weekly data available",
-          "brand": "Caesars Sport Book",
-          "new_date": "2025-11-23 00:00:00",
-          "previous_date": "2025-11-16 00:00:00"
-        },
-        {
-          "type": "new_weekly_data",
-          "description": "ESPN Bet: New weekly data available",
-          "brand": "ESPN Bet",
-          "new_date": "2025-11-23 00:00:00",
-          "previous_date": "2025-11-16 00:00:00"
-        },
-        {
-          "type": "significant_ggr_change",
-          "description": "ESPN Bet: GGR changed by 376.9% ($1,015,091 \u2192 $4,841,338)",
-          "brand": "ESPN Bet",
-          "change_percent": 376.9364087332632,
-          "previous_ggr": 1015090.96,
-          "current_ggr": 4841338.370000005
-        },
-        {
-          "type": "new_weekly_data",
-          "description": "Bally Bet: New weekly data available",
-          "brand": "Bally Bet",
-          "new_date": "2025-11-23 00:00:00",
-          "previous_date": "2025-11-16 00:00:00"
-        }
-      ]
-    }
-  },
-  {
     "timestamp": "2025-11-26T20:34:51.023272",
     "comparison": {
       "is_new_data": false,
@@ -1061,6 +981,16 @@
   },
   {
     "timestamp": "2025-12-04T11:10:44.711056",
+    "comparison": {
+      "is_new_data": false,
+      "total_records": 1599,
+      "date_range": "2022-04-03 00:00:00 to 2025-11-23 00:00:00",
+      "brands": 9,
+      "changes": []
+    }
+  },
+  {
+    "timestamp": "2025-12-04T12:21:59.854778",
     "comparison": {
       "is_new_data": false,
       "total_records": 1599,

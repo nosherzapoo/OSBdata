@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2025-11-27T04:15:00.004244",
-    "comparison": {
-      "is_new_data": false,
-      "total_records": 1599,
-      "date_range": "2022-04-03 00:00:00 to 2025-11-23 00:00:00",
-      "brands": 9,
-      "changes": []
-    }
-  },
-  {
     "timestamp": "2025-11-27T05:11:53.914988",
     "comparison": {
       "is_new_data": false,
@@ -997,6 +987,125 @@
       "date_range": "2022-04-03 00:00:00 to 2025-11-23 00:00:00",
       "brands": 9,
       "changes": []
+    }
+  },
+  {
+    "timestamp": "2025-12-04T17:14:29.319980",
+    "comparison": {
+      "is_new_data": false,
+      "total_records": 1591,
+      "date_range": "2022-04-03 00:00:00 to 2025-11-30 00:00:00",
+      "brands": 9,
+      "changes": [
+        {
+          "type": "record_count",
+          "description": "Total records changed from 1599 to 1591",
+          "previous": 1599,
+          "current": 1591
+        },
+        {
+          "type": "date_range",
+          "description": "Date range changed from 2022-04-03 00:00:00 to 2025-11-23 00:00:00 to 2022-04-03 00:00:00 to 2025-11-30 00:00:00",
+          "previous": "(Timestamp('2022-04-03 00:00:00'), Timestamp('2025-11-23 00:00:00'))",
+          "current": "(Timestamp('2022-04-03 00:00:00'), Timestamp('2025-11-30 00:00:00'))"
+        },
+        {
+          "type": "new_weekly_data",
+          "description": "Caesars Sport Book: New weekly data available",
+          "brand": "Caesars Sport Book",
+          "new_date": "2025-11-30 00:00:00",
+          "previous_date": "2025-11-23 00:00:00"
+        },
+        {
+          "type": "new_weekly_data",
+          "description": "DraftKings Sport Book: New weekly data available",
+          "brand": "DraftKings Sport Book",
+          "new_date": "2025-11-30 00:00:00",
+          "previous_date": "2025-11-23 00:00:00"
+        },
+        {
+          "type": "significant_ggr_change",
+          "description": "DraftKings Sport Book: GGR changed by 49.9% ($18,242,416 \u2192 $27,343,229)",
+          "brand": "DraftKings Sport Book",
+          "change_percent": 49.88820091100115,
+          "previous_ggr": 18242416.08999999,
+          "current_ggr": 27343229.279999983
+        },
+        {
+          "type": "new_weekly_data",
+          "description": "BetMGM: New weekly data available",
+          "brand": "BetMGM",
+          "new_date": "2025-11-30 00:00:00",
+          "previous_date": "2025-11-23 00:00:00"
+        },
+        {
+          "type": "significant_ggr_change",
+          "description": "BetMGM: GGR changed by -23.0% ($2,649,367 \u2192 $2,039,236)",
+          "brand": "BetMGM",
+          "change_percent": -23.02932041714176,
+          "previous_ggr": 2649367.1499999976,
+          "current_ggr": 2039235.9000000013
+        },
+        {
+          "type": "new_weekly_data",
+          "description": "Rush Street Interactive: New weekly data available",
+          "brand": "Rush Street Interactive",
+          "new_date": "2025-11-30 00:00:00",
+          "previous_date": "2025-11-23 00:00:00"
+        },
+        {
+          "type": "significant_ggr_change",
+          "description": "Rush Street Interactive: GGR changed by 42.9% ($782,044 \u2192 $1,117,450)",
+          "brand": "Rush Street Interactive",
+          "change_percent": 42.888513050200345,
+          "previous_ggr": 782043.5499999996,
+          "current_ggr": 1117450.3999999994
+        },
+        {
+          "type": "new_weekly_data",
+          "description": "ESPN Bet: New weekly data available",
+          "brand": "ESPN Bet",
+          "new_date": "2025-11-30 00:00:00",
+          "previous_date": "2025-11-23 00:00:00"
+        },
+        {
+          "type": "significant_ggr_change",
+          "description": "ESPN Bet: GGR changed by -74.5% ($4,841,338 \u2192 $1,235,941)",
+          "brand": "ESPN Bet",
+          "change_percent": -74.47107916152537,
+          "previous_ggr": 4841338.370000005,
+          "current_ggr": 1235941.4399999997
+        },
+        {
+          "type": "new_weekly_data",
+          "description": "Fanatics: New weekly data available",
+          "brand": "Fanatics",
+          "new_date": "2025-11-30 00:00:00",
+          "previous_date": "2025-11-16 00:00:00"
+        },
+        {
+          "type": "significant_ggr_change",
+          "description": "Fanatics: GGR changed by 24.8% ($4,967,778 \u2192 $6,197,653)",
+          "brand": "Fanatics",
+          "change_percent": 24.757052854329643,
+          "previous_ggr": 4967778.0600000005,
+          "current_ggr": 6197653.499999993
+        },
+        {
+          "type": "new_weekly_data",
+          "description": "FanDuel: New weekly data available",
+          "brand": "FanDuel",
+          "new_date": "2025-11-30 00:00:00",
+          "previous_date": "2025-11-23 00:00:00"
+        },
+        {
+          "type": "new_weekly_data",
+          "description": "Bally Bet: New weekly data available",
+          "brand": "Bally Bet",
+          "new_date": "2025-11-30 00:00:00",
+          "previous_date": "2025-11-23 00:00:00"
+        }
+      ]
     }
   }
 ]

@@ -2,14 +2,14 @@ name: NY Gaming Data Monitor
 
 on:
   schedule:
-      # Every 4 hours on Sunday, Monday, Tuesday, Saturday (Removed Wednesday)
+      # Every 4 hours on Sunday, Monday, Tuesday, Saturday
       - cron: '0 */4 * * 0,1,2,6'
       
-      # Every hour on Wednesday
-      - cron: '*/30 * * * 3'
+      # Every 20 minutes on Wednesday (Preserved from your snippet)
+      - cron: '*/20 * * * 3'
       
-      # Every 15 minutes on Thursday
-      - cron: '*/15 * * * 4'
+      # Every 10 minutes on Thursday
+      - cron: '*/10 * * * 4'
       
       # Every 15 minutes on Friday from 4AM to Noon
       - cron: '*/15 4-11 * * 5'

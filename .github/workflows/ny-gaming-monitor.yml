@@ -16,6 +16,7 @@ on:
       
       # Every hour on Friday from 1PM to 11PM
       - cron: '0 13-23 * * 5'
+  #cron-job.org, runs this code every 10 mins
   workflow_dispatch: # Allow manual triggers
 
 # Grant the workflow permission to push commits using GITHUB_TOKEN

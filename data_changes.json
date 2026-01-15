@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-01-15T09:40:25.393925",
-    "comparison": {
-      "is_new_data": false,
-      "total_records": 1630,
-      "date_range": "2022-04-03 00:00:00 to 2026-01-04 00:00:00",
-      "brands": 9,
-      "changes": []
-    }
-  },
-  {
     "timestamp": "2026-01-15T09:50:23.837920",
     "comparison": {
       "is_new_data": false,
@@ -997,6 +987,44 @@
       "date_range": "2022-04-03 00:00:00 to 2026-01-04 00:00:00",
       "brands": 9,
       "changes": []
+    }
+  },
+  {
+    "timestamp": "2026-01-15T22:10:23.349116",
+    "comparison": {
+      "is_new_data": false,
+      "total_records": 1631,
+      "date_range": "2022-04-03 00:00:00 to 2026-01-11 00:00:00",
+      "brands": 9,
+      "changes": [
+        {
+          "type": "record_count",
+          "description": "Total records changed from 1630 to 1631",
+          "previous": 1630,
+          "current": 1631
+        },
+        {
+          "type": "date_range",
+          "description": "Date range changed from 2022-04-03 00:00:00 to 2026-01-04 00:00:00 to 2022-04-03 00:00:00 to 2026-01-11 00:00:00",
+          "previous": "(Timestamp('2022-04-03 00:00:00'), Timestamp('2026-01-04 00:00:00'))",
+          "current": "(Timestamp('2022-04-03 00:00:00'), Timestamp('2026-01-11 00:00:00'))"
+        },
+        {
+          "type": "new_weekly_data",
+          "description": "BetMGM: New weekly data available",
+          "brand": "BetMGM",
+          "new_date": "2026-01-11 00:00:00",
+          "previous_date": "2026-01-04 00:00:00"
+        },
+        {
+          "type": "significant_ggr_change",
+          "description": "BetMGM: GGR changed by -80.5% ($2,577,687 \u2192 $503,642)",
+          "brand": "BetMGM",
+          "change_percent": -80.46147115013879,
+          "previous_ggr": 2577686.600000001,
+          "current_ggr": 503642.04000000656
+        }
+      ]
     }
   }
 ]

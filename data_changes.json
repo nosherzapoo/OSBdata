@@ -1,112 +1,5 @@
 [
   {
-    "timestamp": "2026-01-15T22:15:20.451571",
-    "comparison": {
-      "is_new_data": false,
-      "total_records": 1637,
-      "date_range": "2022-04-03 00:00:00 to 2026-01-11 00:00:00",
-      "brands": 9,
-      "changes": [
-        {
-          "type": "record_count",
-          "description": "Total records changed from 1631 to 1637",
-          "previous": 1631,
-          "current": 1637
-        },
-        {
-          "type": "new_weekly_data",
-          "description": "DraftKings Sport Book: New weekly data available",
-          "brand": "DraftKings Sport Book",
-          "new_date": "2026-01-11 00:00:00",
-          "previous_date": "2026-01-04 00:00:00"
-        },
-        {
-          "type": "significant_ggr_change",
-          "description": "DraftKings Sport Book: GGR changed by -60.5% ($22,828,020 \u2192 $9,014,904)",
-          "brand": "DraftKings Sport Book",
-          "change_percent": -60.509480686148386,
-          "previous_ggr": 22828020.21,
-          "current_ggr": 9014903.73
-        },
-        {
-          "type": "new_weekly_data",
-          "description": "ESPN Bet: New weekly data available",
-          "brand": "ESPN Bet",
-          "new_date": "2026-01-11 00:00:00",
-          "previous_date": "2026-01-04 00:00:00"
-        },
-        {
-          "type": "significant_ggr_change",
-          "description": "ESPN Bet: GGR changed by -54.0% ($1,317,524 \u2192 $605,888)",
-          "brand": "ESPN Bet",
-          "change_percent": -54.01314691770749,
-          "previous_ggr": 1317524.0300000005,
-          "current_ggr": 605887.8399999997
-        },
-        {
-          "type": "new_weekly_data",
-          "description": "FanDuel: New weekly data available",
-          "brand": "FanDuel",
-          "new_date": "2026-01-11 00:00:00",
-          "previous_date": "2026-01-04 00:00:00"
-        },
-        {
-          "type": "significant_ggr_change",
-          "description": "FanDuel: GGR changed by -40.7% ($34,306,387 \u2192 $20,328,286)",
-          "brand": "FanDuel",
-          "change_percent": -40.74489497254404,
-          "previous_ggr": 34306387.48000001,
-          "current_ggr": 20328285.93240001
-        },
-        {
-          "type": "new_weekly_data",
-          "description": "Caesars Sport Book: New weekly data available",
-          "brand": "Caesars Sport Book",
-          "new_date": "2026-01-11 00:00:00",
-          "previous_date": "2026-01-04 00:00:00"
-        },
-        {
-          "type": "significant_ggr_change",
-          "description": "Caesars Sport Book: GGR changed by -52.9% ($3,848,549 \u2192 $1,812,539)",
-          "brand": "Caesars Sport Book",
-          "change_percent": -52.90332132128361,
-          "previous_ggr": 3848549.39,
-          "current_ggr": 1812538.9399999997
-        },
-        {
-          "type": "new_weekly_data",
-          "description": "Bally Bet: New weekly data available",
-          "brand": "Bally Bet",
-          "new_date": "2026-01-11 00:00:00",
-          "previous_date": "2026-01-04 00:00:00"
-        },
-        {
-          "type": "significant_ggr_change",
-          "description": "Bally Bet: GGR changed by -44.6% ($446,795 \u2192 $247,416)",
-          "brand": "Bally Bet",
-          "change_percent": -44.62424335897976,
-          "previous_ggr": 446795.4300000001,
-          "current_ggr": 247416.35
-        },
-        {
-          "type": "new_weekly_data",
-          "description": "Fanatics: New weekly data available",
-          "brand": "Fanatics",
-          "new_date": "2026-01-11 00:00:00",
-          "previous_date": "2026-01-04 00:00:00"
-        },
-        {
-          "type": "significant_ggr_change",
-          "description": "Fanatics: GGR changed by -45.2% ($7,311,626 \u2192 $4,007,285)",
-          "brand": "Fanatics",
-          "change_percent": -45.19296627071748,
-          "previous_ggr": 7311625.730000001,
-          "current_ggr": 4007285.18
-        }
-      ]
-    }
-  },
-  {
     "timestamp": "2026-01-15T22:17:36.400615",
     "comparison": {
       "is_new_data": false,
@@ -1110,6 +1003,16 @@
   },
   {
     "timestamp": "2026-01-16T11:10:24.241276",
+    "comparison": {
+      "is_new_data": false,
+      "total_records": 1638,
+      "date_range": "2022-04-03 00:00:00 to 2026-01-11 00:00:00",
+      "brands": 9,
+      "changes": []
+    }
+  },
+  {
+    "timestamp": "2026-01-16T11:15:18.335397",
     "comparison": {
       "is_new_data": false,
       "total_records": 1638,

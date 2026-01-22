@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-01-22T04:00:25.666620",
-    "comparison": {
-      "is_new_data": false,
-      "total_records": 1638,
-      "date_range": "2022-04-03 00:00:00 to 2026-01-11 00:00:00",
-      "brands": 9,
-      "changes": []
-    }
-  },
-  {
     "timestamp": "2026-01-22T04:10:25.517188",
     "comparison": {
       "is_new_data": false,
@@ -997,6 +987,44 @@
       "date_range": "2022-04-03 00:00:00 to 2026-01-11 00:00:00",
       "brands": 9,
       "changes": []
+    }
+  },
+  {
+    "timestamp": "2026-01-22T16:53:59.899664",
+    "comparison": {
+      "is_new_data": false,
+      "total_records": 1639,
+      "date_range": "2022-04-03 00:00:00 to 2026-01-18 00:00:00",
+      "brands": 9,
+      "changes": [
+        {
+          "type": "record_count",
+          "description": "Total records changed from 1638 to 1639",
+          "previous": 1638,
+          "current": 1639
+        },
+        {
+          "type": "date_range",
+          "description": "Date range changed from 2022-04-03 00:00:00 to 2026-01-11 00:00:00 to 2022-04-03 00:00:00 to 2026-01-18 00:00:00",
+          "previous": "(Timestamp('2022-04-03 00:00:00'), Timestamp('2026-01-11 00:00:00'))",
+          "current": "(Timestamp('2022-04-03 00:00:00'), Timestamp('2026-01-18 00:00:00'))"
+        },
+        {
+          "type": "new_weekly_data",
+          "description": "Caesars Sport Book: New weekly data available",
+          "brand": "Caesars Sport Book",
+          "new_date": "2026-01-18 00:00:00",
+          "previous_date": "2026-01-11 00:00:00"
+        },
+        {
+          "type": "significant_ggr_change",
+          "description": "Caesars Sport Book: GGR changed by 147.7% ($1,812,539 \u2192 $4,489,139)",
+          "brand": "Caesars Sport Book",
+          "change_percent": 147.67129968529127,
+          "previous_ggr": 1812538.9399999997,
+          "current_ggr": 4489138.750000001
+        }
+      ]
     }
   }
 ]

@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-01-22T04:29:18.657952",
-    "comparison": {
-      "is_new_data": false,
-      "total_records": 1638,
-      "date_range": "2022-04-03 00:00:00 to 2026-01-11 00:00:00",
-      "brands": 9,
-      "changes": []
-    }
-  },
-  {
     "timestamp": "2026-01-22T04:30:23.380847",
     "comparison": {
       "is_new_data": false,
@@ -1025,6 +1015,83 @@
       "date_range": "2022-04-03 00:00:00 to 2026-01-18 00:00:00",
       "brands": 9,
       "changes": []
+    }
+  },
+  {
+    "timestamp": "2026-01-22T17:03:09.393092",
+    "comparison": {
+      "is_new_data": false,
+      "total_records": 1643,
+      "date_range": "2022-04-03 00:00:00 to 2026-01-18 00:00:00",
+      "brands": 9,
+      "changes": [
+        {
+          "type": "record_count",
+          "description": "Total records changed from 1639 to 1643",
+          "previous": 1639,
+          "current": 1643
+        },
+        {
+          "type": "new_weekly_data",
+          "description": "ESPN Bet: New weekly data available",
+          "brand": "ESPN Bet",
+          "new_date": "2026-01-18 00:00:00",
+          "previous_date": "2026-01-11 00:00:00"
+        },
+        {
+          "type": "significant_ggr_change",
+          "description": "ESPN Bet: GGR changed by 151.7% ($605,888 \u2192 $1,524,752)",
+          "brand": "ESPN Bet",
+          "change_percent": 151.65581306269507,
+          "previous_ggr": 605887.8399999997,
+          "current_ggr": 1524751.9700000004
+        },
+        {
+          "type": "new_weekly_data",
+          "description": "FanDuel: New weekly data available",
+          "brand": "FanDuel",
+          "new_date": "2026-01-18 00:00:00",
+          "previous_date": "2026-01-11 00:00:00"
+        },
+        {
+          "type": "significant_ggr_change",
+          "description": "FanDuel: GGR changed by 112.3% ($20,328,286 \u2192 $43,148,375)",
+          "brand": "FanDuel",
+          "change_percent": 112.25781235312344,
+          "previous_ggr": 20328285.93240001,
+          "current_ggr": 43148375.009
+        },
+        {
+          "type": "new_weekly_data",
+          "description": "BetMGM: New weekly data available",
+          "brand": "BetMGM",
+          "new_date": "2026-01-18 00:00:00",
+          "previous_date": "2026-01-11 00:00:00"
+        },
+        {
+          "type": "significant_ggr_change",
+          "description": "BetMGM: GGR changed by 1128.8% ($503,642 \u2192 $6,188,866)",
+          "brand": "BetMGM",
+          "change_percent": 1128.822401322955,
+          "previous_ggr": 503642.04000000656,
+          "current_ggr": 6188866.209999998
+        },
+        {
+          "type": "new_weekly_data",
+          "description": "Bally Bet: New weekly data available",
+          "brand": "Bally Bet",
+          "new_date": "2026-01-18 00:00:00",
+          "previous_date": "2026-01-11 00:00:00"
+        },
+        {
+          "type": "significant_ggr_change",
+          "description": "Bally Bet: GGR changed by 149.0% ($247,416 \u2192 $616,081)",
+          "brand": "Bally Bet",
+          "change_percent": 149.0059367539776,
+          "previous_ggr": 247416.35,
+          "current_ggr": 616081.3999999999
+        }
+      ]
     }
   }
 ]

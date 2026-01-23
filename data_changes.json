@@ -1,67 +1,5 @@
 [
   {
-    "timestamp": "2026-01-22T17:08:13.541735",
-    "comparison": {
-      "is_new_data": false,
-      "total_records": 1646,
-      "date_range": "2022-04-03 00:00:00 to 2026-01-18 00:00:00",
-      "brands": 9,
-      "changes": [
-        {
-          "type": "record_count",
-          "description": "Total records changed from 1643 to 1646",
-          "previous": 1643,
-          "current": 1646
-        },
-        {
-          "type": "new_weekly_data",
-          "description": "Rush Street Interactive: New weekly data available",
-          "brand": "Rush Street Interactive",
-          "new_date": "2026-01-18 00:00:00",
-          "previous_date": "2026-01-11 00:00:00"
-        },
-        {
-          "type": "significant_ggr_change",
-          "description": "Rush Street Interactive: GGR changed by 86.6% ($788,625 \u2192 $1,471,295)",
-          "brand": "Rush Street Interactive",
-          "change_percent": 86.56453392684557,
-          "previous_ggr": 788625.3399999992,
-          "current_ggr": 1471295.1899999997
-        },
-        {
-          "type": "new_weekly_data",
-          "description": "Fanatics: New weekly data available",
-          "brand": "Fanatics",
-          "new_date": "2026-01-18 00:00:00",
-          "previous_date": "2026-01-11 00:00:00"
-        },
-        {
-          "type": "significant_ggr_change",
-          "description": "Fanatics: GGR changed by 55.4% ($4,007,285 \u2192 $6,227,930)",
-          "brand": "Fanatics",
-          "change_percent": 55.41518909318066,
-          "previous_ggr": 4007285.18,
-          "current_ggr": 6227929.840000005
-        },
-        {
-          "type": "new_weekly_data",
-          "description": "DraftKings Sport Book: New weekly data available",
-          "brand": "DraftKings Sport Book",
-          "new_date": "2026-01-18 00:00:00",
-          "previous_date": "2026-01-11 00:00:00"
-        },
-        {
-          "type": "significant_ggr_change",
-          "description": "DraftKings Sport Book: GGR changed by 258.7% ($9,014,904 \u2192 $32,339,153)",
-          "brand": "DraftKings Sport Book",
-          "change_percent": 258.72987797286214,
-          "previous_ggr": 9014903.73,
-          "current_ggr": 32339153.15
-        }
-      ]
-    }
-  },
-  {
     "timestamp": "2026-01-22T17:10:22.604700",
     "comparison": {
       "is_new_data": false,
@@ -1043,6 +981,16 @@
   },
   {
     "timestamp": "2026-01-23T05:57:03.042087",
+    "comparison": {
+      "is_new_data": false,
+      "total_records": 1646,
+      "date_range": "2022-04-03 00:00:00 to 2026-01-18 00:00:00",
+      "brands": 9,
+      "changes": []
+    }
+  },
+  {
+    "timestamp": "2026-01-23T06:00:25.892880",
     "comparison": {
       "is_new_data": false,
       "total_records": 1646,

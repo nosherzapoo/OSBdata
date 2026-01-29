@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-01-29T08:40:21.165128",
-    "comparison": {
-      "is_new_data": false,
-      "total_records": 1646,
-      "date_range": "2022-04-03 00:00:00 to 2026-01-18 00:00:00",
-      "brands": 9,
-      "changes": []
-    }
-  },
-  {
     "timestamp": "2026-01-29T08:49:54.282641",
     "comparison": {
       "is_new_data": false,
@@ -997,6 +987,74 @@
       "date_range": "2022-04-03 00:00:00 to 2026-01-18 00:00:00",
       "brands": 9,
       "changes": []
+    }
+  },
+  {
+    "timestamp": "2026-01-29T22:10:22.412034",
+    "comparison": {
+      "is_new_data": false,
+      "total_records": 1649,
+      "date_range": "2022-04-03 00:00:00 to 2026-01-25 00:00:00",
+      "brands": 9,
+      "changes": [
+        {
+          "type": "record_count",
+          "description": "Total records changed from 1646 to 1649",
+          "previous": 1646,
+          "current": 1649
+        },
+        {
+          "type": "date_range",
+          "description": "Date range changed from 2022-04-03 00:00:00 to 2026-01-18 00:00:00 to 2022-04-03 00:00:00 to 2026-01-25 00:00:00",
+          "previous": "(Timestamp('2022-04-03 00:00:00'), Timestamp('2026-01-18 00:00:00'))",
+          "current": "(Timestamp('2022-04-03 00:00:00'), Timestamp('2026-01-25 00:00:00'))"
+        },
+        {
+          "type": "new_weekly_data",
+          "description": "DraftKings Sport Book: New weekly data available",
+          "brand": "DraftKings Sport Book",
+          "new_date": "2026-01-25 00:00:00",
+          "previous_date": "2026-01-18 00:00:00"
+        },
+        {
+          "type": "significant_ggr_change",
+          "description": "DraftKings Sport Book: GGR changed by -74.4% ($32,339,153 \u2192 $8,276,216)",
+          "brand": "DraftKings Sport Book",
+          "change_percent": -74.4080620428986,
+          "previous_ggr": 32339153.15,
+          "current_ggr": 8276216.010000002
+        },
+        {
+          "type": "new_weekly_data",
+          "description": "Bally Bet: New weekly data available",
+          "brand": "Bally Bet",
+          "new_date": "2026-01-25 00:00:00",
+          "previous_date": "2026-01-18 00:00:00"
+        },
+        {
+          "type": "significant_ggr_change",
+          "description": "Bally Bet: GGR changed by -38.4% ($616,081 \u2192 $379,616)",
+          "brand": "Bally Bet",
+          "change_percent": -38.382163460867325,
+          "previous_ggr": 616081.3999999999,
+          "current_ggr": 379616.0300000001
+        },
+        {
+          "type": "new_weekly_data",
+          "description": "FanDuel: New weekly data available",
+          "brand": "FanDuel",
+          "new_date": "2026-01-25 00:00:00",
+          "previous_date": "2026-01-18 00:00:00"
+        },
+        {
+          "type": "significant_ggr_change",
+          "description": "FanDuel: GGR changed by -74.4% ($43,148,375 \u2192 $11,028,913)",
+          "brand": "FanDuel",
+          "change_percent": -74.43956239557214,
+          "previous_ggr": 43148375.009,
+          "current_ggr": 11028913.471499994
+        }
+      ]
     }
   }
 ]

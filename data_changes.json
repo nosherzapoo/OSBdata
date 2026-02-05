@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-02-05T04:50:25.275218",
-    "comparison": {
-      "is_new_data": false,
-      "total_records": 1662,
-      "date_range": "2022-04-03 00:00:00 to 2026-02-01 00:00:00",
-      "brands": 9,
-      "changes": []
-    }
-  },
-  {
     "timestamp": "2026-02-05T05:00:24.673309",
     "comparison": {
       "is_new_data": false,
@@ -997,6 +987,31 @@
       "date_range": "2022-04-03 00:00:00 to 2026-02-01 00:00:00",
       "brands": 9,
       "changes": []
+    }
+  },
+  {
+    "timestamp": "2026-02-05T19:10:23.838630",
+    "comparison": {
+      "is_new_data": false,
+      "total_records": 1315,
+      "date_range": "2022-04-03 00:00:00 to 2026-02-01 00:00:00",
+      "brands": 7,
+      "changes": [
+        {
+          "type": "record_count",
+          "description": "Total records changed from 1662 to 1315",
+          "previous": 1662,
+          "current": 1315
+        },
+        {
+          "type": "removed_brands",
+          "description": "Brands removed: Bally Bet, BetMGM",
+          "brands": [
+            "Bally Bet",
+            "BetMGM"
+          ]
+        }
+      ]
     }
   }
 ]

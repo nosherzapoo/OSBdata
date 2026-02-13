@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-02-13T01:30:25.248498",
-    "comparison": {
-      "is_new_data": false,
-      "total_records": 1662,
-      "date_range": "2022-04-03 00:00:00 to 2026-02-01 00:00:00",
-      "brands": 9,
-      "changes": []
-    }
-  },
-  {
     "timestamp": "2026-02-13T01:40:26.513440",
     "comparison": {
       "is_new_data": false,
@@ -1080,6 +1070,30 @@
           "type": "new_weekly_data",
           "description": "DraftKings Sport Book: New weekly data available",
           "brand": "DraftKings Sport Book",
+          "new_date": "2026-02-08 00:00:00",
+          "previous_date": "2026-02-01 00:00:00"
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-02-13T16:30:28.614512",
+    "comparison": {
+      "is_new_data": false,
+      "total_records": 1669,
+      "date_range": "2022-04-03 00:00:00 to 2026-02-08 00:00:00",
+      "brands": 9,
+      "changes": [
+        {
+          "type": "record_count",
+          "description": "Total records changed from 1668 to 1669",
+          "previous": 1668,
+          "current": 1669
+        },
+        {
+          "type": "new_weekly_data",
+          "description": "ESPN Bet: New weekly data available",
+          "brand": "ESPN Bet",
           "new_date": "2026-02-08 00:00:00",
           "previous_date": "2026-02-01 00:00:00"
         }

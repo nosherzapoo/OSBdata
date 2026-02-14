@@ -1,102 +1,5 @@
 [
   {
-    "timestamp": "2026-02-13T16:20:26.271726",
-    "comparison": {
-      "is_new_data": false,
-      "total_records": 1668,
-      "date_range": "2022-04-03 00:00:00 to 2026-02-08 00:00:00",
-      "brands": 9,
-      "changes": [
-        {
-          "type": "record_count",
-          "description": "Total records changed from 1662 to 1668",
-          "previous": 1662,
-          "current": 1668
-        },
-        {
-          "type": "date_range",
-          "description": "Date range changed from 2022-04-03 00:00:00 to 2026-02-01 00:00:00 to 2022-04-03 00:00:00 to 2026-02-08 00:00:00",
-          "previous": "(Timestamp('2022-04-03 00:00:00'), Timestamp('2026-02-01 00:00:00'))",
-          "current": "(Timestamp('2022-04-03 00:00:00'), Timestamp('2026-02-08 00:00:00'))"
-        },
-        {
-          "type": "new_weekly_data",
-          "description": "Caesars Sport Book: New weekly data available",
-          "brand": "Caesars Sport Book",
-          "new_date": "2026-02-08 00:00:00",
-          "previous_date": "2026-02-01 00:00:00"
-        },
-        {
-          "type": "significant_ggr_change",
-          "description": "Caesars Sport Book: GGR changed by -33.6% ($2,481,554 \u2192 $1,647,114)",
-          "brand": "Caesars Sport Book",
-          "change_percent": -33.62571663911274,
-          "previous_ggr": 2481554.1299999976,
-          "current_ggr": 1647113.769999999
-        },
-        {
-          "type": "new_weekly_data",
-          "description": "Bally Bet: New weekly data available",
-          "brand": "Bally Bet",
-          "new_date": "2026-02-08 00:00:00",
-          "previous_date": "2026-02-01 00:00:00"
-        },
-        {
-          "type": "significant_ggr_change",
-          "description": "Bally Bet: GGR changed by 736.7% ($66,825 \u2192 $559,100)",
-          "brand": "Bally Bet",
-          "change_percent": 736.6642603794304,
-          "previous_ggr": 66824.94000000024,
-          "current_ggr": 559100.3900000001
-        },
-        {
-          "type": "new_weekly_data",
-          "description": "Fanatics: New weekly data available",
-          "brand": "Fanatics",
-          "new_date": "2026-02-08 00:00:00",
-          "previous_date": "2026-02-01 00:00:00"
-        },
-        {
-          "type": "significant_ggr_change",
-          "description": "Fanatics: GGR changed by -39.6% ($4,813,747 \u2192 $2,905,749)",
-          "brand": "Fanatics",
-          "change_percent": -39.63644935676399,
-          "previous_ggr": 4813747.499999988,
-          "current_ggr": 2905748.91
-        },
-        {
-          "type": "new_weekly_data",
-          "description": "Rush Street Interactive: New weekly data available",
-          "brand": "Rush Street Interactive",
-          "new_date": "2026-02-08 00:00:00",
-          "previous_date": "2026-02-01 00:00:00"
-        },
-        {
-          "type": "significant_ggr_change",
-          "description": "Rush Street Interactive: GGR changed by -31.9% ($1,337,269 \u2192 $910,847)",
-          "brand": "Rush Street Interactive",
-          "change_percent": -31.887542805161406,
-          "previous_ggr": 1337268.6399999994,
-          "current_ggr": 910846.5299999998
-        },
-        {
-          "type": "new_weekly_data",
-          "description": "FanDuel: New weekly data available",
-          "brand": "FanDuel",
-          "new_date": "2026-02-08 00:00:00",
-          "previous_date": "2026-02-01 00:00:00"
-        },
-        {
-          "type": "new_weekly_data",
-          "description": "DraftKings Sport Book: New weekly data available",
-          "brand": "DraftKings Sport Book",
-          "new_date": "2026-02-08 00:00:00",
-          "previous_date": "2026-02-01 00:00:00"
-        }
-      ]
-    }
-  },
-  {
     "timestamp": "2026-02-13T16:30:28.614512",
     "comparison": {
       "is_new_data": false,
@@ -1092,6 +995,16 @@
   },
   {
     "timestamp": "2026-02-14T07:00:24.764488",
+    "comparison": {
+      "is_new_data": false,
+      "total_records": 1669,
+      "date_range": "2022-04-03 00:00:00 to 2026-02-08 00:00:00",
+      "brands": 9,
+      "changes": []
+    }
+  },
+  {
+    "timestamp": "2026-02-14T07:10:21.025580",
     "comparison": {
       "is_new_data": false,
       "total_records": 1669,

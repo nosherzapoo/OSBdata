@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-02-19T10:40:21.217286",
-    "comparison": {
-      "is_new_data": false,
-      "total_records": 1669,
-      "date_range": "2022-04-03 00:00:00 to 2026-02-08 00:00:00",
-      "brands": 9,
-      "changes": []
-    }
-  },
-  {
     "timestamp": "2026-02-19T10:50:27.149708",
     "comparison": {
       "is_new_data": false,
@@ -1081,6 +1071,38 @@
           "brand": "ESPN Bet",
           "new_date": "2026-02-15 00:00:00",
           "previous_date": "2026-02-08 00:00:00"
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-02-20T00:40:34.343710",
+    "comparison": {
+      "is_new_data": false,
+      "total_records": 1677,
+      "date_range": "2022-04-03 00:00:00 to 2026-02-15 00:00:00",
+      "brands": 9,
+      "changes": [
+        {
+          "type": "record_count",
+          "description": "Total records changed from 1676 to 1677",
+          "previous": 1676,
+          "current": 1677
+        },
+        {
+          "type": "new_weekly_data",
+          "description": "Bally Bet: New weekly data available",
+          "brand": "Bally Bet",
+          "new_date": "2026-02-15 00:00:00",
+          "previous_date": "2026-02-08 00:00:00"
+        },
+        {
+          "type": "significant_ggr_change",
+          "description": "Bally Bet: GGR changed by -58.4% ($559,100 \u2192 $232,714)",
+          "brand": "Bally Bet",
+          "change_percent": -58.37714404026799,
+          "previous_ggr": 559100.3900000001,
+          "current_ggr": 232713.54999999996
         }
       ]
     }

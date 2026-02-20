@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-02-19T10:30:23.524796",
-    "comparison": {
-      "is_new_data": false,
-      "total_records": 1669,
-      "date_range": "2022-04-03 00:00:00 to 2026-02-08 00:00:00",
-      "brands": 9,
-      "changes": []
-    }
-  },
-  {
     "timestamp": "2026-02-19T10:40:21.217286",
     "comparison": {
       "is_new_data": false,
@@ -997,6 +987,102 @@
       "date_range": "2022-04-03 00:00:00 to 2026-02-08 00:00:00",
       "brands": 9,
       "changes": []
+    }
+  },
+  {
+    "timestamp": "2026-02-20T00:30:24.519880",
+    "comparison": {
+      "is_new_data": false,
+      "total_records": 1676,
+      "date_range": "2022-04-03 00:00:00 to 2026-02-15 00:00:00",
+      "brands": 9,
+      "changes": [
+        {
+          "type": "record_count",
+          "description": "Total records changed from 1669 to 1676",
+          "previous": 1669,
+          "current": 1676
+        },
+        {
+          "type": "date_range",
+          "description": "Date range changed from 2022-04-03 00:00:00 to 2026-02-08 00:00:00 to 2022-04-03 00:00:00 to 2026-02-15 00:00:00",
+          "previous": "(Timestamp('2022-04-03 00:00:00'), Timestamp('2026-02-08 00:00:00'))",
+          "current": "(Timestamp('2022-04-03 00:00:00'), Timestamp('2026-02-15 00:00:00'))"
+        },
+        {
+          "type": "new_weekly_data",
+          "description": "Caesars Sport Book: New weekly data available",
+          "brand": "Caesars Sport Book",
+          "new_date": "2026-02-15 00:00:00",
+          "previous_date": "2026-02-08 00:00:00"
+        },
+        {
+          "type": "significant_ggr_change",
+          "description": "Caesars Sport Book: GGR changed by 45.1% ($1,647,114 \u2192 $2,389,711)",
+          "brand": "Caesars Sport Book",
+          "change_percent": 45.0847357071151,
+          "previous_ggr": 1647113.769999999,
+          "current_ggr": 2389710.6599999983
+        },
+        {
+          "type": "new_weekly_data",
+          "description": "Fanatics: New weekly data available",
+          "brand": "Fanatics",
+          "new_date": "2026-02-15 00:00:00",
+          "previous_date": "2026-02-08 00:00:00"
+        },
+        {
+          "type": "new_weekly_data",
+          "description": "Rush Street Interactive: New weekly data available",
+          "brand": "Rush Street Interactive",
+          "new_date": "2026-02-15 00:00:00",
+          "previous_date": "2026-02-08 00:00:00"
+        },
+        {
+          "type": "new_weekly_data",
+          "description": "DraftKings Sport Book: New weekly data available",
+          "brand": "DraftKings Sport Book",
+          "new_date": "2026-02-15 00:00:00",
+          "previous_date": "2026-02-08 00:00:00"
+        },
+        {
+          "type": "significant_ggr_change",
+          "description": "DraftKings Sport Book: GGR changed by -25.2% ($17,566,780 \u2192 $13,140,788)",
+          "brand": "DraftKings Sport Book",
+          "change_percent": -25.195238284990218,
+          "previous_ggr": 17566779.999999996,
+          "current_ggr": 13140787.919999992
+        },
+        {
+          "type": "new_weekly_data",
+          "description": "FanDuel: New weekly data available",
+          "brand": "FanDuel",
+          "new_date": "2026-02-15 00:00:00",
+          "previous_date": "2026-02-08 00:00:00"
+        },
+        {
+          "type": "significant_ggr_change",
+          "description": "FanDuel: GGR changed by -29.8% ($23,326,074 \u2192 $16,373,033)",
+          "brand": "FanDuel",
+          "change_percent": -29.80801848569981,
+          "previous_ggr": 23326073.9,
+          "current_ggr": 16373033.4799
+        },
+        {
+          "type": "new_weekly_data",
+          "description": "BetMGM: New weekly data available",
+          "brand": "BetMGM",
+          "new_date": "2026-02-15 00:00:00",
+          "previous_date": "2026-02-01 00:00:00"
+        },
+        {
+          "type": "new_weekly_data",
+          "description": "ESPN Bet: New weekly data available",
+          "brand": "ESPN Bet",
+          "new_date": "2026-02-15 00:00:00",
+          "previous_date": "2026-02-08 00:00:00"
+        }
+      ]
     }
   }
 ]

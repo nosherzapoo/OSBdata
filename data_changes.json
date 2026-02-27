@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-02-27T00:20:24.206487",
-    "comparison": {
-      "is_new_data": false,
-      "total_records": 1677,
-      "date_range": "2022-04-03 00:00:00 to 2026-02-15 00:00:00",
-      "brands": 9,
-      "changes": []
-    }
-  },
-  {
     "timestamp": "2026-02-27T00:30:23.593989",
     "comparison": {
       "is_new_data": false,
@@ -1028,6 +1018,44 @@
           "type": "new_weekly_data",
           "description": "Bally Bet: New weekly data available",
           "brand": "Bally Bet",
+          "new_date": "2026-02-22 00:00:00",
+          "previous_date": "2026-02-15 00:00:00"
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-02-27T15:00:24.610340",
+    "comparison": {
+      "is_new_data": false,
+      "total_records": 1682,
+      "date_range": "2022-04-03 00:00:00 to 2026-02-22 00:00:00",
+      "brands": 9,
+      "changes": [
+        {
+          "type": "record_count",
+          "description": "Total records changed from 1679 to 1682",
+          "previous": 1679,
+          "current": 1682
+        },
+        {
+          "type": "new_weekly_data",
+          "description": "FanDuel: New weekly data available",
+          "brand": "FanDuel",
+          "new_date": "2026-02-22 00:00:00",
+          "previous_date": "2026-02-15 00:00:00"
+        },
+        {
+          "type": "new_weekly_data",
+          "description": "Rush Street Interactive: New weekly data available",
+          "brand": "Rush Street Interactive",
+          "new_date": "2026-02-22 00:00:00",
+          "previous_date": "2026-02-15 00:00:00"
+        },
+        {
+          "type": "new_weekly_data",
+          "description": "DraftKings Sport Book: New weekly data available",
+          "brand": "DraftKings Sport Book",
           "new_date": "2026-02-22 00:00:00",
           "previous_date": "2026-02-15 00:00:00"
         }

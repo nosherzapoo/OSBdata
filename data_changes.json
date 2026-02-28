@@ -1,59 +1,5 @@
 [
   {
-    "timestamp": "2026-02-27T15:10:24.890299",
-    "comparison": {
-      "is_new_data": false,
-      "total_records": 1685,
-      "date_range": "2022-04-03 00:00:00 to 2026-02-22 00:00:00",
-      "brands": 9,
-      "changes": [
-        {
-          "type": "record_count",
-          "description": "Total records changed from 1682 to 1685",
-          "previous": 1682,
-          "current": 1685
-        },
-        {
-          "type": "new_weekly_data",
-          "description": "ESPN Bet: New weekly data available",
-          "brand": "ESPN Bet",
-          "new_date": "2026-02-22 00:00:00",
-          "previous_date": "2026-02-15 00:00:00"
-        },
-        {
-          "type": "significant_ggr_change",
-          "description": "ESPN Bet: GGR changed by -20.6% ($733,979 \u2192 $582,709)",
-          "brand": "ESPN Bet",
-          "change_percent": -20.609491801328826,
-          "previous_ggr": 733978.7000000001,
-          "current_ggr": 582709.4200000002
-        },
-        {
-          "type": "new_weekly_data",
-          "description": "BetMGM: New weekly data available",
-          "brand": "BetMGM",
-          "new_date": "2026-02-22 00:00:00",
-          "previous_date": "2026-02-15 00:00:00"
-        },
-        {
-          "type": "significant_ggr_change",
-          "description": "BetMGM: GGR changed by -67.1% ($3,016,343 \u2192 $993,155)",
-          "brand": "BetMGM",
-          "change_percent": -67.07419462956177,
-          "previous_ggr": 3016342.709999999,
-          "current_ggr": 993155.1300000018
-        },
-        {
-          "type": "new_weekly_data",
-          "description": "Caesars Sport Book: New weekly data available",
-          "brand": "Caesars Sport Book",
-          "new_date": "2026-02-22 00:00:00",
-          "previous_date": "2026-02-15 00:00:00"
-        }
-      ]
-    }
-  },
-  {
     "timestamp": "2026-02-27T15:20:26.411338",
     "comparison": {
       "is_new_data": false,
@@ -1035,6 +981,16 @@
   },
   {
     "timestamp": "2026-02-28T05:50:23.801642",
+    "comparison": {
+      "is_new_data": false,
+      "total_records": 1685,
+      "date_range": "2022-04-03 00:00:00 to 2026-02-22 00:00:00",
+      "brands": 9,
+      "changes": []
+    }
+  },
+  {
+    "timestamp": "2026-02-28T06:00:28.055379",
     "comparison": {
       "is_new_data": false,
       "total_records": 1685,

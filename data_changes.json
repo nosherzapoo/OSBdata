@@ -1,50 +1,5 @@
 [
   {
-    "timestamp": "2026-02-27T14:50:23.725332",
-    "comparison": {
-      "is_new_data": false,
-      "total_records": 1679,
-      "date_range": "2022-04-03 00:00:00 to 2026-02-22 00:00:00",
-      "brands": 9,
-      "changes": [
-        {
-          "type": "record_count",
-          "description": "Total records changed from 1677 to 1679",
-          "previous": 1677,
-          "current": 1679
-        },
-        {
-          "type": "date_range",
-          "description": "Date range changed from 2022-04-03 00:00:00 to 2026-02-15 00:00:00 to 2022-04-03 00:00:00 to 2026-02-22 00:00:00",
-          "previous": "(Timestamp('2022-04-03 00:00:00'), Timestamp('2026-02-15 00:00:00'))",
-          "current": "(Timestamp('2022-04-03 00:00:00'), Timestamp('2026-02-22 00:00:00'))"
-        },
-        {
-          "type": "new_weekly_data",
-          "description": "Fanatics: New weekly data available",
-          "brand": "Fanatics",
-          "new_date": "2026-02-22 00:00:00",
-          "previous_date": "2026-02-15 00:00:00"
-        },
-        {
-          "type": "significant_ggr_change",
-          "description": "Fanatics: GGR changed by 22.5% ($2,833,908 \u2192 $3,471,520)",
-          "brand": "Fanatics",
-          "change_percent": 22.499368733967348,
-          "previous_ggr": 2833908.219999994,
-          "current_ggr": 3471519.6800000034
-        },
-        {
-          "type": "new_weekly_data",
-          "description": "Bally Bet: New weekly data available",
-          "brand": "Bally Bet",
-          "new_date": "2026-02-22 00:00:00",
-          "previous_date": "2026-02-15 00:00:00"
-        }
-      ]
-    }
-  },
-  {
     "timestamp": "2026-02-27T15:00:24.610340",
     "comparison": {
       "is_new_data": false,
@@ -1098,6 +1053,16 @@
   },
   {
     "timestamp": "2026-02-28T05:30:27.795138",
+    "comparison": {
+      "is_new_data": false,
+      "total_records": 1685,
+      "date_range": "2022-04-03 00:00:00 to 2026-02-22 00:00:00",
+      "brands": 9,
+      "changes": []
+    }
+  },
+  {
+    "timestamp": "2026-02-28T05:40:21.226416",
     "comparison": {
       "is_new_data": false,
       "total_records": 1685,

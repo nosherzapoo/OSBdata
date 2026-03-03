@@ -112,16 +112,15 @@ def create_weekly_exhibit(data_file: str = 'ny_gaming_data.csv',
     ggr_piv['Statewide']    = ggr_piv.sum(axis=1)
     hold_piv = ggr_piv / handle_piv.replace(0, np.nan)
 
-    # Sort brands by total handle in the most-recent week (largest first), Statewide last
-    brands = sorted(df['Brand'].unique())
-    if recent_dates:
-        most_recent = recent_dates[0]
-        def brand_handle(b):
-            try:
-                return handle_piv.at[most_recent, b] if b in handle_piv.columns else 0
-            except Exception:
-                return 0
-        brands = sorted(brands, key=brand_handle, reverse=True)
+    # Only show these four operators (matching the screenshot) + Statewide
+    FEATURED_BRANDS = [
+        'DraftKings Sport Book',
+        'FanDuel',
+        'BetMGM',
+        'Fanatics',
+    ]
+    available = set(df['Brand'].unique())
+    brands   = [b for b in FEATURED_BRANDS if b in available]
     all_cols = brands + ['Statewide']
 
     # ── Workbook ──────────────────────────────────────────────────────────────

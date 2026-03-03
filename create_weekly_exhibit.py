@@ -39,14 +39,32 @@ NEG_FONT       = Font(color=RED,                    size=9,  name="Arial")
 YOY_LABEL_FONT = Font(color=GRAY_TEXT, italic=True, size=9,  name="Arial")
 
 # ── Border sides ──────────────────────────────────────────────────────────────
-_TW = Side(style="thin",   color="FFFFFF")   # thin white  (header internal)
-_MW = Side(style="medium", color="FFFFFF")   # medium white (header group boundary)
-_TG = Side(style="thin",   color="BFBFBF")   # thin gray   (data internal)
-_MG = Side(style="medium", color="595959")   # medium gray (data group boundary)
+# Only two rules:
+#   1. Medium gray vertical line on the outer edges of every brand group
+#   2. Medium gray horizontal line under the sub-header row (row 2)
+_MG = Side(style="medium", color="595959")
 _NO = Side(style=None)
 
-def _bdr(left, right, top, bottom):
+def _bdr(left=_NO, right=_NO, top=_NO, bottom=_NO):
     return Border(left=left, right=right, top=top, bottom=bottom)
+
+def cell_border(col: int, is_header_bottom: bool = False) -> Border:
+    """
+    col is 1-based.
+    Col 1  = Week (single-column group → left + right).
+    Col 2+ = brand data columns in groups of 3.
+      left  border if (col - 2) % 3 == 0  (first of group)
+      right border if (col - 2) % 3 == 2  (last of group)
+    """
+    if col == 1:
+        left_side  = _MG
+        right_side = _MG
+    else:
+        offset     = col - 2
+        left_side  = _MG if offset % 3 == 0 else _NO
+        right_side = _MG if offset % 3 == 2 else _NO
+    bottom_side = _MG if is_header_bottom else _NO
+    return _bdr(left=left_side, right=right_side, bottom=bottom_side)
 
 # ── Brand display names ───────────────────────────────────────────────────────
 BRAND_DISPLAY = {
@@ -157,27 +175,25 @@ def create_weekly_exhibit(data_file: str = 'ny_gaming_data.csv',
     c.fill      = HEADER_FILL
     c.font      = HEADER_FONT
     c.alignment = Alignment(horizontal='center', vertical='center')
-    c.border    = header_border(0)
+    c.border    = cell_border(col=1)
 
     for idx, col_name in enumerate(all_cols):
         sc    = 2 + idx * 3
         label = 'Statewide' if col_name == 'Statewide' else shorten(col_name)
         ws.merge_cells(start_row=1, start_column=sc, end_row=1, end_column=sc + 2)
-        c = ws.cell(row=1, column=sc, value=label)
-        c.fill      = HEADER_FILL
-        c.font      = HEADER_FONT
-        c.alignment = Alignment(horizontal='center', vertical='center')
-        # Border for merged cell (left edge of group; right edge gets medium if it's the last)
-        is_last_group = (idx == num_groups - 1)
-        c.border = _bdr(left=_TW, right=_MW if is_last_group else _TW,
-                        top=_TW, bottom=_TW)
+        # Left border on the first cell of the merge
+        ws.cell(row=1, column=sc).fill      = HEADER_FILL
+        ws.cell(row=1, column=sc).font      = HEADER_FONT
+        ws.cell(row=1, column=sc).alignment = Alignment(horizontal='center', vertical='center')
+        ws.cell(row=1, column=sc).border    = _bdr(left=_MG)
+        # Right border on the last cell of the merge (sc+2 = Hold column = group right edge)
+        ws.cell(row=1, column=sc + 2).border = _bdr(right=_MG)
 
     # ── Row 2: Handle / GGR / Hold sub-headers ────────────────────────────────
-    # "Week" cell is already covered by the row-1 merge; just set border on row-2 slot
     ws.cell(row=2, column=1).fill      = HEADER_FILL
     ws.cell(row=2, column=1).font      = HEADER_FONT
     ws.cell(row=2, column=1).alignment = Alignment(horizontal='center', vertical='center')
-    ws.cell(row=2, column=1).border    = header_border(0)
+    ws.cell(row=2, column=1).border    = cell_border(col=1, is_header_bottom=True)
 
     for idx in range(num_groups):
         for j, metric in enumerate(['Handle', 'GGR', 'Hold']):
@@ -186,7 +202,7 @@ def create_weekly_exhibit(data_file: str = 'ny_gaming_data.csv',
             c.fill      = HEADER_FILL
             c.font      = HEADER_FONT
             c.alignment = Alignment(horizontal='center', vertical='center')
-            c.border    = header_border(col - 1)   # col is 1-based; col_pos = col-1
+            c.border    = cell_border(col=col, is_header_bottom=True)
 
     # ── Data + YoY rows ───────────────────────────────────────────────────────
     cur_row = 3
@@ -201,7 +217,7 @@ def create_weekly_exhibit(data_file: str = 'ny_gaming_data.csv',
         d.fill      = fill
         d.font      = BOLD_DATA_FONT
         d.alignment = Alignment(horizontal='center', vertical='center')
-        d.border    = data_border(0)
+        d.border    = cell_border(col=1)
 
         for idx, col_name in enumerate(all_cols):
             sc = 2 + idx * 3
@@ -215,7 +231,7 @@ def create_weekly_exhibit(data_file: str = 'ny_gaming_data.csv',
             h_cell.font          = DATA_FONT
             h_cell.fill          = fill
             h_cell.alignment     = Alignment(horizontal='center', vertical='center')
-            h_cell.border        = data_border(sc - 1)
+            h_cell.border        = cell_border(col=sc)
 
             g_cell = ws.cell(row=cur_row, column=sc + 1)
             g_cell.value         = int(round(gv)) if gv is not None else None
@@ -223,7 +239,7 @@ def create_weekly_exhibit(data_file: str = 'ny_gaming_data.csv',
             g_cell.font          = DATA_FONT
             g_cell.fill          = fill
             g_cell.alignment     = Alignment(horizontal='center', vertical='center')
-            g_cell.border        = data_border(sc)
+            g_cell.border        = cell_border(col=sc + 1)
 
             hold_cell = ws.cell(row=cur_row, column=sc + 2)
             if ho is not None:
@@ -232,7 +248,7 @@ def create_weekly_exhibit(data_file: str = 'ny_gaming_data.csv',
             hold_cell.font      = DATA_FONT
             hold_cell.fill      = fill
             hold_cell.alignment = Alignment(horizontal='center', vertical='center')
-            hold_cell.border    = data_border(sc + 1)
+            hold_cell.border    = cell_border(col=sc + 2)
 
         cur_row += 1
 
@@ -241,7 +257,7 @@ def create_weekly_exhibit(data_file: str = 'ny_gaming_data.csv',
         yl.fill      = fill
         yl.font      = YOY_LABEL_FONT
         yl.alignment = Alignment(horizontal='center', vertical='center')
-        yl.border    = data_border(0)
+        yl.border    = cell_border(col=1)
 
         for idx, col_name in enumerate(all_cols):
             sc = 2 + idx * 3
@@ -251,7 +267,7 @@ def create_weekly_exhibit(data_file: str = 'ny_gaming_data.csv',
                 c = ws.cell(row=cur_row, column=sc + j)
                 c.fill      = fill
                 c.alignment = Alignment(horizontal='center', vertical='center')
-                c.border    = data_border(sc + j - 1)
+                c.border    = cell_border(col=sc + j)
 
             if yoy_date is not None:
                 ch = safe_get(handle_piv, date,     col_name)
@@ -298,7 +314,7 @@ def create_weekly_exhibit(data_file: str = 'ny_gaming_data.csv',
     for r in range(3, cur_row):
         ws.row_dimensions[r].height = 16
 
-    # ── Freeze header rows ────────────────────────────────────────────────────
+    # ── Freeze header rows (no separate apply_borders call needed) ───────────
     ws.freeze_panes = 'B3'
 
     wb.save(output_file)

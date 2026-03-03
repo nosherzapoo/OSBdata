@@ -417,8 +417,9 @@ class NYGamingDataMonitor:
         # Save changes log
         self.save_changes_log(comparison_result)
         
-        # Create Excel report and send notification if there are changes
-        if comparison_result['changes'] or comparison_result['is_new_data']:
+        # Create Excel report and send notification if there are changes (or FORCE_SEND is set)
+        force_send = os.getenv('FORCE_SEND', '').lower() == 'true'
+        if force_send or comparison_result['changes'] or comparison_result['is_new_data']:
             # Create comprehensive Excel report
             excel_file = self.create_excel_report(current_data)
             

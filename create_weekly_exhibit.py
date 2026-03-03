@@ -29,12 +29,12 @@ HEADER_FILL     = PatternFill(start_color=NAVY,       end_color=NAVY,       fill
 YOY_FILL        = PatternFill(start_color=LIGHT_GRAY, end_color=LIGHT_GRAY, fill_type="solid")
 WHITE_FILL      = PatternFill(start_color=WHITE,      end_color=WHITE,      fill_type="solid")
 
-HEADER_FONT     = Font(color=WHITE,     bold=True,  size=10, name="Calibri")
-DATA_FONT       = Font(color=BLACK,                 size=10, name="Calibri")
-BOLD_DATA_FONT  = Font(color=BLACK,     bold=True,  size=10, name="Calibri")
-POS_FONT        = Font(color=GREEN,                 size=10, name="Calibri")
-NEG_FONT        = Font(color=RED,                   size=10, name="Calibri")
-YOY_LABEL_FONT  = Font(color=GRAY_TEXT, italic=True, size=10, name="Calibri")
+HEADER_FONT     = Font(color=WHITE,     bold=True,  size=10, name="Arial")
+DATA_FONT       = Font(color=BLACK,                 size=10, name="Arial")
+BOLD_DATA_FONT  = Font(color=BLACK,     bold=True,  size=10, name="Arial")
+POS_FONT        = Font(color=GREEN,                 size=9,  name="Arial")
+NEG_FONT        = Font(color=RED,                   size=9,  name="Arial")
+YOY_LABEL_FONT  = Font(color=GRAY_TEXT, italic=True, size=9, name="Arial")
 
 # ── Brand display name shortening ─────────────────────────────────────────────
 BRAND_DISPLAY = {
@@ -149,7 +149,9 @@ def create_weekly_exhibit(data_file: str = 'ny_gaming_data.csv',
 
     # ── Row 2: Handle / GGR / Hold sub-headers ────────────────────────────────
     # Week cell already merged; fill it
-    ws.cell(row=2, column=1).fill = HEADER_FILL
+    ws.cell(row=2, column=1).fill      = HEADER_FILL
+    ws.cell(row=2, column=1).font      = HEADER_FONT
+    ws.cell(row=2, column=1).alignment = Alignment(horizontal='center', vertical='center')
 
     for idx in range(num_groups):
         for j, metric in enumerate(['Handle', 'GGR', 'Hold']):
@@ -192,14 +194,14 @@ def create_weekly_exhibit(data_file: str = 'ny_gaming_data.csv',
             h_cell.number_format = '#,##0'
             h_cell.font          = DATA_FONT
             h_cell.fill          = WHITE_FILL
-            h_cell.alignment     = Alignment(horizontal='right', vertical='center')
+            h_cell.alignment     = Alignment(horizontal='center', vertical='center')
 
             g_cell = ws.cell(row=cur_row, column=sc + 1)
             g_cell.value         = int(round(gv)) if gv is not None else None
             g_cell.number_format = '#,##0'
             g_cell.font          = DATA_FONT
             g_cell.fill          = WHITE_FILL
-            g_cell.alignment     = Alignment(horizontal='right', vertical='center')
+            g_cell.alignment     = Alignment(horizontal='center', vertical='center')
 
             hold_cell = ws.cell(row=cur_row, column=sc + 2)
             if ho is not None:

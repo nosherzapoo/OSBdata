@@ -1,55 +1,75 @@
 /**
  * NY Gaming Data — Cloudflare Worker
  *
- * Paste this code into the Cloudflare Worker editor and deploy.
- * Then go to Settings → Variables → add a secret:
- *   Name:  GITHUB_TOKEN
- *   Value: your GitHub fine-grained PAT (Actions: Read & Write on OSBdata)
- *
- * NOTE: This uses the classic Service Worker format which works with the
- * default Cloudflare dashboard editor. GITHUB_TOKEN is exposed as a global
- * variable when set under Settings → Variables.
+ * Paste this into the Cloudflare Worker editor and click Save & Deploy.
+ * Then: Settings → Variables → Secrets → add GITHUB_TOKEN = your PAT
+ * After adding the secret, click Save & Deploy again to bind it.
  */
 
-addEventListener('fetch', event => {
-  event.respondWith(handleRequest(event.request));
+addEventListener('fetch', function(event) {
+  event.respondWith(
+    handleRequest(event.request).catch(function(err) {
+      // Catch-all: always return JSON with CORS headers, even on crashes
+      return new Response(JSON.stringify({ error: 'Worker error: ' + err.message }), {
+        status: 500,
+        headers: {
+          'Content-Type': 'application/json',
+          'Access-Control-Allow-Origin': '*',
+          'Access-Control-Allow-Methods': 'POST, OPTIONS',
+          'Access-Control-Allow-Headers': 'Content-Type',
+        },
+      });
+    })
+  );
 });
 
-const CORS = {
-  'Access-Control-Allow-Origin':  '*',
-  'Access-Control-Allow-Methods': 'POST, OPTIONS',
-  'Access-Control-Allow-Headers': 'Content-Type',
-};
-
-function jsonResponse(body, status) {
-  return new Response(JSON.stringify(body), {
-    status: status || 200,
-    headers: Object.assign({}, CORS, { 'Content-Type': 'application/json' }),
-  });
-}
-
 async function handleRequest(request) {
+  var cors = {
+    'Access-Control-Allow-Origin':  '*',
+    'Access-Control-Allow-Methods': 'POST, OPTIONS',
+    'Access-Control-Allow-Headers': 'Content-Type',
+  };
+
+  // Handle CORS preflight
   if (request.method === 'OPTIONS') {
-    return new Response(null, { headers: CORS });
+    return new Response(null, { status: 204, headers: cors });
   }
 
   if (request.method !== 'POST') {
-    return jsonResponse({ error: 'Method not allowed' }, 405);
+    return new Response(JSON.stringify({ error: 'Method not allowed' }), {
+      status: 405,
+      headers: Object.assign({ 'Content-Type': 'application/json' }, cors),
+    });
   }
 
+  // Parse email from request body
   var email;
   try {
     var body = await request.json();
     email = (body.email || '').trim().toLowerCase();
   } catch (e) {
-    return jsonResponse({ error: 'Invalid request body' }, 400);
+    return new Response(JSON.stringify({ error: 'Invalid JSON body' }), {
+      status: 400,
+      headers: Object.assign({ 'Content-Type': 'application/json' }, cors),
+    });
   }
 
   if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-    return jsonResponse({ error: 'Invalid email address' }, 400);
+    return new Response(JSON.stringify({ error: 'Invalid email address' }), {
+      status: 400,
+      headers: Object.assign({ 'Content-Type': 'application/json' }, cors),
+    });
   }
 
-  // GITHUB_TOKEN is available as a global variable from Settings → Variables
+  // Check that GITHUB_TOKEN secret is bound
+  if (typeof GITHUB_TOKEN === 'undefined') {
+    return new Response(JSON.stringify({ error: 'GITHUB_TOKEN secret not configured. Add it under Settings → Variables in the Cloudflare dashboard, then redeploy.' }), {
+      status: 500,
+      headers: Object.assign({ 'Content-Type': 'application/json' }, cors),
+    });
+  }
+
+  // Trigger GitHub Actions workflow
   var ghRes = await fetch(
     'https://api.github.com/repos/nosherzapoo/OSBdata/actions/workflows/ny-gaming-manual.yml/dispatches',
     {
@@ -65,8 +85,15 @@ async function handleRequest(request) {
   );
 
   if (ghRes.status === 204) {
-    return jsonResponse({ success: true }, 200);
+    return new Response(JSON.stringify({ success: true }), {
+      status: 200,
+      headers: Object.assign({ 'Content-Type': 'application/json' }, cors),
+    });
   }
 
-  return jsonResponse({ error: 'Failed to trigger report. Please try again.' }, 500);
+  var errBody = await ghRes.text();
+  return new Response(JSON.stringify({ error: 'GitHub API error ' + ghRes.status + ': ' + errBody }), {
+    status: 500,
+    headers: Object.assign({ 'Content-Type': 'application/json' }, cors),
+  });
 }

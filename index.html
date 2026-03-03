@@ -200,13 +200,9 @@
   </div>
 
   <script>
-    // ── Paste your GitHub fine-grained PAT here ───────────────────────────────
-    const GITHUB_TOKEN  = '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';
+    // ── Paste your Cloudflare Worker URL after deploying ─────────────────────
+    const WORKER_URL = 'REPLACE_WITH_YOUR_CLOUDFLARE_WORKER_URL';
     // ─────────────────────────────────────────────────────────────────────────
-
-    const GITHUB_OWNER  = 'nosherzapoo';
-    const GITHUB_REPO   = 'OSBdata';
-    const WORKFLOW_FILE = 'ny-gaming-manual.yml';
 
     const form      = document.getElementById('reportForm');
     const statusEl  = document.getElementById('status');
@@ -222,30 +218,20 @@
       statusEl.innerHTML = '<span class="spinner"></span> Triggering report generation — expect an email in about 2 minutes…';
 
       try {
-        const res = await fetch(
-          `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/actions/workflows/${WORKFLOW_FILE}/dispatches`,
-          {
-            method: 'POST',
-            headers: {
-              'Authorization': `Bearer ${GITHUB_TOKEN}`,
-              'Accept':        'application/vnd.github.v3+json',
-              'Content-Type':  'application/json',
-            },
-            body: JSON.stringify({
-              ref:    'main',
-              inputs: { recipient_email: email },
-            }),
-          }
-        );
+        const res = await fetch(WORKER_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email }),
+        });
 
-        // GitHub returns 204 No Content on success
-        if (res.status === 204) {
+        const data = await res.json();
+
+        if (res.ok && data.success) {
           statusEl.className = 'status success';
           statusEl.textContent = `✓ Report requested. Check ${email} in about 2 minutes.`;
           form.reset();
         } else {
-          const errText = await res.text();
-          throw new Error(`GitHub API returned ${res.status}`);
+          throw new Error(data.error || 'Unknown error');
         }
       } catch (err) {
         statusEl.className = 'status error';

@@ -167,7 +167,7 @@ class NYGamingDataMonitor:
             'changes': changes
         }
     
-    def send_notification(self, comparison_result, excel_file=None):
+    def send_notification(self, comparison_result, excel_file=None, additional_files=None):
         """Send email notification about data changes."""
         if not self.email_user or not self.email_pass or not self.notification_email:
             logger.warning("Email credentials not configured - skipping notification")
@@ -183,19 +183,25 @@ class NYGamingDataMonitor:
             # Create email body
             body = self.create_email_body(comparison_result)
             msg.attach(MIMEText(body, 'html'))
-            
+
+            def attach_file(filepath, mime_type='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'):
+                if Path(filepath).exists():
+                    with open(filepath, "rb") as f:
+                        part = MIMEBase(*mime_type.split('/'))
+                        part.set_payload(f.read())
+                        encoders.encode_base64(part)
+                        part.add_header('Content-Disposition', f'attachment; filename={Path(filepath).name}')
+                        msg.attach(part)
+                    logger.info(f"📎 Attached: {filepath}")
+
             # Attach Excel analysis file if provided
-            if excel_file and Path(excel_file).exists():
-                with open(excel_file, "rb") as attachment:
-                    part = MIMEBase('application', 'vnd.openxmlformats-officedocument.spreadsheetml.sheet')
-                    part.set_payload(attachment.read())
-                    encoders.encode_base64(part)
-                    part.add_header(
-                        'Content-Disposition',
-                        f'attachment; filename= {excel_file}'
-                    )
-                    msg.attach(part)
-                logger.info(f"📎 Attached Excel analysis: {excel_file}")
+            if excel_file:
+                attach_file(excel_file)
+
+            # Attach any additional files (e.g. weekly exhibit)
+            if additional_files:
+                for f in additional_files:
+                    attach_file(f)
             
             # Also attach current data CSV
             if Path(self.current_data_file).exists():
@@ -422,9 +428,16 @@ class NYGamingDataMonitor:
         if force_send or comparison_result['changes'] or comparison_result['is_new_data']:
             # Create comprehensive Excel report
             excel_file = self.create_excel_report(current_data)
-            
-            # Send notification with Excel attachment
-            self.send_notification(comparison_result, excel_file)
+
+            # When running manually, also attach the weekly exhibit if it was generated
+            additional = []
+            exhibit_file = 'ny_gaming_weekly_exhibit.xlsx'
+            if force_send and Path(exhibit_file).exists():
+                additional.append(exhibit_file)
+                logger.info(f"📋 Including weekly exhibit in email: {exhibit_file}")
+
+            # Send notification with Excel attachment(s)
+            self.send_notification(comparison_result, excel_file, additional_files=additional or None)
             
             # Save current data as the new baseline for next comparison
             import shutil

@@ -33,6 +33,10 @@ jobs:
       run: |
         python extract_to_csv_v2.py
         
+    - name: Create weekly exhibit
+      run: |
+        python create_weekly_exhibit.py
+
     - name: Compare data and send notifications
       run: |
         python compare_data.py

@@ -181,17 +181,19 @@ def create_weekly_exhibit(data_file: str = 'ny_gaming_data.csv',
         sc    = 2 + idx * 3
         label = 'Statewide' if col_name == 'Statewide' else shorten(col_name)
         ws.merge_cells(start_row=1, start_column=sc, end_row=1, end_column=sc + 2)
-        # Left border on the first cell of the merge
-        ws.cell(row=1, column=sc).fill      = HEADER_FILL
-        ws.cell(row=1, column=sc).font      = HEADER_FONT
-        ws.cell(row=1, column=sc).alignment = Alignment(horizontal='center', vertical='center')
-        ws.cell(row=1, column=sc).border    = _bdr(left=_MG)
-        # Right border on the last cell of the merge (sc+2 = Hold column = group right edge)
+        # Value + style on the first cell of the merge
+        c = ws.cell(row=1, column=sc, value=label)
+        c.fill      = HEADER_FILL
+        c.font      = HEADER_FONT
+        c.alignment = Alignment(horizontal='center', vertical='center')
+        c.border    = _bdr(left=_MG)
+        # Right border on the last cell of the merge
         ws.cell(row=1, column=sc + 2).border = _bdr(right=_MG)
 
-    # ── Row 2: Handle / GGR / Hold sub-headers ────────────────────────────────
-    ws.cell(row=2, column=1).fill      = HEADER_FILL
-    ws.cell(row=2, column=1).font      = HEADER_FONT
+    # ── Row 2: Handle / GGR / Hold sub-headers (light gray) ──────────────────
+    ROW2_FONT = Font(color=BLACK, bold=True, size=10, name="Arial")
+    ws.cell(row=2, column=1).fill      = GRAY_FILL
+    ws.cell(row=2, column=1).font      = ROW2_FONT
     ws.cell(row=2, column=1).alignment = Alignment(horizontal='center', vertical='center')
     ws.cell(row=2, column=1).border    = cell_border(col=1, is_header_bottom=True)
 
@@ -199,8 +201,8 @@ def create_weekly_exhibit(data_file: str = 'ny_gaming_data.csv',
         for j, metric in enumerate(['Handle', 'GGR', 'Hold']):
             col = 2 + idx * 3 + j
             c = ws.cell(row=2, column=col, value=metric)
-            c.fill      = HEADER_FILL
-            c.font      = HEADER_FONT
+            c.fill      = GRAY_FILL
+            c.font      = ROW2_FONT
             c.alignment = Alignment(horizontal='center', vertical='center')
             c.border    = cell_border(col=col, is_header_bottom=True)
 

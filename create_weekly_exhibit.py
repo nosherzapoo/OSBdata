@@ -303,6 +303,18 @@ def create_weekly_exhibit(data_file: str = 'ny_gaming_data.csv',
 
         cur_row += 1
 
+    # ── Bottom border under the last data row (row 12) ───────────────────────
+    last_data_row = cur_row - 1
+    for col in range(1, last_col + 1):
+        c = ws.cell(row=last_data_row, column=col)
+        existing = c.border
+        c.border = Border(
+            left   = existing.left,
+            right  = existing.right,
+            top    = existing.top,
+            bottom = _MG,
+        )
+
     # ── Column widths ─────────────────────────────────────────────────────────
     ws.column_dimensions['A'].width = 13
     for idx in range(num_groups):

@@ -1,93 +1,5 @@
 [
   {
-    "timestamp": "2026-03-05T17:23:06.790543",
-    "comparison": {
-      "is_new_data": false,
-      "total_records": 1692,
-      "date_range": "2022-04-03 00:00:00 to 2026-03-01 00:00:00",
-      "brands": 9,
-      "changes": [
-        {
-          "type": "record_count",
-          "description": "Total records changed from 1685 to 1692",
-          "previous": 1685,
-          "current": 1692
-        },
-        {
-          "type": "date_range",
-          "description": "Date range changed from 2022-04-03 00:00:00 to 2026-02-22 00:00:00 to 2022-04-03 00:00:00 to 2026-03-01 00:00:00",
-          "previous": "(Timestamp('2022-04-03 00:00:00'), Timestamp('2026-02-22 00:00:00'))",
-          "current": "(Timestamp('2022-04-03 00:00:00'), Timestamp('2026-03-01 00:00:00'))"
-        },
-        {
-          "type": "new_weekly_data",
-          "description": "DraftKings Sport Book: New weekly data available",
-          "brand": "DraftKings Sport Book",
-          "new_date": "2026-03-01 00:00:00",
-          "previous_date": "2026-02-22 00:00:00"
-        },
-        {
-          "type": "new_weekly_data",
-          "description": "Bally Bet: New weekly data available",
-          "brand": "Bally Bet",
-          "new_date": "2026-03-01 00:00:00",
-          "previous_date": "2026-02-22 00:00:00"
-        },
-        {
-          "type": "new_weekly_data",
-          "description": "FanDuel: New weekly data available",
-          "brand": "FanDuel",
-          "new_date": "2026-03-01 00:00:00",
-          "previous_date": "2026-02-22 00:00:00"
-        },
-        {
-          "type": "new_weekly_data",
-          "description": "Rush Street Interactive: New weekly data available",
-          "brand": "Rush Street Interactive",
-          "new_date": "2026-03-01 00:00:00",
-          "previous_date": "2026-02-22 00:00:00"
-        },
-        {
-          "type": "new_weekly_data",
-          "description": "BetMGM: New weekly data available",
-          "brand": "BetMGM",
-          "new_date": "2026-03-01 00:00:00",
-          "previous_date": "2026-02-22 00:00:00"
-        },
-        {
-          "type": "significant_ggr_change",
-          "description": "BetMGM: GGR changed by 89.1% ($993,155 \u2192 $1,877,738)",
-          "brand": "BetMGM",
-          "change_percent": 89.06795859776635,
-          "previous_ggr": 993155.1300000018,
-          "current_ggr": 1877738.129999996
-        },
-        {
-          "type": "new_weekly_data",
-          "description": "Caesars Sport Book: New weekly data available",
-          "brand": "Caesars Sport Book",
-          "new_date": "2026-03-01 00:00:00",
-          "previous_date": "2026-02-22 00:00:00"
-        },
-        {
-          "type": "new_weekly_data",
-          "description": "Fanatics: New weekly data available",
-          "brand": "Fanatics",
-          "new_date": "2026-03-01 00:00:00",
-          "previous_date": "2026-02-22 00:00:00"
-        },
-        {
-          "type": "significant_ggr_change",
-          "description": "Fanatics: GGR changed by 29.1% ($3,471,520 \u2192 $4,480,674)",
-          "brand": "Fanatics",
-          "change_percent": 29.06951977872687,
-          "previous_ggr": 3471519.6800000034,
-          "current_ggr": 4480673.78
-        }
-      ]
-    }
-  },
-  {
     "timestamp": "2026-03-05T17:24:51.723805",
     "comparison": {
       "is_new_data": false,
@@ -1091,6 +1003,16 @@
   },
   {
     "timestamp": "2026-03-06T07:40:25.366065",
+    "comparison": {
+      "is_new_data": false,
+      "total_records": 1693,
+      "date_range": "2022-04-03 00:00:00 to 2026-03-01 00:00:00",
+      "brands": 9,
+      "changes": []
+    }
+  },
+  {
+    "timestamp": "2026-03-06T07:50:21.621485",
     "comparison": {
       "is_new_data": false,
       "total_records": 1693,

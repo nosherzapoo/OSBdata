@@ -1,43 +1,5 @@
 [
   {
-    "timestamp": "2026-03-13T18:50:25.554573",
-    "comparison": {
-      "is_new_data": false,
-      "total_records": 1694,
-      "date_range": "2022-04-03 00:00:00 to 2026-03-08 00:00:00",
-      "brands": 9,
-      "changes": [
-        {
-          "type": "record_count",
-          "description": "Total records changed from 1693 to 1694",
-          "previous": 1693,
-          "current": 1694
-        },
-        {
-          "type": "date_range",
-          "description": "Date range changed from 2022-04-03 00:00:00 to 2026-03-01 00:00:00 to 2022-04-03 00:00:00 to 2026-03-08 00:00:00",
-          "previous": "(Timestamp('2022-04-03 00:00:00'), Timestamp('2026-03-01 00:00:00'))",
-          "current": "(Timestamp('2022-04-03 00:00:00'), Timestamp('2026-03-08 00:00:00'))"
-        },
-        {
-          "type": "new_weekly_data",
-          "description": "Bally Bet: New weekly data available",
-          "brand": "Bally Bet",
-          "new_date": "2026-03-08 00:00:00",
-          "previous_date": "2026-03-01 00:00:00"
-        },
-        {
-          "type": "significant_ggr_change",
-          "description": "Bally Bet: GGR changed by 85.1% ($209,467 \u2192 $387,684)",
-          "brand": "Bally Bet",
-          "change_percent": 85.08110171515625,
-          "previous_ggr": 209467.21000000008,
-          "current_ggr": 387684.2200000001
-        }
-      ]
-    }
-  },
-  {
     "timestamp": "2026-03-13T18:57:10.907530",
     "comparison": {
       "is_new_data": false,
@@ -1114,6 +1076,16 @@
   },
   {
     "timestamp": "2026-03-14T09:40:24.774393",
+    "comparison": {
+      "is_new_data": false,
+      "total_records": 1701,
+      "date_range": "2022-04-03 00:00:00 to 2026-03-08 00:00:00",
+      "brands": 9,
+      "changes": []
+    }
+  },
+  {
+    "timestamp": "2026-03-14T09:50:23.465675",
     "comparison": {
       "is_new_data": false,
       "total_records": 1701,

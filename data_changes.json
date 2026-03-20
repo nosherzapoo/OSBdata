@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-03-19T23:50:24.797368",
-    "comparison": {
-      "is_new_data": false,
-      "total_records": 1701,
-      "date_range": "2022-04-03 00:00:00 to 2026-03-08 00:00:00",
-      "brands": 9,
-      "changes": []
-    }
-  },
-  {
     "timestamp": "2026-03-20T00:00:25.000236",
     "comparison": {
       "is_new_data": false,
@@ -1054,6 +1044,51 @@
       "date_range": "2022-04-03 00:00:00 to 2026-03-15 00:00:00",
       "brands": 9,
       "changes": []
+    }
+  },
+  {
+    "timestamp": "2026-03-20T14:17:56.475260",
+    "comparison": {
+      "is_new_data": false,
+      "total_records": 1701,
+      "date_range": "2022-04-03 00:00:00 to 2026-03-15 00:00:00",
+      "brands": 9,
+      "changes": [
+        {
+          "type": "record_count",
+          "description": "Total records changed from 1697 to 1701",
+          "previous": 1697,
+          "current": 1701
+        },
+        {
+          "type": "new_weekly_data",
+          "description": "Caesars Sport Book: New weekly data available",
+          "brand": "Caesars Sport Book",
+          "new_date": "2026-03-15 00:00:00",
+          "previous_date": "2026-03-08 00:00:00"
+        },
+        {
+          "type": "new_weekly_data",
+          "description": "ESPN Bet: New weekly data available",
+          "brand": "ESPN Bet",
+          "new_date": "2026-03-15 00:00:00",
+          "previous_date": "2026-03-08 00:00:00"
+        },
+        {
+          "type": "new_weekly_data",
+          "description": "FanDuel: New weekly data available",
+          "brand": "FanDuel",
+          "new_date": "2026-03-15 00:00:00",
+          "previous_date": "2026-03-08 00:00:00"
+        },
+        {
+          "type": "new_weekly_data",
+          "description": "Rush Street Interactive: New weekly data available",
+          "brand": "Rush Street Interactive",
+          "new_date": "2026-03-15 00:00:00",
+          "previous_date": "2026-03-08 00:00:00"
+        }
+      ]
     }
   }
 ]

@@ -1,44 +1,5 @@
 [
   {
-    "timestamp": "2026-03-20T14:10:24.731262",
-    "comparison": {
-      "is_new_data": false,
-      "total_records": 1697,
-      "date_range": "2022-04-03 00:00:00 to 2026-03-15 00:00:00",
-      "brands": 9,
-      "changes": [
-        {
-          "type": "record_count",
-          "description": "Total records changed from 1702 to 1697",
-          "previous": 1702,
-          "current": 1697
-        },
-        {
-          "type": "new_weekly_data",
-          "description": "DraftKings Sport Book: New weekly data available",
-          "brand": "DraftKings Sport Book",
-          "new_date": "2026-03-15 00:00:00",
-          "previous_date": "2026-03-08 00:00:00"
-        },
-        {
-          "type": "significant_ggr_change",
-          "description": "DraftKings Sport Book: GGR changed by -80.3% ($18,276,652 \u2192 $3,602,831)",
-          "brand": "DraftKings Sport Book",
-          "change_percent": -80.28725040336971,
-          "previous_ggr": 18276652.49,
-          "current_ggr": 3602830.739999993
-        },
-        {
-          "type": "new_weekly_data",
-          "description": "Bally Bet: New weekly data available",
-          "brand": "Bally Bet",
-          "new_date": "2026-03-15 00:00:00",
-          "previous_date": "2026-03-08 00:00:00"
-        }
-      ]
-    }
-  },
-  {
     "timestamp": "2026-03-20T14:12:59.670126",
     "comparison": {
       "is_new_data": false,
@@ -1055,6 +1016,16 @@
   },
   {
     "timestamp": "2026-03-21T04:40:23.825835",
+    "comparison": {
+      "is_new_data": false,
+      "total_records": 1701,
+      "date_range": "2022-04-03 00:00:00 to 2026-03-15 00:00:00",
+      "brands": 9,
+      "changes": []
+    }
+  },
+  {
+    "timestamp": "2026-03-21T04:50:26.317401",
     "comparison": {
       "is_new_data": false,
       "total_records": 1701,

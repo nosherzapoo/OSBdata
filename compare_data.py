@@ -441,11 +441,13 @@ class NYGamingDataMonitor:
             
             # Save current data as the new baseline for next comparison
             import shutil
+            Path(self.previous_data_file).parent.mkdir(parents=True, exist_ok=True)
             shutil.copy2(self.current_data_file, self.previous_data_file)
             logger.info("📁 Updated baseline data for next comparison")
         else:
             # Still update the baseline even if no changes
             import shutil
+            Path(self.previous_data_file).parent.mkdir(parents=True, exist_ok=True)
             shutil.copy2(self.current_data_file, self.previous_data_file)
             logger.info("📁 Updated baseline data (no changes detected)")
         

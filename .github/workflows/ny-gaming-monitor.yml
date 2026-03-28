@@ -16,8 +16,7 @@ on:
       
       # Every hour on Friday from 1PM to 11PM
       - cron: '0 13-23 * * 5'
-  #cron-job.org, runs this code every 10 mins
-  workflow_dispatch: # Allow manual triggers
+  workflow_dispatch:
 
 # Grant the workflow permission to push commits using GITHUB_TOKEN
 permissions:
@@ -67,10 +66,10 @@ jobs:
         cp ny_gaming_data.csv data_archive/$TIMESTAMP/
         cp -r NY_State_Reports_* data_archive/$TIMESTAMP/ 2>/dev/null || true
         
-        # Keep only the 10 most recent archives (delete older ones)
+        # Keep only the 10 most recent timestamped archives (never touch 'latest/')
         cd data_archive
-        if [ $(ls -d */ 2>/dev/null | wc -l) -gt 10 ]; then
-          ls -t -d */ | tail -n +11 | xargs rm -rf
+        if [ $(ls -d [0-9]*/ 2>/dev/null | wc -l) -gt 10 ]; then
+          ls -t -d [0-9]*/ | tail -n +11 | xargs rm -rf
         fi
         
     - name: Commit and push changes

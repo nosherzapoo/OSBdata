@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-03-31T00:10:21.303825",
-    "comparison": {
-      "is_new_data": false,
-      "total_records": 1724,
-      "date_range": "2022-04-03 00:00:00 to 2026-03-22 00:00:00",
-      "brands": 9,
-      "changes": []
-    }
-  },
-  {
     "timestamp": "2026-03-31T00:20:22.047258",
     "comparison": {
       "is_new_data": false,
@@ -997,6 +987,30 @@
       "date_range": "2022-04-03 00:00:00 to 2026-03-22 00:00:00",
       "brands": 9,
       "changes": []
+    }
+  },
+  {
+    "timestamp": "2026-03-31T17:00:25.751417",
+    "comparison": {
+      "is_new_data": false,
+      "total_records": 1572,
+      "date_range": "2022-04-03 00:00:00 to 2026-03-22 00:00:00",
+      "brands": 8,
+      "changes": [
+        {
+          "type": "record_count",
+          "description": "Total records changed from 1724 to 1572",
+          "previous": 1724,
+          "current": 1572
+        },
+        {
+          "type": "removed_brands",
+          "description": "Brands removed: Resorts World Bet",
+          "brands": [
+            "Resorts World Bet"
+          ]
+        }
+      ]
     }
   }
 ]

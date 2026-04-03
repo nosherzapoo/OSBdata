@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-04-03T01:00:25.663865",
-    "comparison": {
-      "is_new_data": false,
-      "total_records": 1572,
-      "date_range": "2022-04-03 00:00:00 to 2026-03-22 00:00:00",
-      "brands": 8,
-      "changes": []
-    }
-  },
-  {
     "timestamp": "2026-04-03T01:10:22.769086",
     "comparison": {
       "is_new_data": false,
@@ -1104,6 +1094,30 @@
           "brand": "FanDuel",
           "new_date": "2026-03-29 00:00:00",
           "previous_date": "2026-03-15 00:00:00"
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-04-03T17:40:24.601984",
+    "comparison": {
+      "is_new_data": false,
+      "total_records": 1573,
+      "date_range": "2022-04-03 00:00:00 to 2026-03-29 00:00:00",
+      "brands": 8,
+      "changes": [
+        {
+          "type": "record_count",
+          "description": "Total records changed from 1572 to 1573",
+          "previous": 1572,
+          "current": 1573
+        },
+        {
+          "type": "new_weekly_data",
+          "description": "ESPN Bet: New weekly data available",
+          "brand": "ESPN Bet",
+          "new_date": "2026-03-29 00:00:00",
+          "previous_date": "2026-03-22 00:00:00"
         }
       ]
     }

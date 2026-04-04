@@ -1,51 +1,5 @@
 [
   {
-    "timestamp": "2026-04-03T17:30:28.491943",
-    "comparison": {
-      "is_new_data": false,
-      "total_records": 1572,
-      "date_range": "2022-04-03 00:00:00 to 2026-03-29 00:00:00",
-      "brands": 8,
-      "changes": [
-        {
-          "type": "record_count",
-          "description": "Total records changed from 1568 to 1572",
-          "previous": 1568,
-          "current": 1572
-        },
-        {
-          "type": "new_weekly_data",
-          "description": "BetMGM: New weekly data available",
-          "brand": "BetMGM",
-          "new_date": "2026-03-29 00:00:00",
-          "previous_date": "2026-03-22 00:00:00"
-        },
-        {
-          "type": "significant_ggr_change",
-          "description": "BetMGM: GGR changed by -72.3% ($3,101,211 \u2192 $859,832)",
-          "brand": "BetMGM",
-          "change_percent": -72.27430402322413,
-          "previous_ggr": 3101211.2399999998,
-          "current_ggr": 859832.4000000008
-        },
-        {
-          "type": "new_weekly_data",
-          "description": "DraftKings Sport Book: New weekly data available",
-          "brand": "DraftKings Sport Book",
-          "new_date": "2026-03-29 00:00:00",
-          "previous_date": "2026-03-22 00:00:00"
-        },
-        {
-          "type": "new_weekly_data",
-          "description": "FanDuel: New weekly data available",
-          "brand": "FanDuel",
-          "new_date": "2026-03-29 00:00:00",
-          "previous_date": "2026-03-15 00:00:00"
-        }
-      ]
-    }
-  },
-  {
     "timestamp": "2026-04-03T17:40:24.601984",
     "comparison": {
       "is_new_data": false,
@@ -1041,6 +995,16 @@
   },
   {
     "timestamp": "2026-04-04T10:00:28.859678",
+    "comparison": {
+      "is_new_data": false,
+      "total_records": 1573,
+      "date_range": "2022-04-03 00:00:00 to 2026-03-29 00:00:00",
+      "brands": 8,
+      "changes": []
+    }
+  },
+  {
+    "timestamp": "2026-04-04T10:10:24.436599",
     "comparison": {
       "is_new_data": false,
       "total_records": 1573,

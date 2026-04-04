@@ -1,29 +1,5 @@
 [
   {
-    "timestamp": "2026-04-03T17:40:24.601984",
-    "comparison": {
-      "is_new_data": false,
-      "total_records": 1573,
-      "date_range": "2022-04-03 00:00:00 to 2026-03-29 00:00:00",
-      "brands": 8,
-      "changes": [
-        {
-          "type": "record_count",
-          "description": "Total records changed from 1572 to 1573",
-          "previous": 1572,
-          "current": 1573
-        },
-        {
-          "type": "new_weekly_data",
-          "description": "ESPN Bet: New weekly data available",
-          "brand": "ESPN Bet",
-          "new_date": "2026-03-29 00:00:00",
-          "previous_date": "2026-03-22 00:00:00"
-        }
-      ]
-    }
-  },
-  {
     "timestamp": "2026-04-03T17:50:24.637468",
     "comparison": {
       "is_new_data": false,
@@ -1005,6 +981,16 @@
   },
   {
     "timestamp": "2026-04-04T10:10:24.436599",
+    "comparison": {
+      "is_new_data": false,
+      "total_records": 1573,
+      "date_range": "2022-04-03 00:00:00 to 2026-03-29 00:00:00",
+      "brands": 8,
+      "changes": []
+    }
+  },
+  {
+    "timestamp": "2026-04-04T10:20:20.504587",
     "comparison": {
       "is_new_data": false,
       "total_records": 1573,

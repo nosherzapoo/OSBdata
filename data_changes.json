@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-04-16T23:00:32.455469",
-    "comparison": {
-      "is_new_data": false,
-      "total_records": 1581,
-      "date_range": "2022-04-03 00:00:00 to 2026-04-05 00:00:00",
-      "brands": 8,
-      "changes": []
-    }
-  },
-  {
     "timestamp": "2026-04-16T23:10:24.880971",
     "comparison": {
       "is_new_data": false,
@@ -1057,6 +1047,37 @@
           "type": "new_weekly_data",
           "description": "DraftKings Sport Book: New weekly data available",
           "brand": "DraftKings Sport Book",
+          "new_date": "2026-04-12 00:00:00",
+          "previous_date": "2026-04-05 00:00:00"
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-04-17T15:40:23.868207",
+    "comparison": {
+      "is_new_data": false,
+      "total_records": 1587,
+      "date_range": "2022-04-03 00:00:00 to 2026-04-12 00:00:00",
+      "brands": 8,
+      "changes": [
+        {
+          "type": "record_count",
+          "description": "Total records changed from 1585 to 1587",
+          "previous": 1585,
+          "current": 1587
+        },
+        {
+          "type": "new_weekly_data",
+          "description": "FanDuel: New weekly data available",
+          "brand": "FanDuel",
+          "new_date": "2026-04-12 00:00:00",
+          "previous_date": "2026-04-05 00:00:00"
+        },
+        {
+          "type": "new_weekly_data",
+          "description": "Fanatics: New weekly data available",
+          "brand": "Fanatics",
           "new_date": "2026-04-12 00:00:00",
           "previous_date": "2026-04-05 00:00:00"
         }

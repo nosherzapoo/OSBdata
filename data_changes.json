@@ -1,44 +1,5 @@
 [
   {
-    "timestamp": "2026-04-17T15:50:21.619078",
-    "comparison": {
-      "is_new_data": false,
-      "total_records": 1589,
-      "date_range": "2022-04-03 00:00:00 to 2026-04-12 00:00:00",
-      "brands": 8,
-      "changes": [
-        {
-          "type": "record_count",
-          "description": "Total records changed from 1587 to 1589",
-          "previous": 1587,
-          "current": 1589
-        },
-        {
-          "type": "new_weekly_data",
-          "description": "ESPN Bet: New weekly data available",
-          "brand": "ESPN Bet",
-          "new_date": "2026-04-12 00:00:00",
-          "previous_date": "2026-04-05 00:00:00"
-        },
-        {
-          "type": "significant_ggr_change",
-          "description": "ESPN Bet: GGR changed by -62.1% ($1,251,339 \u2192 $474,038)",
-          "brand": "ESPN Bet",
-          "change_percent": -62.117536481711575,
-          "previous_ggr": 1251338.63,
-          "current_ggr": 474037.90000000014
-        },
-        {
-          "type": "new_weekly_data",
-          "description": "Rush Street Interactive: New weekly data available",
-          "brand": "Rush Street Interactive",
-          "new_date": "2026-04-12 00:00:00",
-          "previous_date": "2026-04-05 00:00:00"
-        }
-      ]
-    }
-  },
-  {
     "timestamp": "2026-04-17T16:00:28.236680",
     "comparison": {
       "is_new_data": false,
@@ -1020,6 +981,16 @@
   },
   {
     "timestamp": "2026-04-18T08:20:24.956174",
+    "comparison": {
+      "is_new_data": false,
+      "total_records": 1589,
+      "date_range": "2022-04-03 00:00:00 to 2026-04-12 00:00:00",
+      "brands": 8,
+      "changes": []
+    }
+  },
+  {
+    "timestamp": "2026-04-18T08:30:27.028393",
     "comparison": {
       "is_new_data": false,
       "total_records": 1589,

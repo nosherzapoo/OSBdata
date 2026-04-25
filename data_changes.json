@@ -1,35 +1,5 @@
 [
   {
-    "timestamp": "2026-04-24T16:30:27.010157",
-    "comparison": {
-      "is_new_data": false,
-      "total_records": 1590,
-      "date_range": "2022-04-03 00:00:00 to 2026-04-19 00:00:00",
-      "brands": 8,
-      "changes": [
-        {
-          "type": "record_count",
-          "description": "Total records changed from 1589 to 1590",
-          "previous": 1589,
-          "current": 1590
-        },
-        {
-          "type": "date_range",
-          "description": "Date range changed from 2022-04-03 00:00:00 to 2026-04-12 00:00:00 to 2022-04-03 00:00:00 to 2026-04-19 00:00:00",
-          "previous": "(Timestamp('2022-04-03 00:00:00'), Timestamp('2026-04-12 00:00:00'))",
-          "current": "(Timestamp('2022-04-03 00:00:00'), Timestamp('2026-04-19 00:00:00'))"
-        },
-        {
-          "type": "new_weekly_data",
-          "description": "Bally Bet: New weekly data available",
-          "brand": "Bally Bet",
-          "new_date": "2026-04-19 00:00:00",
-          "previous_date": "2026-04-12 00:00:00"
-        }
-      ]
-    }
-  },
-  {
     "timestamp": "2026-04-24T16:40:22.451829",
     "comparison": {
       "is_new_data": false,
@@ -1089,6 +1059,16 @@
   },
   {
     "timestamp": "2026-04-25T08:40:26.631695",
+    "comparison": {
+      "is_new_data": false,
+      "total_records": 1597,
+      "date_range": "2022-04-03 00:00:00 to 2026-04-19 00:00:00",
+      "brands": 8,
+      "changes": []
+    }
+  },
+  {
+    "timestamp": "2026-04-25T08:50:20.709114",
     "comparison": {
       "is_new_data": false,
       "total_records": 1597,

@@ -1,36 +1,5 @@
 [
   {
-    "timestamp": "2026-04-24T16:40:22.451829",
-    "comparison": {
-      "is_new_data": false,
-      "total_records": 1592,
-      "date_range": "2022-04-03 00:00:00 to 2026-04-19 00:00:00",
-      "brands": 8,
-      "changes": [
-        {
-          "type": "record_count",
-          "description": "Total records changed from 1590 to 1592",
-          "previous": 1590,
-          "current": 1592
-        },
-        {
-          "type": "new_weekly_data",
-          "description": "BetMGM: New weekly data available",
-          "brand": "BetMGM",
-          "new_date": "2026-04-19 00:00:00",
-          "previous_date": "2026-04-12 00:00:00"
-        },
-        {
-          "type": "new_weekly_data",
-          "description": "Caesars Sport Book: New weekly data available",
-          "brand": "Caesars Sport Book",
-          "new_date": "2026-04-19 00:00:00",
-          "previous_date": "2026-04-12 00:00:00"
-        }
-      ]
-    }
-  },
-  {
     "timestamp": "2026-04-24T16:45:34.097981",
     "comparison": {
       "is_new_data": false,
@@ -1069,6 +1038,16 @@
   },
   {
     "timestamp": "2026-04-25T08:50:20.709114",
+    "comparison": {
+      "is_new_data": false,
+      "total_records": 1597,
+      "date_range": "2022-04-03 00:00:00 to 2026-04-19 00:00:00",
+      "brands": 8,
+      "changes": []
+    }
+  },
+  {
+    "timestamp": "2026-04-25T09:00:27.293976",
     "comparison": {
       "is_new_data": false,
       "total_records": 1597,

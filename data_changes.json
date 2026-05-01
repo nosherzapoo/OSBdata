@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-05-01T00:10:35.934136",
-    "comparison": {
-      "is_new_data": false,
-      "total_records": 1597,
-      "date_range": "2022-04-03 00:00:00 to 2026-04-19 00:00:00",
-      "brands": 8,
-      "changes": []
-    }
-  },
-  {
     "timestamp": "2026-05-01T00:20:24.660139",
     "comparison": {
       "is_new_data": false,
@@ -1028,6 +1018,59 @@
           "type": "new_weekly_data",
           "description": "DraftKings Sport Book: New weekly data available",
           "brand": "DraftKings Sport Book",
+          "new_date": "2026-04-26 00:00:00",
+          "previous_date": "2026-04-19 00:00:00"
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-05-01T16:44:11.490488",
+    "comparison": {
+      "is_new_data": false,
+      "total_records": 1603,
+      "date_range": "2022-04-03 00:00:00 to 2026-04-26 00:00:00",
+      "brands": 8,
+      "changes": [
+        {
+          "type": "record_count",
+          "description": "Total records changed from 1599 to 1603",
+          "previous": 1599,
+          "current": 1603
+        },
+        {
+          "type": "new_weekly_data",
+          "description": "Rush Street Interactive: New weekly data available",
+          "brand": "Rush Street Interactive",
+          "new_date": "2026-04-26 00:00:00",
+          "previous_date": "2026-04-19 00:00:00"
+        },
+        {
+          "type": "significant_ggr_change",
+          "description": "Rush Street Interactive: GGR changed by 20.1% ($1,123,094 \u2192 $1,348,556)",
+          "brand": "Rush Street Interactive",
+          "change_percent": 20.075077585433988,
+          "previous_ggr": 1123094.189999999,
+          "current_ggr": 1348556.2200000002
+        },
+        {
+          "type": "new_weekly_data",
+          "description": "Fanatics: New weekly data available",
+          "brand": "Fanatics",
+          "new_date": "2026-04-26 00:00:00",
+          "previous_date": "2026-04-19 00:00:00"
+        },
+        {
+          "type": "new_weekly_data",
+          "description": "FanDuel: New weekly data available",
+          "brand": "FanDuel",
+          "new_date": "2026-04-26 00:00:00",
+          "previous_date": "2026-04-19 00:00:00"
+        },
+        {
+          "type": "new_weekly_data",
+          "description": "Caesars Sport Book: New weekly data available",
+          "brand": "Caesars Sport Book",
           "new_date": "2026-04-26 00:00:00",
           "previous_date": "2026-04-19 00:00:00"
         }

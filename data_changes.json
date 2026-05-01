@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-05-01T00:20:24.660139",
-    "comparison": {
-      "is_new_data": false,
-      "total_records": 1597,
-      "date_range": "2022-04-03 00:00:00 to 2026-04-19 00:00:00",
-      "brands": 8,
-      "changes": []
-    }
-  },
-  {
     "timestamp": "2026-05-01T00:30:25.477503",
     "comparison": {
       "is_new_data": false,
@@ -1073,6 +1063,38 @@
           "brand": "Caesars Sport Book",
           "new_date": "2026-04-26 00:00:00",
           "previous_date": "2026-04-19 00:00:00"
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-05-01T16:50:23.670527",
+    "comparison": {
+      "is_new_data": false,
+      "total_records": 1560,
+      "date_range": "2022-04-03 00:00:00 to 2026-04-26 00:00:00",
+      "brands": 8,
+      "changes": [
+        {
+          "type": "record_count",
+          "description": "Total records changed from 1603 to 1560",
+          "previous": 1603,
+          "current": 1560
+        },
+        {
+          "type": "new_weekly_data",
+          "description": "BetMGM: New weekly data available",
+          "brand": "BetMGM",
+          "new_date": "2026-04-26 00:00:00",
+          "previous_date": "2026-04-19 00:00:00"
+        },
+        {
+          "type": "significant_ggr_change",
+          "description": "BetMGM: GGR changed by -91.1% ($3,599,704 \u2192 $321,419)",
+          "brand": "BetMGM",
+          "change_percent": -91.07096167785228,
+          "previous_ggr": 3599703.78,
+          "current_ggr": 321418.93
         }
       ]
     }

@@ -1,50 +1,5 @@
 [
   {
-    "timestamp": "2026-05-01T16:40:25.018055",
-    "comparison": {
-      "is_new_data": false,
-      "total_records": 1599,
-      "date_range": "2022-04-03 00:00:00 to 2026-04-26 00:00:00",
-      "brands": 8,
-      "changes": [
-        {
-          "type": "record_count",
-          "description": "Total records changed from 1597 to 1599",
-          "previous": 1597,
-          "current": 1599
-        },
-        {
-          "type": "date_range",
-          "description": "Date range changed from 2022-04-03 00:00:00 to 2026-04-19 00:00:00 to 2022-04-03 00:00:00 to 2026-04-26 00:00:00",
-          "previous": "(Timestamp('2022-04-03 00:00:00'), Timestamp('2026-04-19 00:00:00'))",
-          "current": "(Timestamp('2022-04-03 00:00:00'), Timestamp('2026-04-26 00:00:00'))"
-        },
-        {
-          "type": "new_weekly_data",
-          "description": "Bally Bet: New weekly data available",
-          "brand": "Bally Bet",
-          "new_date": "2026-04-26 00:00:00",
-          "previous_date": "2026-04-19 00:00:00"
-        },
-        {
-          "type": "significant_ggr_change",
-          "description": "Bally Bet: GGR changed by 50.5% ($213,537 \u2192 $321,419)",
-          "brand": "Bally Bet",
-          "change_percent": 50.521528251446966,
-          "previous_ggr": 213536.85000000003,
-          "current_ggr": 321418.93
-        },
-        {
-          "type": "new_weekly_data",
-          "description": "DraftKings Sport Book: New weekly data available",
-          "brand": "DraftKings Sport Book",
-          "new_date": "2026-04-26 00:00:00",
-          "previous_date": "2026-04-19 00:00:00"
-        }
-      ]
-    }
-  },
-  {
     "timestamp": "2026-05-01T16:44:11.490488",
     "comparison": {
       "is_new_data": false,
@@ -1091,6 +1046,16 @@
   },
   {
     "timestamp": "2026-05-02T08:50:24.620892",
+    "comparison": {
+      "is_new_data": false,
+      "total_records": 1560,
+      "date_range": "2022-04-03 00:00:00 to 2026-04-26 00:00:00",
+      "brands": 8,
+      "changes": []
+    }
+  },
+  {
+    "timestamp": "2026-05-02T09:00:23.188475",
     "comparison": {
       "is_new_data": false,
       "total_records": 1560,

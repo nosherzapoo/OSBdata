@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-05-07T23:00:36.744184",
-    "comparison": {
-      "is_new_data": false,
-      "total_records": 1560,
-      "date_range": "2022-04-03 00:00:00 to 2026-04-26 00:00:00",
-      "brands": 8,
-      "changes": []
-    }
-  },
-  {
     "timestamp": "2026-05-07T23:10:25.099619",
     "comparison": {
       "is_new_data": false,
@@ -1075,6 +1065,75 @@
           "change_percent": 1075.5578366215084,
           "previous_ggr": 321418.93,
           "current_ggr": 3778465.420000001
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-05-08T15:40:23.930398",
+    "comparison": {
+      "is_new_data": false,
+      "total_records": 1556,
+      "date_range": "2022-04-03 00:00:00 to 2026-05-03 00:00:00",
+      "brands": 8,
+      "changes": [
+        {
+          "type": "record_count",
+          "description": "Total records changed from 1608 to 1556",
+          "previous": 1608,
+          "current": 1556
+        },
+        {
+          "type": "new_weekly_data",
+          "description": "Rush Street Interactive: New weekly data available",
+          "brand": "Rush Street Interactive",
+          "new_date": "2025-06-15 00:00:00",
+          "previous_date": "2026-04-26 00:00:00"
+        },
+        {
+          "type": "significant_ggr_change",
+          "description": "Rush Street Interactive: GGR changed by -96.0% ($1,348,556 \u2192 $53,688)",
+          "brand": "Rush Street Interactive",
+          "change_percent": -96.01886453054215,
+          "previous_ggr": 1348556.2200000002,
+          "current_ggr": 53687.84999999999
+        },
+        {
+          "type": "new_weekly_data",
+          "description": "FanDuel: New weekly data available",
+          "brand": "FanDuel",
+          "new_date": "2026-05-03 00:00:00",
+          "previous_date": "2026-04-26 00:00:00"
+        },
+        {
+          "type": "new_weekly_data",
+          "description": "Caesars Sport Book: New weekly data available",
+          "brand": "Caesars Sport Book",
+          "new_date": "2026-05-03 00:00:00",
+          "previous_date": "2026-04-26 00:00:00"
+        },
+        {
+          "type": "significant_ggr_change",
+          "description": "Caesars Sport Book: GGR changed by -28.0% ($3,207,246 \u2192 $2,308,604)",
+          "brand": "Caesars Sport Book",
+          "change_percent": -28.019115043642884,
+          "previous_ggr": 3207245.6199999987,
+          "current_ggr": 2308603.7800000017
+        },
+        {
+          "type": "new_weekly_data",
+          "description": "ESPN Bet: New weekly data available",
+          "brand": "ESPN Bet",
+          "new_date": "2026-05-03 00:00:00",
+          "previous_date": "2026-04-19 00:00:00"
+        },
+        {
+          "type": "significant_ggr_change",
+          "description": "ESPN Bet: GGR changed by 26.0% ($576,207 \u2192 $726,274)",
+          "brand": "ESPN Bet",
+          "change_percent": 26.043977792848683,
+          "previous_ggr": 576207.1800000002,
+          "current_ggr": 726274.4499999998
         }
       ]
     }

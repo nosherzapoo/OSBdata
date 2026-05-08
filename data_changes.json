@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-05-07T22:50:22.970652",
-    "comparison": {
-      "is_new_data": false,
-      "total_records": 1560,
-      "date_range": "2022-04-03 00:00:00 to 2026-04-26 00:00:00",
-      "brands": 8,
-      "changes": []
-    }
-  },
-  {
     "timestamp": "2026-05-07T23:00:36.744184",
     "comparison": {
       "is_new_data": false,
@@ -1023,6 +1013,68 @@
           "change_percent": -59.90101143078284,
           "previous_ggr": 321418.93,
           "current_ggr": 128885.7400000001
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-05-08T15:30:33.329762",
+    "comparison": {
+      "is_new_data": false,
+      "total_records": 1608,
+      "date_range": "2022-04-03 00:00:00 to 2026-05-03 00:00:00",
+      "brands": 8,
+      "changes": [
+        {
+          "type": "record_count",
+          "description": "Total records changed from 1561 to 1608",
+          "previous": 1561,
+          "current": 1608
+        },
+        {
+          "type": "new_weekly_data",
+          "description": "Fanatics: New weekly data available",
+          "brand": "Fanatics",
+          "new_date": "2026-05-03 00:00:00",
+          "previous_date": "2026-04-26 00:00:00"
+        },
+        {
+          "type": "significant_ggr_change",
+          "description": "Fanatics: GGR changed by -53.8% ($5,765,686 \u2192 $2,663,170)",
+          "brand": "Fanatics",
+          "change_percent": -53.80999672233281,
+          "previous_ggr": 5765685.800000011,
+          "current_ggr": 2663170.459999997
+        },
+        {
+          "type": "new_weekly_data",
+          "description": "DraftKings Sport Book: New weekly data available",
+          "brand": "DraftKings Sport Book",
+          "new_date": "2026-05-03 00:00:00",
+          "previous_date": "2026-04-26 00:00:00"
+        },
+        {
+          "type": "significant_ggr_change",
+          "description": "DraftKings Sport Book: GGR changed by -33.0% ($20,911,447 \u2192 $14,003,270)",
+          "brand": "DraftKings Sport Book",
+          "change_percent": -33.03538714560203,
+          "previous_ggr": 20911447.29,
+          "current_ggr": 14003269.719999995
+        },
+        {
+          "type": "new_weekly_data",
+          "description": "BetMGM: New weekly data available",
+          "brand": "BetMGM",
+          "new_date": "2026-05-03 00:00:00",
+          "previous_date": "2026-04-26 00:00:00"
+        },
+        {
+          "type": "significant_ggr_change",
+          "description": "BetMGM: GGR changed by 1075.6% ($321,419 \u2192 $3,778,465)",
+          "brand": "BetMGM",
+          "change_percent": 1075.5578366215084,
+          "previous_ggr": 321418.93,
+          "current_ggr": 3778465.420000001
         }
       ]
     }

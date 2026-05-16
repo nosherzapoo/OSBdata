@@ -1,52 +1,5 @@
 [
   {
-    "timestamp": "2026-05-15T14:20:25.923061",
-    "comparison": {
-      "is_new_data": false,
-      "total_records": 1621,
-      "date_range": "2022-04-03 00:00:00 to 2026-05-10 00:00:00",
-      "brands": 8,
-      "changes": [
-        {
-          "type": "record_count",
-          "description": "Total records changed from 1619 to 1621",
-          "previous": 1619,
-          "current": 1621
-        },
-        {
-          "type": "new_weekly_data",
-          "description": "FanDuel: New weekly data available",
-          "brand": "FanDuel",
-          "new_date": "2026-05-10 00:00:00",
-          "previous_date": "2026-05-03 00:00:00"
-        },
-        {
-          "type": "significant_ggr_change",
-          "description": "FanDuel: GGR changed by 27.9% ($21,270,408 \u2192 $27,197,849)",
-          "brand": "FanDuel",
-          "change_percent": 27.867077920214612,
-          "previous_ggr": 21270407.780000005,
-          "current_ggr": 27197848.889999997
-        },
-        {
-          "type": "new_weekly_data",
-          "description": "ESPN Bet: New weekly data available",
-          "brand": "ESPN Bet",
-          "new_date": "2026-05-10 00:00:00",
-          "previous_date": "2026-05-03 00:00:00"
-        },
-        {
-          "type": "significant_ggr_change",
-          "description": "ESPN Bet: GGR changed by 64.9% ($726,274 \u2192 $1,197,326)",
-          "brand": "ESPN Bet",
-          "change_percent": 64.85862334823979,
-          "previous_ggr": 726274.4499999998,
-          "current_ggr": 1197326.0599999998
-        }
-      ]
-    }
-  },
-  {
     "timestamp": "2026-05-15T14:30:26.885721",
     "comparison": {
       "is_new_data": false,
@@ -1028,6 +981,16 @@
   },
   {
     "timestamp": "2026-05-16T06:40:21.351456",
+    "comparison": {
+      "is_new_data": false,
+      "total_records": 1621,
+      "date_range": "2022-04-03 00:00:00 to 2026-05-10 00:00:00",
+      "brands": 8,
+      "changes": []
+    }
+  },
+  {
+    "timestamp": "2026-05-16T06:50:24.228213",
     "comparison": {
       "is_new_data": false,
       "total_records": 1621,

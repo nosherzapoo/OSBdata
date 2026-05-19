@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-05-18T21:50:25.520181",
-    "comparison": {
-      "is_new_data": false,
-      "total_records": 1621,
-      "date_range": "2022-04-03 00:00:00 to 2026-05-10 00:00:00",
-      "brands": 8,
-      "changes": []
-    }
-  },
-  {
     "timestamp": "2026-05-18T22:00:28.155472",
     "comparison": {
       "is_new_data": false,
@@ -997,6 +987,30 @@
       "date_range": "2022-04-03 00:00:00 to 2026-05-10 00:00:00",
       "brands": 8,
       "changes": []
+    }
+  },
+  {
+    "timestamp": "2026-05-19T14:30:26.045120",
+    "comparison": {
+      "is_new_data": false,
+      "total_records": 1773,
+      "date_range": "2022-04-03 00:00:00 to 2026-05-10 00:00:00",
+      "brands": 9,
+      "changes": [
+        {
+          "type": "record_count",
+          "description": "Total records changed from 1621 to 1773",
+          "previous": 1621,
+          "current": 1773
+        },
+        {
+          "type": "new_brands",
+          "description": "New brands detected: Resorts World Bet",
+          "brands": [
+            "Resorts World Bet"
+          ]
+        }
+      ]
     }
   }
 ]

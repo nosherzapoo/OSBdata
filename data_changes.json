@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-05-21T22:40:23.257334",
-    "comparison": {
-      "is_new_data": false,
-      "total_records": 1773,
-      "date_range": "2022-04-03 00:00:00 to 2026-05-10 00:00:00",
-      "brands": 9,
-      "changes": []
-    }
-  },
-  {
     "timestamp": "2026-05-21T22:50:22.015839",
     "comparison": {
       "is_new_data": false,
@@ -1023,6 +1013,45 @@
           "change_percent": -35.1319440790735,
           "previous_ggr": 3264377.2499999995,
           "current_ggr": 2117538.0600000024
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-05-22T15:21:48.123899",
+    "comparison": {
+      "is_new_data": false,
+      "total_records": 1776,
+      "date_range": "2022-04-03 00:00:00 to 2026-05-17 00:00:00",
+      "brands": 9,
+      "changes": [
+        {
+          "type": "record_count",
+          "description": "Total records changed from 1774 to 1776",
+          "previous": 1774,
+          "current": 1776
+        },
+        {
+          "type": "new_weekly_data",
+          "description": "Rush Street Interactive: New weekly data available",
+          "brand": "Rush Street Interactive",
+          "new_date": "2026-05-17 00:00:00",
+          "previous_date": "2026-05-10 00:00:00"
+        },
+        {
+          "type": "significant_ggr_change",
+          "description": "Rush Street Interactive: GGR changed by -30.9% ($1,028,842 \u2192 $711,417)",
+          "brand": "Rush Street Interactive",
+          "change_percent": -30.852612669382513,
+          "previous_ggr": 1028841.6200000002,
+          "current_ggr": 711417.0999999999
+        },
+        {
+          "type": "new_weekly_data",
+          "description": "Fanatics: New weekly data available",
+          "brand": "Fanatics",
+          "new_date": "2026-05-17 00:00:00",
+          "previous_date": "2026-05-10 00:00:00"
         }
       ]
     }

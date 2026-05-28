@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-05-28T02:00:29.493169",
-    "comparison": {
-      "is_new_data": false,
-      "total_records": 1781,
-      "date_range": "2022-04-03 00:00:00 to 2026-05-17 00:00:00",
-      "brands": 9,
-      "changes": []
-    }
-  },
-  {
     "timestamp": "2026-05-28T02:10:30.759320",
     "comparison": {
       "is_new_data": false,
@@ -1059,6 +1049,53 @@
           "change_percent": 37.70697527512347,
           "previous_ggr": 711417.0999999999,
           "current_ggr": 979670.9700000002
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-05-28T18:36:04.757235",
+    "comparison": {
+      "is_new_data": false,
+      "total_records": 1788,
+      "date_range": "2022-04-03 00:00:00 to 2026-05-24 00:00:00",
+      "brands": 9,
+      "changes": [
+        {
+          "type": "record_count",
+          "description": "Total records changed from 1786 to 1788",
+          "previous": 1786,
+          "current": 1788
+        },
+        {
+          "type": "new_weekly_data",
+          "description": "Caesars Sport Book: New weekly data available",
+          "brand": "Caesars Sport Book",
+          "new_date": "2026-05-24 00:00:00",
+          "previous_date": "2026-05-17 00:00:00"
+        },
+        {
+          "type": "significant_ggr_change",
+          "description": "Caesars Sport Book: GGR changed by 22.4% ($2,117,538 \u2192 $2,592,544)",
+          "brand": "Caesars Sport Book",
+          "change_percent": 22.43197697235241,
+          "previous_ggr": 2117538.0600000024,
+          "current_ggr": 2592543.710000001
+        },
+        {
+          "type": "new_weekly_data",
+          "description": "Fanatics: New weekly data available",
+          "brand": "Fanatics",
+          "new_date": "2026-05-24 00:00:00",
+          "previous_date": "2026-05-17 00:00:00"
+        },
+        {
+          "type": "significant_ggr_change",
+          "description": "Fanatics: GGR changed by -52.6% ($5,668,234 \u2192 $2,686,435)",
+          "brand": "Fanatics",
+          "change_percent": -52.605422464650275,
+          "previous_ggr": 5668233.540000001,
+          "current_ggr": 2686435.339999999
         }
       ]
     }

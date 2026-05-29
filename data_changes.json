@@ -1,37 +1,5 @@
 [
   {
-    "timestamp": "2026-05-28T18:38:38.291441",
-    "comparison": {
-      "is_new_data": false,
-      "total_records": 1789,
-      "date_range": "2022-04-03 00:00:00 to 2026-05-24 00:00:00",
-      "brands": 9,
-      "changes": [
-        {
-          "type": "record_count",
-          "description": "Total records changed from 1788 to 1789",
-          "previous": 1788,
-          "current": 1789
-        },
-        {
-          "type": "new_weekly_data",
-          "description": "ESPN Bet: New weekly data available",
-          "brand": "ESPN Bet",
-          "new_date": "2026-05-24 00:00:00",
-          "previous_date": "2026-05-17 00:00:00"
-        },
-        {
-          "type": "significant_ggr_change",
-          "description": "ESPN Bet: GGR changed by 28.9% ($663,018 \u2192 $854,717)",
-          "brand": "ESPN Bet",
-          "change_percent": 28.913010395037293,
-          "previous_ggr": 663018.2999999997,
-          "current_ggr": 854716.8499999992
-        }
-      ]
-    }
-  },
-  {
     "timestamp": "2026-05-28T18:40:24.204677",
     "comparison": {
       "is_new_data": false,
@@ -1013,6 +981,16 @@
   },
   {
     "timestamp": "2026-05-29T11:00:26.255621",
+    "comparison": {
+      "is_new_data": false,
+      "total_records": 1789,
+      "date_range": "2022-04-03 00:00:00 to 2026-05-24 00:00:00",
+      "brands": 9,
+      "changes": []
+    }
+  },
+  {
+    "timestamp": "2026-05-29T11:10:27.894999",
     "comparison": {
       "is_new_data": false,
       "total_records": 1789,

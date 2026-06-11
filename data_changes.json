@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-06-11T02:40:21.748659",
-    "comparison": {
-      "is_new_data": false,
-      "total_records": 1797,
-      "date_range": "2022-04-03 00:00:00 to 2026-05-31 00:00:00",
-      "brands": 9,
-      "changes": []
-    }
-  },
-  {
     "timestamp": "2026-06-11T02:50:22.069020",
     "comparison": {
       "is_new_data": false,
@@ -997,6 +987,59 @@
       "date_range": "2022-04-03 00:00:00 to 2026-05-31 00:00:00",
       "brands": 9,
       "changes": []
+    }
+  },
+  {
+    "timestamp": "2026-06-11T19:20:26.090554",
+    "comparison": {
+      "is_new_data": false,
+      "total_records": 1799,
+      "date_range": "2022-04-03 00:00:00 to 2026-06-07 00:00:00",
+      "brands": 9,
+      "changes": [
+        {
+          "type": "record_count",
+          "description": "Total records changed from 1797 to 1799",
+          "previous": 1797,
+          "current": 1799
+        },
+        {
+          "type": "date_range",
+          "description": "Date range changed from 2022-04-03 00:00:00 to 2026-05-31 00:00:00 to 2022-04-03 00:00:00 to 2026-06-07 00:00:00",
+          "previous": "(Timestamp('2022-04-03 00:00:00'), Timestamp('2026-05-31 00:00:00'))",
+          "current": "(Timestamp('2022-04-03 00:00:00'), Timestamp('2026-06-07 00:00:00'))"
+        },
+        {
+          "type": "new_weekly_data",
+          "description": "Caesars Sport Book: New weekly data available",
+          "brand": "Caesars Sport Book",
+          "new_date": "2026-06-07 00:00:00",
+          "previous_date": "2026-05-31 00:00:00"
+        },
+        {
+          "type": "significant_ggr_change",
+          "description": "Caesars Sport Book: GGR changed by 173.6% ($1,275,369 \u2192 $3,488,825)",
+          "brand": "Caesars Sport Book",
+          "change_percent": 173.5541108183282,
+          "previous_ggr": 1275369.1799999988,
+          "current_ggr": 3488824.8200000003
+        },
+        {
+          "type": "new_weekly_data",
+          "description": "Bally Bet: New weekly data available",
+          "brand": "Bally Bet",
+          "new_date": "2026-06-07 00:00:00",
+          "previous_date": "2026-05-31 00:00:00"
+        },
+        {
+          "type": "significant_ggr_change",
+          "description": "Bally Bet: GGR changed by -28.8% ($244,748 \u2192 $174,175)",
+          "brand": "Bally Bet",
+          "change_percent": -28.83500978865774,
+          "previous_ggr": 244747.55000000005,
+          "current_ggr": 174174.57000000004
+        }
+      ]
     }
   }
 ]

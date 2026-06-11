@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-06-11T03:10:27.189168",
-    "comparison": {
-      "is_new_data": false,
-      "total_records": 1797,
-      "date_range": "2022-04-03 00:00:00 to 2026-05-31 00:00:00",
-      "brands": 9,
-      "changes": []
-    }
-  },
-  {
     "timestamp": "2026-06-11T03:20:24.421240",
     "comparison": {
       "is_new_data": false,
@@ -1081,6 +1071,53 @@
           "brand": "DraftKings Sport Book",
           "new_date": "2026-06-07 00:00:00",
           "previous_date": "2026-05-31 00:00:00"
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-06-11T19:36:54.907443",
+    "comparison": {
+      "is_new_data": false,
+      "total_records": 1804,
+      "date_range": "2022-04-03 00:00:00 to 2026-06-07 00:00:00",
+      "brands": 9,
+      "changes": [
+        {
+          "type": "record_count",
+          "description": "Total records changed from 1802 to 1804",
+          "previous": 1802,
+          "current": 1804
+        },
+        {
+          "type": "new_weekly_data",
+          "description": "ESPN Bet: New weekly data available",
+          "brand": "ESPN Bet",
+          "new_date": "2026-06-07 00:00:00",
+          "previous_date": "2026-05-31 00:00:00"
+        },
+        {
+          "type": "significant_ggr_change",
+          "description": "ESPN Bet: GGR changed by 74.5% ($484,212 \u2192 $844,766)",
+          "brand": "ESPN Bet",
+          "change_percent": 74.46213052919963,
+          "previous_ggr": 484211.81000000006,
+          "current_ggr": 844766.2400000002
+        },
+        {
+          "type": "new_weekly_data",
+          "description": "Rush Street Interactive: New weekly data available",
+          "brand": "Rush Street Interactive",
+          "new_date": "2026-06-07 00:00:00",
+          "previous_date": "2026-05-31 00:00:00"
+        },
+        {
+          "type": "significant_ggr_change",
+          "description": "Rush Street Interactive: GGR changed by 1027.3% ($78,997 \u2192 $890,553)",
+          "brand": "Rush Street Interactive",
+          "change_percent": 1027.3190383480892,
+          "previous_ggr": 78997.4000000006,
+          "current_ggr": 890552.7300000002
         }
       ]
     }

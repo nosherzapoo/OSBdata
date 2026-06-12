@@ -1,36 +1,5 @@
 [
   {
-    "timestamp": "2026-06-11T19:30:25.560095",
-    "comparison": {
-      "is_new_data": false,
-      "total_records": 1802,
-      "date_range": "2022-04-03 00:00:00 to 2026-06-07 00:00:00",
-      "brands": 9,
-      "changes": [
-        {
-          "type": "record_count",
-          "description": "Total records changed from 1800 to 1802",
-          "previous": 1800,
-          "current": 1802
-        },
-        {
-          "type": "new_weekly_data",
-          "description": "FanDuel: New weekly data available",
-          "brand": "FanDuel",
-          "new_date": "2026-06-07 00:00:00",
-          "previous_date": "2026-05-31 00:00:00"
-        },
-        {
-          "type": "new_weekly_data",
-          "description": "DraftKings Sport Book: New weekly data available",
-          "brand": "DraftKings Sport Book",
-          "new_date": "2026-06-07 00:00:00",
-          "previous_date": "2026-05-31 00:00:00"
-        }
-      ]
-    }
-  },
-  {
     "timestamp": "2026-06-11T19:36:54.907443",
     "comparison": {
       "is_new_data": false,
@@ -1071,6 +1040,16 @@
   },
   {
     "timestamp": "2026-06-12T11:50:27.239149",
+    "comparison": {
+      "is_new_data": false,
+      "total_records": 1805,
+      "date_range": "2022-04-03 00:00:00 to 2026-06-07 00:00:00",
+      "brands": 9,
+      "changes": []
+    }
+  },
+  {
+    "timestamp": "2026-06-12T12:00:29.796653",
     "comparison": {
       "is_new_data": false,
       "total_records": 1805,

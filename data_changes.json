@@ -1,37 +1,5 @@
 [
   {
-    "timestamp": "2026-06-11T19:25:10.663901",
-    "comparison": {
-      "is_new_data": false,
-      "total_records": 1800,
-      "date_range": "2022-04-03 00:00:00 to 2026-06-07 00:00:00",
-      "brands": 9,
-      "changes": [
-        {
-          "type": "record_count",
-          "description": "Total records changed from 1799 to 1800",
-          "previous": 1799,
-          "current": 1800
-        },
-        {
-          "type": "new_weekly_data",
-          "description": "Fanatics: New weekly data available",
-          "brand": "Fanatics",
-          "new_date": "2026-06-07 00:00:00",
-          "previous_date": "2026-05-31 00:00:00"
-        },
-        {
-          "type": "significant_ggr_change",
-          "description": "Fanatics: GGR changed by 31.5% ($3,296,357 \u2192 $4,335,793)",
-          "brand": "Fanatics",
-          "change_percent": 31.532877543877508,
-          "previous_ggr": 3296356.7900000047,
-          "current_ggr": 4335792.939999998
-        }
-      ]
-    }
-  },
-  {
     "timestamp": "2026-06-11T19:30:25.560095",
     "comparison": {
       "is_new_data": false,
@@ -1093,6 +1061,16 @@
   },
   {
     "timestamp": "2026-06-12T11:40:25.852679",
+    "comparison": {
+      "is_new_data": false,
+      "total_records": 1805,
+      "date_range": "2022-04-03 00:00:00 to 2026-06-07 00:00:00",
+      "brands": 9,
+      "changes": []
+    }
+  },
+  {
+    "timestamp": "2026-06-12T11:50:27.239149",
     "comparison": {
       "is_new_data": false,
       "total_records": 1805,

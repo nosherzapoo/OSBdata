@@ -24,9 +24,12 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(
 logger = logging.getLogger(__name__)
 
 # A PDF data row looks like:  03/29/26 $3,233,405 $317,181
-# (date, handle, GGR). GGR may be parenthesised to indicate a negative value.
+# A negative value is parenthesised with the $ inside the parens, e.g.
+# 06/14/26 $44,703,354 ($2,481,951). Each money token may therefore be wrapped
+# in ( ) and prefixed with $; _parse_money() interprets the parentheses as a
+# negative sign.
 PDF_ROW_RE = re.compile(
-    r'^(\d{2}/\d{2}/\d{2})\s+\$?\(?([\d,]+)\)?\s+\$?(\(?[\d,]+\)?)\s*$'
+    r'^(\d{2}/\d{2}/\d{2})\s+(\(?\$?[\d,]+\)?)\s+(\(?\$?[\d,]+\)?)\s*$'
 )
 
 
@@ -87,16 +90,29 @@ class NYGamingDataExtractorV2:
     def _make_record(self, date_val, handle_val, ggr_val, brand):
         """Build a normalized record dict, or None if the row is not usable.
 
-        Only rows with a parseable date and a positive GGR are kept (matching the
-        historical behaviour of this extractor).
+        A real reporting week is identified by a *positive handle* (wagers were
+        placed). GGR is kept with whatever sign it has -- weekly GGR is regularly
+        negative when bettors win net (e.g. 2026-06-14), and those weeks must not
+        be dropped. Blank/future weeks (no handle/GGR) and pre-launch $0 weeks are
+        excluded by the positive-handle requirement.
         """
-        if pd.isna(date_val) or ggr_val is None:
+        if pd.isna(date_val):
             return None
+
+        # GGR must be a reported number, but may be zero or negative.
         try:
             ggr_val = float(ggr_val)
         except (TypeError, ValueError):
             return None
-        if ggr_val <= 0:
+        if pd.isna(ggr_val):
+            return None
+
+        # Handle must be a positive number for the week to count as reported.
+        try:
+            handle_num = float(handle_val)
+        except (TypeError, ValueError):
+            return None
+        if pd.isna(handle_num) or handle_num <= 0:
             return None
 
         try:
@@ -104,16 +120,9 @@ class NYGamingDataExtractorV2:
         except (ValueError, TypeError):
             return None
 
-        handle_str = ''
-        if handle_val is not None and not (isinstance(handle_val, float) and pd.isna(handle_val)):
-            try:
-                handle_str = str(int(float(handle_val)))
-            except (TypeError, ValueError):
-                handle_str = str(handle_val)
-
         return {
             'Date': date_norm,
-            'Handle': handle_str,
+            'Handle': str(int(handle_num)),
             'GGR': ggr_val,
             'Brand': brand,
         }

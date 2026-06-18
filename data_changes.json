@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-06-17T22:30:25.668130",
-    "comparison": {
-      "is_new_data": false,
-      "total_records": 1805,
-      "date_range": "2022-04-03 00:00:00 to 2026-06-07 00:00:00",
-      "brands": 9,
-      "changes": []
-    }
-  },
-  {
     "timestamp": "2026-06-17T22:40:23.603963",
     "comparison": {
       "is_new_data": false,
@@ -997,6 +987,59 @@
       "date_range": "2022-04-03 00:00:00 to 2026-06-07 00:00:00",
       "brands": 9,
       "changes": []
+    }
+  },
+  {
+    "timestamp": "2026-06-18T15:10:31.565269",
+    "comparison": {
+      "is_new_data": false,
+      "total_records": 1807,
+      "date_range": "2022-04-03 00:00:00 to 2026-06-14 00:00:00",
+      "brands": 9,
+      "changes": [
+        {
+          "type": "record_count",
+          "description": "Total records changed from 1805 to 1807",
+          "previous": 1805,
+          "current": 1807
+        },
+        {
+          "type": "date_range",
+          "description": "Date range changed from 2022-04-03 00:00:00 to 2026-06-07 00:00:00 to 2022-04-03 00:00:00 to 2026-06-14 00:00:00",
+          "previous": "(Timestamp('2022-04-03 00:00:00'), Timestamp('2026-06-07 00:00:00'))",
+          "current": "(Timestamp('2022-04-03 00:00:00'), Timestamp('2026-06-14 00:00:00'))"
+        },
+        {
+          "type": "new_weekly_data",
+          "description": "Rush Street Interactive: New weekly data available",
+          "brand": "Rush Street Interactive",
+          "new_date": "2026-06-14 00:00:00",
+          "previous_date": "2026-06-07 00:00:00"
+        },
+        {
+          "type": "significant_ggr_change",
+          "description": "Rush Street Interactive: GGR changed by -95.4% ($890,553 \u2192 $41,379)",
+          "brand": "Rush Street Interactive",
+          "change_percent": -95.35353622463218,
+          "previous_ggr": 890552.7300000002,
+          "current_ggr": 41379.209999999264
+        },
+        {
+          "type": "new_weekly_data",
+          "description": "Bally Bet: New weekly data available",
+          "brand": "Bally Bet",
+          "new_date": "2026-06-14 00:00:00",
+          "previous_date": "2026-06-07 00:00:00"
+        },
+        {
+          "type": "significant_ggr_change",
+          "description": "Bally Bet: GGR changed by -40.3% ($174,175 \u2192 $104,046)",
+          "brand": "Bally Bet",
+          "change_percent": -40.26346670469757,
+          "previous_ggr": 174174.57000000004,
+          "current_ggr": 104045.84999999986
+        }
+      ]
     }
   }
 ]

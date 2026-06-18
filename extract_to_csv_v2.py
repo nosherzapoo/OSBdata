@@ -1,9 +1,20 @@
 #!/usr/bin/env python3
 """
 NY State Gaming Reports Data Extractor V2
-Simplified and robust extraction from Excel files to CSV.
+Extracts weekly Handle/GGR data from the downloaded reports into a single CSV.
+
+Each operator is published as both an Excel file and a PDF. They carry the same
+weekly figures, but:
+  * the Excel file keeps full cents precision, and
+  * the PDF is the more reliably up-to-date source (the Excel is sometimes
+    published late / without the latest week).
+
+So for every operator we extract both and merge per week-ending date: the Excel
+value wins whenever it exists (precision preserved) and the PDF only fills weeks
+the Excel is missing (the latest-data gap).
 """
 
+import re
 import pandas as pd
 from pathlib import Path
 import logging
@@ -12,9 +23,30 @@ import logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 
+# A PDF data row looks like:  03/29/26 $3,233,405 $317,181
+# (date, handle, GGR). GGR may be parenthesised to indicate a negative value.
+PDF_ROW_RE = re.compile(
+    r'^(\d{2}/\d{2}/\d{2})\s+\$?\(?([\d,]+)\)?\s+\$?(\(?[\d,]+\)?)\s*$'
+)
+
+
+def _parse_money(token: str):
+    """Parse a money token like '3,233,405' or '(123)' into a float, or None."""
+    token = token.strip().replace(',', '').replace('$', '')
+    negative = token.startswith('(') and token.endswith(')')
+    token = token.strip('()')
+    if not token:
+        return None
+    try:
+        value = float(token)
+    except ValueError:
+        return None
+    return -value if negative else value
+
+
 class NYGamingDataExtractorV2:
-    """Simplified extractor for NY State Gaming Excel reports."""
-    
+    """Extractor for NY State Gaming reports (Excel + PDF) -> CSV."""
+
     def __init__(self, reports_dir=None):
         """Initialize the extractor.
 
@@ -38,130 +70,178 @@ class NYGamingDataExtractorV2:
         else:
             self.reports_dir = Path(reports_dir)
         self.all_data = []
-        
-        # Brand mapping from filename to display name
+
+        # Brand mapping from report file stem to display name.
         self.brand_mapping = {
-            'Bally_Bet_Weekly_Report.xlsx': 'Bally Bet',
-            'BetMGM_Weekly_Report.xlsx': 'BetMGM',
-            'Caesars_Sport_Book_Weekly_Report.xlsx': 'Caesars Sport Book',
-            'DraftKings_Sport_Book_Weekly_Report.xlsx': 'DraftKings Sport Book',
-            'ESPN_Bet_Wynn_Interactive_Weekly_Report.xlsx': 'ESPN Bet',
-            'Fanatics_Weekly_Report.xlsx': 'Fanatics',
-            'FanDuel_Weekly_Report.xlsx': 'FanDuel',
-            'Resorts_World_Bet_Weekly_Report.xlsx': 'Resorts World Bet',
-            'Rush_Street_Interactive_Weekly_Report.xlsx': 'Rush Street Interactive'
+            'Bally_Bet_Weekly_Report': 'Bally Bet',
+            'BetMGM_Weekly_Report': 'BetMGM',
+            'Caesars_Sport_Book_Weekly_Report': 'Caesars Sport Book',
+            'DraftKings_Sport_Book_Weekly_Report': 'DraftKings Sport Book',
+            'ESPN_Bet_Wynn_Interactive_Weekly_Report': 'ESPN Bet',
+            'Fanatics_Weekly_Report': 'Fanatics',
+            'FanDuel_Weekly_Report': 'FanDuel',
+            'Resorts_World_Bet_Weekly_Report': 'Resorts World Bet',
+            'Rush_Street_Interactive_Weekly_Report': 'Rush Street Interactive',
         }
-    
-    def extract_data_from_file(self, file_path):
-        """Extract data from a single Excel file."""
-        brand = self.brand_mapping.get(file_path.name, file_path.stem)
-        logger.info(f"Processing {brand}...")
-        
+
+    def _make_record(self, date_val, handle_val, ggr_val, brand):
+        """Build a normalized record dict, or None if the row is not usable.
+
+        Only rows with a parseable date and a positive GGR are kept (matching the
+        historical behaviour of this extractor).
+        """
+        if pd.isna(date_val) or ggr_val is None:
+            return None
+        try:
+            ggr_val = float(ggr_val)
+        except (TypeError, ValueError):
+            return None
+        if ggr_val <= 0:
+            return None
+
+        try:
+            date_norm = pd.to_datetime(date_val).strftime('%Y-%m-%d')
+        except (ValueError, TypeError):
+            return None
+
+        handle_str = ''
+        if handle_val is not None and not (isinstance(handle_val, float) and pd.isna(handle_val)):
+            try:
+                handle_str = str(int(float(handle_val)))
+            except (TypeError, ValueError):
+                handle_str = str(handle_val)
+
+        return {
+            'Date': date_norm,
+            'Handle': handle_str,
+            'GGR': ggr_val,
+            'Brand': brand,
+        }
+
+    def extract_excel_records(self, file_path, brand):
+        """Extract {date_str: record} from a single Excel file (precise source)."""
+        records = {}
         try:
             excel_file = pd.ExcelFile(file_path)
-            file_data = []
-            
-            for sheet_name in excel_file.sheet_names:
-                logger.info(f"  Processing sheet: {sheet_name}")
-                
-                # Read the sheet without headers
-                df = pd.read_excel(file_path, sheet_name=sheet_name, header=None)
-                
-                # Find the header row (contains "Week-Ending")
-                header_row = None
-                for idx, row in df.iterrows():
-                    if pd.notna(row.iloc[0]) and 'Week-Ending' in str(row.iloc[0]):
-                        header_row = idx
-                        break
-                
-                if header_row is None:
-                    logger.warning(f"    No header row found in {sheet_name}")
-                    continue
-                
-                # Extract data starting from the row after header
-                data_df = df.iloc[header_row + 1:].copy()
-                
-                # Clean up empty rows
-                data_df = data_df.dropna(how='all')
-                
-                # Extract data from known columns:
-                # Column 0: Date
-                # Column 2: Handle  
-                # Column 5: GGR
-                for idx, row in data_df.iterrows():
-                    date_val = row.iloc[0] if len(row) > 0 else None
-                    handle_val = row.iloc[2] if len(row) > 2 else None
-                    ggr_val = row.iloc[5] if len(row) > 5 else None
-                    
-                    # Validate data
-                    if pd.notna(date_val) and pd.notna(ggr_val):
-                        try:
-                            # Convert date
-                            if isinstance(date_val, str):
-                                date_val = pd.to_datetime(date_val)
-                            
-                            # Convert GGR to float
-                            ggr_val = float(ggr_val)
-                            
-                            # Convert Handle to float if available
-                            handle_str = ''
-                            if pd.notna(handle_val):
-                                try:
-                                    handle_float = float(handle_val)
-                                    handle_str = str(int(handle_float))
-                                except:
-                                    handle_str = str(handle_val)
-                            
-                            # Only include positive GGR values
-                            if ggr_val > 0:
-                                file_data.append({
-                                    'Date': date_val.strftime('%Y-%m-%d'),
-                                    'Handle': handle_str,
-                                    'GGR': ggr_val,
-                                    'Brand': brand
-                                })
-                        except Exception as e:
-                            logger.debug(f"    Skipping row due to error: {e}")
-                            continue
-                
-                logger.info(f"    Extracted {len(file_data)} records from {sheet_name}")
-            
-            return file_data
-            
         except Exception as e:
-            logger.error(f"Error processing {file_path}: {e}")
-            return []
-    
+            logger.error(f"  Error opening Excel {file_path.name}: {e}")
+            return records
+
+        for sheet_name in excel_file.sheet_names:
+            df = pd.read_excel(file_path, sheet_name=sheet_name, header=None)
+
+            # Find the header row (contains "Week-Ending")
+            header_row = None
+            for idx, row in df.iterrows():
+                if pd.notna(row.iloc[0]) and 'Week-Ending' in str(row.iloc[0]):
+                    header_row = idx
+                    break
+            if header_row is None:
+                continue
+
+            data_df = df.iloc[header_row + 1:].copy().dropna(how='all')
+
+            # Known columns: 0=Date, 2=Handle, 5=GGR
+            for _, row in data_df.iterrows():
+                date_val = row.iloc[0] if len(row) > 0 else None
+                handle_val = row.iloc[2] if len(row) > 2 else None
+                ggr_val = row.iloc[5] if len(row) > 5 else None
+                if pd.isna(date_val):
+                    continue
+                rec = self._make_record(date_val, handle_val, ggr_val, brand)
+                if rec:
+                    records[rec['Date']] = rec
+
+        logger.info(f"    Excel: {len(records)} weeks")
+        return records
+
+    def extract_pdf_records(self, file_path, brand):
+        """Extract {date_str: record} from a single PDF file (gap-fill source)."""
+        records = {}
+        try:
+            import pdfplumber
+        except ImportError:
+            logger.warning("    pdfplumber not installed; skipping PDF extraction")
+            return records
+
+        try:
+            with pdfplumber.open(file_path) as pdf:
+                for page in pdf.pages:
+                    text = page.extract_text() or ''
+                    for line in text.split('\n'):
+                        match = PDF_ROW_RE.match(line.strip())
+                        if not match:
+                            continue
+                        date_str, handle_str, ggr_str = match.groups()
+                        try:
+                            date_val = pd.to_datetime(date_str, format='%m/%d/%y')
+                        except ValueError:
+                            continue
+                        rec = self._make_record(
+                            date_val, _parse_money(handle_str), _parse_money(ggr_str), brand
+                        )
+                        if rec:
+                            records[rec['Date']] = rec
+        except Exception as e:
+            logger.error(f"  Error reading PDF {file_path.name}: {e}")
+
+        logger.info(f"    PDF:   {len(records)} weeks")
+        return records
+
+    def extract_operator(self, stem, brand):
+        """Extract and merge one operator's Excel + PDF reports.
+
+        Excel wins for any week it has; the PDF only fills weeks Excel lacks.
+        """
+        logger.info(f"Processing {brand}...")
+        excel_path = self.reports_dir / f"{stem}.xlsx"
+        pdf_path = self.reports_dir / f"{stem}.pdf"
+
+        excel_records = self.extract_excel_records(excel_path, brand) if excel_path.exists() else {}
+        pdf_records = self.extract_pdf_records(pdf_path, brand) if pdf_path.exists() else {}
+
+        # {**pdf, **excel}: Excel precedence, PDF fills the gaps.
+        merged = {**pdf_records, **excel_records}
+        filled_from_pdf = sorted(d for d in pdf_records if d not in excel_records)
+        if filled_from_pdf:
+            logger.info(f"    Filled {len(filled_from_pdf)} week(s) from PDF: {', '.join(filled_from_pdf)}")
+        logger.info(f"    Merged: {len(merged)} weeks")
+        return list(merged.values())
+
     def extract_all_data(self):
-        """Extract data from all Excel files."""
+        """Extract data from all operator reports (Excel + PDF) in the reports dir."""
         logger.info("🚀 Starting data extraction...")
-        
-        excel_files = list(self.reports_dir.glob("*.xlsx"))
-        # Filter out temporary Excel files
-        excel_files = [f for f in excel_files if not f.name.startswith('~$')]
-        logger.info(f"Found {len(excel_files)} Excel files")
-        
-        for file_path in excel_files:
-            file_data = self.extract_data_from_file(file_path)
-            self.all_data.extend(file_data)
+
+        # Collect report stems present as either .xlsx or .pdf (ignore Excel temp files).
+        stems = set()
+        for path in list(self.reports_dir.glob('*.xlsx')) + list(self.reports_dir.glob('*.pdf')):
+            if path.name.startswith('~$'):
+                continue
+            stems.add(path.stem)
+
+        logger.info(f"Found {len(stems)} operator report set(s)")
+
+        for stem in sorted(stems):
+            brand = self.brand_mapping.get(stem, stem.replace('_', ' '))
+            self.all_data.extend(self.extract_operator(stem, brand))
             logger.info(f"  Total records so far: {len(self.all_data)}")
-        
+
         logger.info(f"✅ Extraction complete! Total records: {len(self.all_data)}")
         return self.all_data
-    
+
     def save_to_csv(self, output_file="ny_gaming_data.csv"):
         """Save all extracted data to CSV."""
         if not self.all_data:
             logger.warning("No data to save!")
             return None
-        
+
         df = pd.DataFrame(self.all_data)
         df['Date'] = pd.to_datetime(df['Date'])
         df = df.sort_values(['Date', 'Brand'])
-        
+
         output_path = Path(output_file)
         df.to_csv(output_path, index=False)
-        
+
         logger.info(f"💾 Data saved: {len(df)} records, {df['Brand'].nunique()} brands")
         return output_path
 
@@ -169,24 +249,24 @@ def main():
     """Main function to run the extraction."""
     try:
         extractor = NYGamingDataExtractorV2()
-        
+
         # Extract all data
         extractor.extract_all_data()
-        
+
         # Save to CSV
         output_file = extractor.save_to_csv()
-        
+
         if output_file:
             print(f"\n🎉 Data extraction complete!")
             print(f"📁 Output file: {output_file.absolute()}")
         else:
             print("❌ No data extracted!")
             return 1
-        
+
     except Exception as e:
         logger.error(f"💥 Error: {e}")
         return 1
-    
+
     return 0
 
 if __name__ == "__main__":

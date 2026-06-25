@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-06-25T04:10:30.139945",
-    "comparison": {
-      "is_new_data": false,
-      "total_records": 1966,
-      "date_range": "2022-01-09 00:00:00 to 2026-06-14 00:00:00",
-      "brands": 9,
-      "changes": []
-    }
-  },
-  {
     "timestamp": "2026-06-25T04:20:33.935706",
     "comparison": {
       "is_new_data": false,
@@ -1002,6 +992,73 @@
           "description": "Total records changed from 1966 to 1932",
           "previous": 1966,
           "current": 1932
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-06-25T20:50:34.508328",
+    "comparison": {
+      "is_new_data": false,
+      "total_records": 1929,
+      "date_range": "2022-01-09 00:00:00 to 2026-06-21 00:00:00",
+      "brands": 9,
+      "changes": [
+        {
+          "type": "record_count",
+          "description": "Total records changed from 1932 to 1929",
+          "previous": 1932,
+          "current": 1929
+        },
+        {
+          "type": "date_range",
+          "description": "Date range changed from 2022-01-09 00:00:00 to 2026-06-14 00:00:00 to 2022-01-09 00:00:00 to 2026-06-21 00:00:00",
+          "previous": "(Timestamp('2022-01-09 00:00:00'), Timestamp('2026-06-14 00:00:00'))",
+          "current": "(Timestamp('2022-01-09 00:00:00'), Timestamp('2026-06-21 00:00:00'))"
+        },
+        {
+          "type": "new_weekly_data",
+          "description": "BetMGM: New weekly data available",
+          "brand": "BetMGM",
+          "new_date": "2026-06-21 00:00:00",
+          "previous_date": "2026-06-14 00:00:00"
+        },
+        {
+          "type": "new_weekly_data",
+          "description": "Rush Street Interactive: New weekly data available",
+          "brand": "Rush Street Interactive",
+          "new_date": "2026-06-21 00:00:00",
+          "previous_date": "2026-06-14 00:00:00"
+        },
+        {
+          "type": "significant_ggr_change",
+          "description": "Rush Street Interactive: GGR changed by 1190.6% ($41,379 \u2192 $534,031)",
+          "brand": "Rush Street Interactive",
+          "change_percent": 1190.578046318452,
+          "previous_ggr": 41379.209999999264,
+          "current_ggr": 534031.0
+        },
+        {
+          "type": "new_weekly_data",
+          "description": "Bally Bet: New weekly data available",
+          "brand": "Bally Bet",
+          "new_date": "2026-06-21 00:00:00",
+          "previous_date": "2026-06-14 00:00:00"
+        },
+        {
+          "type": "significant_ggr_change",
+          "description": "Bally Bet: GGR changed by 247.2% ($104,046 \u2192 $361,196)",
+          "brand": "Bally Bet",
+          "change_percent": 247.15079938315702,
+          "previous_ggr": 104045.84999999986,
+          "current_ggr": 361196.0
+        },
+        {
+          "type": "new_weekly_data",
+          "description": "Caesars Sport Book: New weekly data available",
+          "brand": "Caesars Sport Book",
+          "new_date": "2026-06-21 00:00:00",
+          "previous_date": "2026-06-14 00:00:00"
         }
       ]
     }

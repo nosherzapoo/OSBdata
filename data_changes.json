@@ -1,50 +1,5 @@
 [
   {
-    "timestamp": "2026-06-25T21:00:42.443035",
-    "comparison": {
-      "is_new_data": false,
-      "total_records": 1974,
-      "date_range": "2022-01-09 00:00:00 to 2026-06-21 00:00:00",
-      "brands": 9,
-      "changes": [
-        {
-          "type": "record_count",
-          "description": "Total records changed from 1929 to 1974",
-          "previous": 1929,
-          "current": 1974
-        },
-        {
-          "type": "new_weekly_data",
-          "description": "FanDuel: New weekly data available",
-          "brand": "FanDuel",
-          "new_date": "2026-06-21 00:00:00",
-          "previous_date": "2026-06-14 00:00:00"
-        },
-        {
-          "type": "new_weekly_data",
-          "description": "Fanatics: New weekly data available",
-          "brand": "Fanatics",
-          "new_date": "2026-06-21 00:00:00",
-          "previous_date": "2026-06-14 00:00:00"
-        },
-        {
-          "type": "new_weekly_data",
-          "description": "DraftKings Sport Book: New weekly data available",
-          "brand": "DraftKings Sport Book",
-          "new_date": "2026-06-21 00:00:00",
-          "previous_date": "2026-06-14 00:00:00"
-        },
-        {
-          "type": "new_weekly_data",
-          "description": "ESPN Bet: New weekly data available",
-          "brand": "ESPN Bet",
-          "new_date": "2026-06-21 00:00:00",
-          "previous_date": "2026-06-14 00:00:00"
-        }
-      ]
-    }
-  },
-  {
     "timestamp": "2026-06-25T21:04:28.552873",
     "comparison": {
       "is_new_data": false,
@@ -1026,6 +981,16 @@
   },
   {
     "timestamp": "2026-06-26T13:20:30.366814",
+    "comparison": {
+      "is_new_data": false,
+      "total_records": 1974,
+      "date_range": "2022-01-09 00:00:00 to 2026-06-21 00:00:00",
+      "brands": 9,
+      "changes": []
+    }
+  },
+  {
+    "timestamp": "2026-06-26T13:30:31.865454",
     "comparison": {
       "is_new_data": false,
       "total_records": 1974,

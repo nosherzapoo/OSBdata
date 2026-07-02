@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-07-02T01:10:38.369939",
-    "comparison": {
-      "is_new_data": false,
-      "total_records": 1974,
-      "date_range": "2022-01-09 00:00:00 to 2026-06-21 00:00:00",
-      "brands": 9,
-      "changes": []
-    }
-  },
-  {
     "timestamp": "2026-07-02T01:20:31.930040",
     "comparison": {
       "is_new_data": false,
@@ -1023,6 +1013,51 @@
           "change_percent": 36.781263483195396,
           "previous_ggr": 3330256.5600000005,
           "current_ggr": 4555167.0
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-07-02T17:50:09.013038",
+    "comparison": {
+      "is_new_data": false,
+      "total_records": 1920,
+      "date_range": "2022-01-23 00:00:00 to 2026-06-28 00:00:00",
+      "brands": 9,
+      "changes": [
+        {
+          "type": "record_count",
+          "description": "Total records changed from 1975 to 1920",
+          "previous": 1975,
+          "current": 1920
+        },
+        {
+          "type": "date_range",
+          "description": "Date range changed from 2022-01-09 00:00:00 to 2026-06-28 00:00:00 to 2022-01-23 00:00:00 to 2026-06-28 00:00:00",
+          "previous": "(Timestamp('2022-01-09 00:00:00'), Timestamp('2026-06-28 00:00:00'))",
+          "current": "(Timestamp('2022-01-23 00:00:00'), Timestamp('2026-06-28 00:00:00'))"
+        },
+        {
+          "type": "new_weekly_data",
+          "description": "Caesars Sport Book: New weekly data available",
+          "brand": "Caesars Sport Book",
+          "new_date": "2026-06-28 00:00:00",
+          "previous_date": "2026-06-21 00:00:00"
+        },
+        {
+          "type": "significant_ggr_change",
+          "description": "Caesars Sport Book: GGR changed by 23.2% ($2,668,780 \u2192 $3,289,236)",
+          "brand": "Caesars Sport Book",
+          "change_percent": 23.24868952383053,
+          "previous_ggr": 2668779.929999998,
+          "current_ggr": 3289236.289999999
+        },
+        {
+          "type": "new_weekly_data",
+          "description": "Bally Bet: New weekly data available",
+          "brand": "Bally Bet",
+          "new_date": "2026-06-28 00:00:00",
+          "previous_date": "2026-06-21 00:00:00"
         }
       ]
     }

@@ -5,9 +5,9 @@ Downloads all weekly reports from gaming.ny.gov efficiently using parallel proce
 
 For each operator we download BOTH the PDF and the Excel report:
   * The PDF is the most reliably up-to-date source (the Excel file is sometimes
-    published late / without the latest week), so it is used to fill gaps.
-  * The Excel file carries full cents precision, so it stays the precise source
-    for any week it contains.
+    published late / without the latest week), so it is the primary source and
+    its value wins for any week it contains.
+  * The Excel file only fills weeks the PDF is missing.
 
 When fetching a file we resolve the site's ``-excel`` / ``-pdf`` redirect to the
 real document URL and then prefer the ``_2`` re-upload variant (the site appends

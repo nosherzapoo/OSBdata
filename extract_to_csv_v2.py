@@ -4,14 +4,11 @@ NY State Gaming Reports Data Extractor V2
 Extracts weekly Handle/GGR data from the downloaded reports into a single CSV.
 
 Each operator is published as both an Excel file and a PDF. They carry the same
-weekly figures, but:
-  * the Excel file keeps full cents precision, and
-  * the PDF is the more reliably up-to-date source (the Excel is sometimes
-    published late / without the latest week).
+weekly figures, but the PDF is the more reliably up-to-date source (the Excel is
+sometimes published late / without the latest week).
 
-So for every operator we extract both and merge per week-ending date: the Excel
-value wins whenever it exists (precision preserved) and the PDF only fills weeks
-the Excel is missing (the latest-data gap).
+So for every operator we extract both and merge per week-ending date: the PDF
+value wins whenever it exists and the Excel only fills weeks the PDF is missing.
 """
 
 import re
@@ -128,7 +125,7 @@ class NYGamingDataExtractorV2:
         }
 
     def extract_excel_records(self, file_path, brand):
-        """Extract {date_str: record} from a single Excel file (precise source)."""
+        """Extract {date_str: record} from a single Excel file (gap-fill source)."""
         records = {}
         try:
             excel_file = pd.ExcelFile(file_path)
@@ -165,7 +162,7 @@ class NYGamingDataExtractorV2:
         return records
 
     def extract_pdf_records(self, file_path, brand):
-        """Extract {date_str: record} from a single PDF file (gap-fill source)."""
+        """Extract {date_str: record} from a single PDF file (primary source)."""
         records = {}
         try:
             import pdfplumber
@@ -200,7 +197,16 @@ class NYGamingDataExtractorV2:
     def extract_operator(self, stem, brand):
         """Extract and merge one operator's Excel + PDF reports.
 
-        Excel wins for any week it has; the PDF only fills weeks Excel lacks.
+        PDF is preferred and wins for any week it reports. But the state does not
+        publish both formats in lockstep -- sometimes a week lands on the PDF
+        first, sometimes on the Excel first -- so we take the *union* of weeks and
+        fall back to the Excel for any week the PDF does not have.
+
+        Crucially, neither source can contribute a blank or $0 week: extraction
+        runs every row through _make_record(), which drops any row without a
+        positive handle. So an unpublished / zeroed-out PDF week simply never
+        enters ``pdf_records`` and therefore never suppresses a real Excel week
+        for the same date (and vice-versa). A 0 is never published.
         """
         logger.info(f"Processing {brand}...")
         excel_path = self.reports_dir / f"{stem}.xlsx"
@@ -209,12 +215,25 @@ class NYGamingDataExtractorV2:
         excel_records = self.extract_excel_records(excel_path, brand) if excel_path.exists() else {}
         pdf_records = self.extract_pdf_records(pdf_path, brand) if pdf_path.exists() else {}
 
-        # {**pdf, **excel}: Excel precedence, PDF fills the gaps.
-        merged = {**pdf_records, **excel_records}
-        filled_from_pdf = sorted(d for d in pdf_records if d not in excel_records)
-        if filled_from_pdf:
-            logger.info(f"    Filled {len(filled_from_pdf)} week(s) from PDF: {', '.join(filled_from_pdf)}")
-        logger.info(f"    Merged: {len(merged)} weeks")
+        # {**excel, **pdf}: union of both, PDF value winning on any shared week.
+        merged = {**excel_records, **pdf_records}
+
+        filled_from_excel = sorted(d for d in excel_records if d not in pdf_records)
+        if filled_from_excel:
+            logger.info(
+                f"    Filled {len(filled_from_excel)} week(s) from Excel (PDF missing): "
+                f"{', '.join(filled_from_excel)}"
+            )
+        only_in_pdf = sorted(d for d in pdf_records if d not in excel_records)
+        if only_in_pdf:
+            logger.info(
+                f"    {len(only_in_pdf)} week(s) came only from the PDF (Excel missing): "
+                f"{', '.join(only_in_pdf)}"
+            )
+        logger.info(
+            f"    Merged: {len(merged)} weeks "
+            f"(PDF {len(pdf_records)}, Excel {len(excel_records)}, Excel-only fills {len(filled_from_excel)})"
+        )
         return list(merged.values())
 
     def extract_all_data(self):

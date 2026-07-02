@@ -429,10 +429,12 @@ class NYGamingDataMonitor:
             # Create comprehensive Excel report
             excel_file = self.create_excel_report(current_data)
 
-            # When running manually, also attach the weekly exhibit if it was generated
+            # Attach the weekly exhibit whenever it was generated. Both the
+            # scheduled and manual workflows build it before this step, so any
+            # email that goes out includes the exhibit alongside the numbers.
             additional = []
             exhibit_file = 'ny_gaming_weekly_exhibit.xlsx'
-            if force_send and Path(exhibit_file).exists():
+            if Path(exhibit_file).exists():
                 additional.append(exhibit_file)
                 logger.info(f"📋 Including weekly exhibit in email: {exhibit_file}")
 

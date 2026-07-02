@@ -200,8 +200,13 @@
   </div>
 
   <script>
-    // ── Paste your Cloudflare Worker URL after deploying ─────────────────────
-    const WORKER_URL = '/api/trigger';
+    // ── Paste your scoped GitHub PAT here (see setup_public_form.md) ─────────
+    // Fine-grained token, Only-this-repo, Actions: Read and Write. Nothing else.
+    // It can ONLY trigger this workflow — it cannot read code or secrets.
+    const GITHUB_TOKEN  = 'REPLACE_WITH_YOUR_GITHUB_PAT';
+    const GITHUB_OWNER  = 'nosherzapoo';
+    const GITHUB_REPO   = 'OSBdata';
+    const WORKFLOW_FILE = 'ny-gaming-manual.yml';
     // ─────────────────────────────────────────────────────────────────────────
 
     const form      = document.getElementById('reportForm');
@@ -218,20 +223,29 @@
       statusEl.innerHTML = '<span class="spinner"></span> Triggering report generation — expect an email in about 2 minutes…';
 
       try {
-        const res = await fetch(WORKER_URL, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ email }),
-        });
+        // Call the GitHub API directly to trigger the workflow. A successful
+        // dispatch returns 204 No Content (there is no JSON body to parse).
+        const res = await fetch(
+          `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/actions/workflows/${WORKFLOW_FILE}/dispatches`,
+          {
+            method: 'POST',
+            headers: {
+              'Authorization': `Bearer ${GITHUB_TOKEN}`,
+              'Accept':        'application/vnd.github.v3+json',
+              'Content-Type':  'application/json',
+            },
+            body: JSON.stringify({ ref: 'main', inputs: { recipient_email: email } }),
+          }
+        );
 
-        const data = await res.json();
-
-        if (res.ok && data.success) {
+        if (res.status === 204) {
           statusEl.className = 'status success';
           statusEl.textContent = `✓ Report requested. Check ${email} in about 2 minutes.`;
           form.reset();
         } else {
-          throw new Error(data.error || 'Unknown error');
+          let detail = `${res.status} ${res.statusText}`;
+          try { const body = await res.json(); if (body.message) detail = body.message; } catch (_) {}
+          throw new Error(detail);
         }
       } catch (err) {
         statusEl.className = 'status error';

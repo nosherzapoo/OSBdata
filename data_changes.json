@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-07-10T01:20:39.624654",
-    "comparison": {
-      "is_new_data": false,
-      "total_records": 1982,
-      "date_range": "2022-01-09 00:00:00 to 2026-06-28 00:00:00",
-      "brands": 9,
-      "changes": []
-    }
-  },
-  {
     "timestamp": "2026-07-10T01:30:52.891978",
     "comparison": {
       "is_new_data": false,
@@ -1045,6 +1035,104 @@
           "brand": "Bally Bet",
           "new_date": "2026-07-05 00:00:00",
           "previous_date": "2026-06-28 00:00:00"
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-07-10T18:00:45.379290",
+    "comparison": {
+      "is_new_data": false,
+      "total_records": 1990,
+      "date_range": "2022-01-09 00:00:00 to 2026-07-05 00:00:00",
+      "brands": 9,
+      "changes": [
+        {
+          "type": "record_count",
+          "description": "Total records changed from 1918 to 1990",
+          "previous": 1918,
+          "current": 1990
+        },
+        {
+          "type": "date_range",
+          "description": "Date range changed from 2022-02-06 00:00:00 to 2026-07-05 00:00:00 to 2022-01-09 00:00:00 to 2026-07-05 00:00:00",
+          "previous": "(Timestamp('2022-02-06 00:00:00'), Timestamp('2026-07-05 00:00:00'))",
+          "current": "(Timestamp('2022-01-09 00:00:00'), Timestamp('2026-07-05 00:00:00'))"
+        },
+        {
+          "type": "new_weekly_data",
+          "description": "ESPN Bet: New weekly data available",
+          "brand": "ESPN Bet",
+          "new_date": "2026-07-05 00:00:00",
+          "previous_date": "2026-06-28 00:00:00"
+        },
+        {
+          "type": "significant_ggr_change",
+          "description": "ESPN Bet: GGR changed by -38.3% ($802,855 \u2192 $495,151)",
+          "brand": "ESPN Bet",
+          "change_percent": -38.32622329063155,
+          "previous_ggr": 802855.0,
+          "current_ggr": 495151.0
+        },
+        {
+          "type": "new_weekly_data",
+          "description": "Fanatics: New weekly data available",
+          "brand": "Fanatics",
+          "new_date": "2026-07-05 00:00:00",
+          "previous_date": "2026-06-28 00:00:00"
+        },
+        {
+          "type": "significant_ggr_change",
+          "description": "Fanatics: GGR changed by -38.5% ($5,238,538 \u2192 $3,223,781)",
+          "brand": "Fanatics",
+          "change_percent": -38.46029107885015,
+          "previous_ggr": 5238537.94,
+          "current_ggr": 3223781.0
+        },
+        {
+          "type": "new_weekly_data",
+          "description": "FanDuel: New weekly data available",
+          "brand": "FanDuel",
+          "new_date": "2026-07-05 00:00:00",
+          "previous_date": "2026-06-28 00:00:00"
+        },
+        {
+          "type": "significant_ggr_change",
+          "description": "FanDuel: GGR changed by -47.1% ($25,667,736 \u2192 $13,578,971)",
+          "brand": "FanDuel",
+          "change_percent": -47.09712166227648,
+          "previous_ggr": 25667735.719999995,
+          "current_ggr": 13578971.0
+        },
+        {
+          "type": "new_weekly_data",
+          "description": "Rush Street Interactive: New weekly data available",
+          "brand": "Rush Street Interactive",
+          "new_date": "2026-07-05 00:00:00",
+          "previous_date": "2026-06-28 00:00:00"
+        },
+        {
+          "type": "significant_ggr_change",
+          "description": "Rush Street Interactive: GGR changed by -39.8% ($1,177,585 \u2192 $708,616)",
+          "brand": "Rush Street Interactive",
+          "change_percent": -39.824649795819056,
+          "previous_ggr": 1177585.1700000009,
+          "current_ggr": 708616.0
+        },
+        {
+          "type": "new_weekly_data",
+          "description": "BetMGM: New weekly data available",
+          "brand": "BetMGM",
+          "new_date": "2026-07-05 00:00:00",
+          "previous_date": "2026-06-28 00:00:00"
+        },
+        {
+          "type": "significant_ggr_change",
+          "description": "BetMGM: GGR changed by -42.0% ($4,555,167 \u2192 $2,644,188)",
+          "brand": "BetMGM",
+          "change_percent": -41.951902926878404,
+          "previous_ggr": 4555167.410000002,
+          "current_ggr": 2644188.0
         }
       ]
     }

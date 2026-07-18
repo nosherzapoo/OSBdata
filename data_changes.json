@@ -1,58 +1,5 @@
 [
   {
-    "timestamp": "2026-07-17T15:10:26.181673",
-    "comparison": {
-      "is_new_data": false,
-      "total_records": 1958,
-      "date_range": "2022-01-09 00:00:00 to 2026-07-12 00:00:00",
-      "brands": 9,
-      "changes": [
-        {
-          "type": "record_count",
-          "description": "Total records changed from 1990 to 1958",
-          "previous": 1990,
-          "current": 1958
-        },
-        {
-          "type": "date_range",
-          "description": "Date range changed from 2022-01-09 00:00:00 to 2026-07-05 00:00:00 to 2022-01-09 00:00:00 to 2026-07-12 00:00:00",
-          "previous": "(Timestamp('2022-01-09 00:00:00'), Timestamp('2026-07-05 00:00:00'))",
-          "current": "(Timestamp('2022-01-09 00:00:00'), Timestamp('2026-07-12 00:00:00'))"
-        },
-        {
-          "type": "new_weekly_data",
-          "description": "Caesars Sport Book: New weekly data available",
-          "brand": "Caesars Sport Book",
-          "new_date": "2026-07-12 00:00:00",
-          "previous_date": "2026-07-05 00:00:00"
-        },
-        {
-          "type": "significant_ggr_change",
-          "description": "Caesars Sport Book: GGR changed by 108.4% ($1,785,512 \u2192 $3,721,553)",
-          "brand": "Caesars Sport Book",
-          "change_percent": 108.43057901599093,
-          "previous_ggr": 1785512.0,
-          "current_ggr": 3721553.0
-        },
-        {
-          "type": "new_weekly_data",
-          "description": "Fanatics: New weekly data available",
-          "brand": "Fanatics",
-          "new_date": "2026-07-12 00:00:00",
-          "previous_date": "2026-07-05 00:00:00"
-        },
-        {
-          "type": "significant_ggr_change",
-          "description": "Fanatics: GGR changed by 131.7% ($3,223,781 \u2192 $7,470,125)",
-          "brand": "Fanatics",
-          "change_percent": 131.71936927477395,
-          "previous_ggr": 3223781.0,
-          "current_ggr": 7470125.0
-        }
-      ]
-    }
-  },
-  {
     "timestamp": "2026-07-17T15:20:35.916029",
     "comparison": {
       "is_new_data": false,
@@ -1138,6 +1085,16 @@
   },
   {
     "timestamp": "2026-07-18T07:40:30.411958",
+    "comparison": {
+      "is_new_data": false,
+      "total_records": 1998,
+      "date_range": "2022-01-09 00:00:00 to 2026-07-12 00:00:00",
+      "brands": 9,
+      "changes": []
+    }
+  },
+  {
+    "timestamp": "2026-07-18T07:50:32.673439",
     "comparison": {
       "is_new_data": false,
       "total_records": 1998,

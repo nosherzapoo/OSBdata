@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-07-23T01:40:31.647121",
-    "comparison": {
-      "is_new_data": false,
-      "total_records": 1998,
-      "date_range": "2022-01-09 00:00:00 to 2026-07-12 00:00:00",
-      "brands": 9,
-      "changes": []
-    }
-  },
-  {
     "timestamp": "2026-07-23T01:50:30.131228",
     "comparison": {
       "is_new_data": false,
@@ -997,6 +987,102 @@
       "date_range": "2022-01-09 00:00:00 to 2026-07-12 00:00:00",
       "brands": 9,
       "changes": []
+    }
+  },
+  {
+    "timestamp": "2026-07-23T18:30:33.718661",
+    "comparison": {
+      "is_new_data": false,
+      "total_records": 1996,
+      "date_range": "2022-01-09 00:00:00 to 2026-07-19 00:00:00",
+      "brands": 9,
+      "changes": [
+        {
+          "type": "record_count",
+          "description": "Total records changed from 1998 to 1996",
+          "previous": 1998,
+          "current": 1996
+        },
+        {
+          "type": "date_range",
+          "description": "Date range changed from 2022-01-09 00:00:00 to 2026-07-12 00:00:00 to 2022-01-09 00:00:00 to 2026-07-19 00:00:00",
+          "previous": "(Timestamp('2022-01-09 00:00:00'), Timestamp('2026-07-12 00:00:00'))",
+          "current": "(Timestamp('2022-01-09 00:00:00'), Timestamp('2026-07-19 00:00:00'))"
+        },
+        {
+          "type": "new_weekly_data",
+          "description": "BetMGM: New weekly data available",
+          "brand": "BetMGM",
+          "new_date": "2026-07-19 00:00:00",
+          "previous_date": "2026-07-12 00:00:00"
+        },
+        {
+          "type": "new_weekly_data",
+          "description": "DraftKings Sport Book: New weekly data available",
+          "brand": "DraftKings Sport Book",
+          "new_date": "2026-07-19 00:00:00",
+          "previous_date": "2026-07-12 00:00:00"
+        },
+        {
+          "type": "new_weekly_data",
+          "description": "Caesars Sport Book: New weekly data available",
+          "brand": "Caesars Sport Book",
+          "new_date": "2026-07-19 00:00:00",
+          "previous_date": "2026-07-12 00:00:00"
+        },
+        {
+          "type": "significant_ggr_change",
+          "description": "Caesars Sport Book: GGR changed by -32.1% ($3,721,553 \u2192 $2,525,190)",
+          "brand": "Caesars Sport Book",
+          "change_percent": -32.14687524267423,
+          "previous_ggr": 3721553.0,
+          "current_ggr": 2525190.0
+        },
+        {
+          "type": "new_weekly_data",
+          "description": "FanDuel: New weekly data available",
+          "brand": "FanDuel",
+          "new_date": "2026-07-19 00:00:00",
+          "previous_date": "2026-07-12 00:00:00"
+        },
+        {
+          "type": "new_weekly_data",
+          "description": "Fanatics: New weekly data available",
+          "brand": "Fanatics",
+          "new_date": "2026-07-19 00:00:00",
+          "previous_date": "2026-07-12 00:00:00"
+        },
+        {
+          "type": "significant_ggr_change",
+          "description": "Fanatics: GGR changed by -33.2% ($7,470,125 \u2192 $4,987,561)",
+          "brand": "Fanatics",
+          "change_percent": -33.23323237562959,
+          "previous_ggr": 7470125.0,
+          "current_ggr": 4987561.0
+        },
+        {
+          "type": "new_weekly_data",
+          "description": "Rush Street Interactive: New weekly data available",
+          "brand": "Rush Street Interactive",
+          "new_date": "2026-07-19 00:00:00",
+          "previous_date": "2026-07-12 00:00:00"
+        },
+        {
+          "type": "new_weekly_data",
+          "description": "Bally Bet: New weekly data available",
+          "brand": "Bally Bet",
+          "new_date": "2026-07-19 00:00:00",
+          "previous_date": "2026-07-12 00:00:00"
+        },
+        {
+          "type": "significant_ggr_change",
+          "description": "Bally Bet: GGR changed by 37.3% ($230,665 \u2192 $316,714)",
+          "brand": "Bally Bet",
+          "change_percent": 37.30474931177248,
+          "previous_ggr": 230665.0,
+          "current_ggr": 316714.0
+        }
+      ]
     }
   }
 ]

@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-08-05T23:10:30.294272",
-    "comparison": {
-      "is_new_data": false,
-      "total_records": 2014,
-      "date_range": "2022-01-09 00:00:00 to 2026-07-26 00:00:00",
-      "brands": 9,
-      "changes": []
-    }
-  },
-  {
     "timestamp": "2026-08-05T23:20:33.097883",
     "comparison": {
       "is_new_data": false,
@@ -1112,6 +1102,23 @@
           "brand": "BetMGM",
           "new_date": "2026-08-02 00:00:00",
           "previous_date": "2026-07-26 00:00:00"
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-08-06T19:36:10.378852",
+    "comparison": {
+      "is_new_data": false,
+      "total_records": 2022,
+      "date_range": "2022-01-09 00:00:00 to 2026-08-02 00:00:00",
+      "brands": 9,
+      "changes": [
+        {
+          "type": "record_count",
+          "description": "Total records changed from 2002 to 2022",
+          "previous": 2002,
+          "current": 2022
         }
       ]
     }

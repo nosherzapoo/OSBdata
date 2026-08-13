@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-08-13T03:40:34.884777",
-    "comparison": {
-      "is_new_data": false,
-      "total_records": 2022,
-      "date_range": "2022-01-09 00:00:00 to 2026-08-02 00:00:00",
-      "brands": 9,
-      "changes": []
-    }
-  },
-  {
     "timestamp": "2026-08-13T03:50:34.541029",
     "comparison": {
       "is_new_data": false,
@@ -1053,6 +1043,81 @@
           "change_percent": 81.9083466974151,
           "previous_ggr": 226353.0,
           "current_ggr": 411755.0
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-08-13T20:20:28.896250",
+    "comparison": {
+      "is_new_data": false,
+      "total_records": 2009,
+      "date_range": "2022-01-09 00:00:00 to 2026-08-09 00:00:00",
+      "brands": 9,
+      "changes": [
+        {
+          "type": "record_count",
+          "description": "Total records changed from 1967 to 2009",
+          "previous": 1967,
+          "current": 2009
+        },
+        {
+          "type": "date_range",
+          "description": "Date range changed from 2022-01-30 00:00:00 to 2026-08-09 00:00:00 to 2022-01-09 00:00:00 to 2026-08-09 00:00:00",
+          "previous": "(Timestamp('2022-01-30 00:00:00'), Timestamp('2026-08-09 00:00:00'))",
+          "current": "(Timestamp('2022-01-09 00:00:00'), Timestamp('2026-08-09 00:00:00'))"
+        },
+        {
+          "type": "new_weekly_data",
+          "description": "FanDuel: New weekly data available",
+          "brand": "FanDuel",
+          "new_date": "2026-08-09 00:00:00",
+          "previous_date": "2026-08-02 00:00:00"
+        },
+        {
+          "type": "significant_ggr_change",
+          "description": "FanDuel: GGR changed by -22.9% ($18,214,019 \u2192 $14,045,656)",
+          "brand": "FanDuel",
+          "change_percent": -22.885466647300465,
+          "previous_ggr": 18214019.33000001,
+          "current_ggr": 14045656.011099998
+        },
+        {
+          "type": "new_weekly_data",
+          "description": "BetMGM: New weekly data available",
+          "brand": "BetMGM",
+          "new_date": "2026-08-09 00:00:00",
+          "previous_date": "2026-08-02 00:00:00"
+        },
+        {
+          "type": "significant_ggr_change",
+          "description": "BetMGM: GGR changed by 28.3% ($2,695,236 \u2192 $3,458,247)",
+          "brand": "BetMGM",
+          "change_percent": 28.30961931808002,
+          "previous_ggr": 2695235.9600000004,
+          "current_ggr": 3458247.0
+        },
+        {
+          "type": "new_weekly_data",
+          "description": "Caesars Sport Book: New weekly data available",
+          "brand": "Caesars Sport Book",
+          "new_date": "2026-08-09 00:00:00",
+          "previous_date": "2026-08-02 00:00:00"
+        },
+        {
+          "type": "new_weekly_data",
+          "description": "DraftKings Sport Book: New weekly data available",
+          "brand": "DraftKings Sport Book",
+          "new_date": "2026-08-09 00:00:00",
+          "previous_date": "2026-08-02 00:00:00"
+        },
+        {
+          "type": "significant_ggr_change",
+          "description": "DraftKings Sport Book: GGR changed by -30.9% ($16,204,920 \u2192 $11,195,807)",
+          "brand": "DraftKings Sport Book",
+          "change_percent": -30.911062370475662,
+          "previous_ggr": 16204919.896200003,
+          "current_ggr": 11195807.0
         }
       ]
     }

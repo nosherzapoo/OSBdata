@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-08-19T21:50:32.520797",
-    "comparison": {
-      "is_new_data": false,
-      "total_records": 2030,
-      "date_range": "2022-01-09 00:00:00 to 2026-08-09 00:00:00",
-      "brands": 9,
-      "changes": []
-    }
-  },
-  {
     "timestamp": "2026-08-19T22:00:32.721315",
     "comparison": {
       "is_new_data": false,
@@ -1038,6 +1028,59 @@
           "change_percent": -66.15487365059319,
           "previous_ggr": 411755.0,
           "current_ggr": 139359.0
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-08-20T14:30:36.698241",
+    "comparison": {
+      "is_new_data": false,
+      "total_records": 1995,
+      "date_range": "2022-01-09 00:00:00 to 2026-08-16 00:00:00",
+      "brands": 9,
+      "changes": [
+        {
+          "type": "record_count",
+          "description": "Total records changed from 1977 to 1995",
+          "previous": 1977,
+          "current": 1995
+        },
+        {
+          "type": "new_weekly_data",
+          "description": "DraftKings Sport Book: New weekly data available",
+          "brand": "DraftKings Sport Book",
+          "new_date": "2026-08-16 00:00:00",
+          "previous_date": "2026-08-09 00:00:00"
+        },
+        {
+          "type": "significant_ggr_change",
+          "description": "DraftKings Sport Book: GGR changed by 33.4% ($11,195,807 \u2192 $14,936,414)",
+          "brand": "DraftKings Sport Book",
+          "change_percent": 33.41078542497484,
+          "previous_ggr": 11195806.96,
+          "current_ggr": 14936414.0
+        },
+        {
+          "type": "new_weekly_data",
+          "description": "Fanatics: New weekly data available",
+          "brand": "Fanatics",
+          "new_date": "2026-08-16 00:00:00",
+          "previous_date": "2026-08-09 00:00:00"
+        },
+        {
+          "type": "new_weekly_data",
+          "description": "BetMGM: New weekly data available",
+          "brand": "BetMGM",
+          "new_date": "2026-08-16 00:00:00",
+          "previous_date": "2026-08-09 00:00:00"
+        },
+        {
+          "type": "new_weekly_data",
+          "description": "FanDuel: New weekly data available",
+          "brand": "FanDuel",
+          "new_date": "2026-08-16 00:00:00",
+          "previous_date": "2026-08-09 00:00:00"
         }
       ]
     }

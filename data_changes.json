@@ -1,58 +1,5 @@
 [
   {
-    "timestamp": "2026-08-20T14:20:28.106407",
-    "comparison": {
-      "is_new_data": false,
-      "total_records": 1977,
-      "date_range": "2022-01-09 00:00:00 to 2026-08-16 00:00:00",
-      "brands": 9,
-      "changes": [
-        {
-          "type": "record_count",
-          "description": "Total records changed from 2030 to 1977",
-          "previous": 2030,
-          "current": 1977
-        },
-        {
-          "type": "date_range",
-          "description": "Date range changed from 2022-01-09 00:00:00 to 2026-08-09 00:00:00 to 2022-01-09 00:00:00 to 2026-08-16 00:00:00",
-          "previous": "(Timestamp('2022-01-09 00:00:00'), Timestamp('2026-08-09 00:00:00'))",
-          "current": "(Timestamp('2022-01-09 00:00:00'), Timestamp('2026-08-16 00:00:00'))"
-        },
-        {
-          "type": "new_weekly_data",
-          "description": "Caesars Sport Book: New weekly data available",
-          "brand": "Caesars Sport Book",
-          "new_date": "2026-08-16 00:00:00",
-          "previous_date": "2026-08-09 00:00:00"
-        },
-        {
-          "type": "significant_ggr_change",
-          "description": "Caesars Sport Book: GGR changed by 35.5% ($2,163,067 \u2192 $2,930,203)",
-          "brand": "Caesars Sport Book",
-          "change_percent": 35.46519825784407,
-          "previous_ggr": 2163067.0,
-          "current_ggr": 2930203.0
-        },
-        {
-          "type": "new_weekly_data",
-          "description": "Bally Bet: New weekly data available",
-          "brand": "Bally Bet",
-          "new_date": "2026-08-16 00:00:00",
-          "previous_date": "2026-08-09 00:00:00"
-        },
-        {
-          "type": "significant_ggr_change",
-          "description": "Bally Bet: GGR changed by -66.2% ($411,755 \u2192 $139,359)",
-          "brand": "Bally Bet",
-          "change_percent": -66.15487365059319,
-          "previous_ggr": 411755.0,
-          "current_ggr": 139359.0
-        }
-      ]
-    }
-  },
-  {
     "timestamp": "2026-08-20T14:30:36.698241",
     "comparison": {
       "is_new_data": false,
@@ -1106,6 +1053,16 @@
   },
   {
     "timestamp": "2026-08-21T06:50:33.660646",
+    "comparison": {
+      "is_new_data": false,
+      "total_records": 2038,
+      "date_range": "2022-01-09 00:00:00 to 2026-08-16 00:00:00",
+      "brands": 9,
+      "changes": []
+    }
+  },
+  {
+    "timestamp": "2026-08-21T07:00:47.747525",
     "comparison": {
       "is_new_data": false,
       "total_records": 2038,

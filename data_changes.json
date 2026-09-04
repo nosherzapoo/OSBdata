@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-09-03T22:40:33.752992",
-    "comparison": {
-      "is_new_data": false,
-      "total_records": 2046,
-      "date_range": "2022-01-09 00:00:00 to 2026-08-23 00:00:00",
-      "brands": 9,
-      "changes": []
-    }
-  },
-  {
     "timestamp": "2026-09-03T22:50:36.115538",
     "comparison": {
       "is_new_data": false,
@@ -1038,6 +1028,67 @@
           "change_percent": 37.76529630496398,
           "previous_ggr": 192285.0,
           "current_ggr": 264902.0
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-09-04T15:20:27.947670",
+    "comparison": {
+      "is_new_data": false,
+      "total_records": 2008,
+      "date_range": "2022-01-09 00:00:00 to 2026-08-30 00:00:00",
+      "brands": 9,
+      "changes": [
+        {
+          "type": "record_count",
+          "description": "Total records changed from 2015 to 2008",
+          "previous": 2015,
+          "current": 2008
+        },
+        {
+          "type": "new_weekly_data",
+          "description": "FanDuel: New weekly data available",
+          "brand": "FanDuel",
+          "new_date": "2026-08-30 00:00:00",
+          "previous_date": "2026-08-23 00:00:00"
+        },
+        {
+          "type": "significant_ggr_change",
+          "description": "FanDuel: GGR changed by 48.2% ($10,710,519 \u2192 $15,874,317)",
+          "brand": "FanDuel",
+          "change_percent": 48.21239501559164,
+          "previous_ggr": 10710519.0,
+          "current_ggr": 15874316.728499996
+        },
+        {
+          "type": "new_weekly_data",
+          "description": "Caesars Sport Book: New weekly data available",
+          "brand": "Caesars Sport Book",
+          "new_date": "2026-08-30 00:00:00",
+          "previous_date": "2026-08-23 00:00:00"
+        },
+        {
+          "type": "new_weekly_data",
+          "description": "DraftKings Sport Book: New weekly data available",
+          "brand": "DraftKings Sport Book",
+          "new_date": "2026-08-30 00:00:00",
+          "previous_date": "2026-08-23 00:00:00"
+        },
+        {
+          "type": "new_weekly_data",
+          "description": "Fanatics: New weekly data available",
+          "brand": "Fanatics",
+          "new_date": "2026-08-30 00:00:00",
+          "previous_date": "2026-08-23 00:00:00"
+        },
+        {
+          "type": "significant_ggr_change",
+          "description": "Fanatics: GGR changed by 45.6% ($3,476,356 \u2192 $5,061,346)",
+          "brand": "Fanatics",
+          "change_percent": 45.59343760624126,
+          "previous_ggr": 3476355.859999992,
+          "current_ggr": 5061346.0
         }
       ]
     }

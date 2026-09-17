@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-09-17T00:20:31.127170",
-    "comparison": {
-      "is_new_data": false,
-      "total_records": 2062,
-      "date_range": "2022-01-09 00:00:00 to 2026-09-06 00:00:00",
-      "brands": 9,
-      "changes": []
-    }
-  },
-  {
     "timestamp": "2026-09-17T00:30:35.327295",
     "comparison": {
       "is_new_data": false,
@@ -1038,6 +1028,44 @@
           "change_percent": -71.06075804993391,
           "previous_ggr": 359475.0,
           "current_ggr": 104029.34000000011
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-09-17T17:00:32.276794",
+    "comparison": {
+      "is_new_data": false,
+      "total_records": 2008,
+      "date_range": "2022-01-23 00:00:00 to 2026-09-13 00:00:00",
+      "brands": 9,
+      "changes": [
+        {
+          "type": "record_count",
+          "description": "Total records changed from 2042 to 2008",
+          "previous": 2042,
+          "current": 2008
+        },
+        {
+          "type": "date_range",
+          "description": "Date range changed from 2022-01-09 00:00:00 to 2026-09-13 00:00:00 to 2022-01-23 00:00:00 to 2026-09-13 00:00:00",
+          "previous": "(Timestamp('2022-01-09 00:00:00'), Timestamp('2026-09-13 00:00:00'))",
+          "current": "(Timestamp('2022-01-23 00:00:00'), Timestamp('2026-09-13 00:00:00'))"
+        },
+        {
+          "type": "new_weekly_data",
+          "description": "FanDuel: New weekly data available",
+          "brand": "FanDuel",
+          "new_date": "2026-09-13 00:00:00",
+          "previous_date": "2026-09-06 00:00:00"
+        },
+        {
+          "type": "significant_ggr_change",
+          "description": "FanDuel: GGR changed by -50.6% ($16,892,923 \u2192 $8,347,252)",
+          "brand": "FanDuel",
+          "change_percent": -50.58728385845374,
+          "previous_ggr": 16892923.0,
+          "current_ggr": 8347252.089999981
         }
       ]
     }

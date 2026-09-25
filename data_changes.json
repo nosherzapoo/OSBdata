@@ -1,35 +1,5 @@
 [
   {
-    "timestamp": "2026-09-24T20:00:38.029789",
-    "comparison": {
-      "is_new_data": false,
-      "total_records": 2016,
-      "date_range": "2022-01-09 00:00:00 to 2026-09-20 00:00:00",
-      "brands": 9,
-      "changes": [
-        {
-          "type": "record_count",
-          "description": "Total records changed from 2070 to 2016",
-          "previous": 2070,
-          "current": 2016
-        },
-        {
-          "type": "date_range",
-          "description": "Date range changed from 2022-01-09 00:00:00 to 2026-09-13 00:00:00 to 2022-01-09 00:00:00 to 2026-09-20 00:00:00",
-          "previous": "(Timestamp('2022-01-09 00:00:00'), Timestamp('2026-09-13 00:00:00'))",
-          "current": "(Timestamp('2022-01-09 00:00:00'), Timestamp('2026-09-20 00:00:00'))"
-        },
-        {
-          "type": "new_weekly_data",
-          "description": "Rush Street Interactive: New weekly data available",
-          "brand": "Rush Street Interactive",
-          "new_date": "2026-09-20 00:00:00",
-          "previous_date": "2026-09-13 00:00:00"
-        }
-      ]
-    }
-  },
-  {
     "timestamp": "2026-09-24T20:10:28.523331",
     "comparison": {
       "is_new_data": false,
@@ -1130,6 +1100,16 @@
   },
   {
     "timestamp": "2026-09-25T12:30:34.280120",
+    "comparison": {
+      "is_new_data": false,
+      "total_records": 2078,
+      "date_range": "2022-01-09 00:00:00 to 2026-09-20 00:00:00",
+      "brands": 9,
+      "changes": []
+    }
+  },
+  {
+    "timestamp": "2026-09-25T12:40:30.965089",
     "comparison": {
       "is_new_data": false,
       "total_records": 2078,

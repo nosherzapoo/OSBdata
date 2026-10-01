@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-10-01T01:10:35.644091",
-    "comparison": {
-      "is_new_data": false,
-      "total_records": 2078,
-      "date_range": "2022-01-09 00:00:00 to 2026-09-20 00:00:00",
-      "brands": 9,
-      "changes": []
-    }
-  },
-  {
     "timestamp": "2026-10-01T01:20:31.712280",
     "comparison": {
       "is_new_data": false,
@@ -1015,6 +1005,68 @@
           "brand": "BetMGM",
           "new_date": "2026-09-27 00:00:00",
           "previous_date": "2026-09-20 00:00:00"
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-10-01T17:50:31.763466",
+    "comparison": {
+      "is_new_data": false,
+      "total_records": 2029,
+      "date_range": "2022-01-09 00:00:00 to 2026-09-27 00:00:00",
+      "brands": 9,
+      "changes": [
+        {
+          "type": "record_count",
+          "description": "Total records changed from 2079 to 2029",
+          "previous": 2079,
+          "current": 2029
+        },
+        {
+          "type": "new_weekly_data",
+          "description": "FanDuel: New weekly data available",
+          "brand": "FanDuel",
+          "new_date": "2026-09-27 00:00:00",
+          "previous_date": "2026-09-20 00:00:00"
+        },
+        {
+          "type": "significant_ggr_change",
+          "description": "FanDuel: GGR changed by 55.7% ($12,919,114 \u2192 $20,111,002)",
+          "brand": "FanDuel",
+          "change_percent": 55.66858532249193,
+          "previous_ggr": 12919114.0,
+          "current_ggr": 20111002.0
+        },
+        {
+          "type": "new_weekly_data",
+          "description": "Caesars Sport Book: New weekly data available",
+          "brand": "Caesars Sport Book",
+          "new_date": "2026-09-27 00:00:00",
+          "previous_date": "2026-09-20 00:00:00"
+        },
+        {
+          "type": "significant_ggr_change",
+          "description": "Caesars Sport Book: GGR changed by -35.8% ($2,038,071 \u2192 $1,308,778)",
+          "brand": "Caesars Sport Book",
+          "change_percent": -35.78350852350063,
+          "previous_ggr": 2038071.0,
+          "current_ggr": 1308777.6900000055
+        },
+        {
+          "type": "new_weekly_data",
+          "description": "Bally Bet: New weekly data available",
+          "brand": "Bally Bet",
+          "new_date": "2026-09-27 00:00:00",
+          "previous_date": "2026-09-20 00:00:00"
+        },
+        {
+          "type": "significant_ggr_change",
+          "description": "Bally Bet: GGR changed by 53.8% ($247,569 \u2192 $380,853)",
+          "brand": "Bally Bet",
+          "change_percent": 53.83691166863639,
+          "previous_ggr": 247569.03000000012,
+          "current_ggr": 380852.5500000001
         }
       ]
     }

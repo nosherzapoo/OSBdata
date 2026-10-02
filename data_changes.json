@@ -1,58 +1,5 @@
 [
   {
-    "timestamp": "2026-10-01T18:00:39.695321",
-    "comparison": {
-      "is_new_data": false,
-      "total_records": 2086,
-      "date_range": "2022-01-09 00:00:00 to 2026-09-27 00:00:00",
-      "brands": 9,
-      "changes": [
-        {
-          "type": "record_count",
-          "description": "Total records changed from 2029 to 2086",
-          "previous": 2029,
-          "current": 2086
-        },
-        {
-          "type": "new_weekly_data",
-          "description": "Rush Street Interactive: New weekly data available",
-          "brand": "Rush Street Interactive",
-          "new_date": "2026-09-27 00:00:00",
-          "previous_date": "2026-09-20 00:00:00"
-        },
-        {
-          "type": "new_weekly_data",
-          "description": "Fanatics: New weekly data available",
-          "brand": "Fanatics",
-          "new_date": "2026-09-27 00:00:00",
-          "previous_date": "2026-09-20 00:00:00"
-        },
-        {
-          "type": "new_weekly_data",
-          "description": "DraftKings Sport Book: New weekly data available",
-          "brand": "DraftKings Sport Book",
-          "new_date": "2026-09-27 00:00:00",
-          "previous_date": "2026-09-20 00:00:00"
-        },
-        {
-          "type": "significant_ggr_change",
-          "description": "DraftKings Sport Book: GGR changed by 27.5% ($14,221,076 \u2192 $18,137,767)",
-          "brand": "DraftKings Sport Book",
-          "change_percent": 27.54145756762012,
-          "previous_ggr": 14221075.51999999,
-          "current_ggr": 18137767.0
-        },
-        {
-          "type": "new_weekly_data",
-          "description": "ESPN Bet: New weekly data available",
-          "brand": "ESPN Bet",
-          "new_date": "2026-09-27 00:00:00",
-          "previous_date": "2026-09-20 00:00:00"
-        }
-      ]
-    }
-  },
-  {
     "timestamp": "2026-10-01T18:10:35.366212",
     "comparison": {
       "is_new_data": false,
@@ -1034,6 +981,16 @@
   },
   {
     "timestamp": "2026-10-02T10:30:30.187785",
+    "comparison": {
+      "is_new_data": false,
+      "total_records": 2086,
+      "date_range": "2022-01-09 00:00:00 to 2026-09-27 00:00:00",
+      "brands": 9,
+      "changes": []
+    }
+  },
+  {
+    "timestamp": "2026-10-02T10:40:35.544425",
     "comparison": {
       "is_new_data": false,
       "total_records": 2086,

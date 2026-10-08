@@ -1,50 +1,5 @@
 [
   {
-    "timestamp": "2026-10-07T20:20:35.264129",
-    "comparison": {
-      "is_new_data": false,
-      "total_records": 2021,
-      "date_range": "2022-02-06 00:00:00 to 2026-10-04 00:00:00",
-      "brands": 9,
-      "changes": [
-        {
-          "type": "record_count",
-          "description": "Total records changed from 2086 to 2021",
-          "previous": 2086,
-          "current": 2021
-        },
-        {
-          "type": "date_range",
-          "description": "Date range changed from 2022-01-09 00:00:00 to 2026-09-27 00:00:00 to 2022-02-06 00:00:00 to 2026-10-04 00:00:00",
-          "previous": "(Timestamp('2022-01-09 00:00:00'), Timestamp('2026-09-27 00:00:00'))",
-          "current": "(Timestamp('2022-02-06 00:00:00'), Timestamp('2026-10-04 00:00:00'))"
-        },
-        {
-          "type": "new_weekly_data",
-          "description": "BetMGM: New weekly data available",
-          "brand": "BetMGM",
-          "new_date": "2026-10-04 00:00:00",
-          "previous_date": "2026-09-27 00:00:00"
-        },
-        {
-          "type": "new_weekly_data",
-          "description": "Bally Bet: New weekly data available",
-          "brand": "Bally Bet",
-          "new_date": "2026-10-04 00:00:00",
-          "previous_date": "2026-09-27 00:00:00"
-        },
-        {
-          "type": "significant_ggr_change",
-          "description": "Bally Bet: GGR changed by -39.2% ($380,853 \u2192 $231,704)",
-          "brand": "Bally Bet",
-          "change_percent": -39.16182884209918,
-          "previous_ggr": 380853.0,
-          "current_ggr": 231704.0
-        }
-      ]
-    }
-  },
-  {
     "timestamp": "2026-10-07T20:30:25.545802",
     "comparison": {
       "is_new_data": false,
@@ -1112,6 +1067,16 @@
   },
   {
     "timestamp": "2026-10-08T12:50:35.906490",
+    "comparison": {
+      "is_new_data": false,
+      "total_records": 2094,
+      "date_range": "2022-01-09 00:00:00 to 2026-10-04 00:00:00",
+      "brands": 9,
+      "changes": []
+    }
+  },
+  {
+    "timestamp": "2026-10-08T13:00:40.871823",
     "comparison": {
       "is_new_data": false,
       "total_records": 2094,

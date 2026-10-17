@@ -1,124 +1,5 @@
 [
   {
-    "timestamp": "2026-10-16T15:00:43.587281",
-    "comparison": {
-      "is_new_data": false,
-      "total_records": 2102,
-      "date_range": "2022-01-09 00:00:00 to 2026-10-11 00:00:00",
-      "brands": 9,
-      "changes": [
-        {
-          "type": "record_count",
-          "description": "Total records changed from 2094 to 2102",
-          "previous": 2094,
-          "current": 2102
-        },
-        {
-          "type": "date_range",
-          "description": "Date range changed from 2022-01-09 00:00:00 to 2026-10-04 00:00:00 to 2022-01-09 00:00:00 to 2026-10-11 00:00:00",
-          "previous": "(Timestamp('2022-01-09 00:00:00'), Timestamp('2026-10-04 00:00:00'))",
-          "current": "(Timestamp('2022-01-09 00:00:00'), Timestamp('2026-10-11 00:00:00'))"
-        },
-        {
-          "type": "new_weekly_data",
-          "description": "Bally Bet: New weekly data available",
-          "brand": "Bally Bet",
-          "new_date": "2026-10-11 00:00:00",
-          "previous_date": "2026-10-04 00:00:00"
-        },
-        {
-          "type": "significant_ggr_change",
-          "description": "Bally Bet: GGR changed by 45.4% ($231,704 \u2192 $336,852)",
-          "brand": "Bally Bet",
-          "change_percent": 45.38031281289921,
-          "previous_ggr": 231704.0,
-          "current_ggr": 336852.0
-        },
-        {
-          "type": "new_weekly_data",
-          "description": "Caesars Sport Book: New weekly data available",
-          "brand": "Caesars Sport Book",
-          "new_date": "2026-10-11 00:00:00",
-          "previous_date": "2026-10-04 00:00:00"
-        },
-        {
-          "type": "significant_ggr_change",
-          "description": "Caesars Sport Book: GGR changed by 61.3% ($2,177,048 \u2192 $3,511,390)",
-          "brand": "Caesars Sport Book",
-          "change_percent": 61.29134497723523,
-          "previous_ggr": 2177048.0,
-          "current_ggr": 3511390.0
-        },
-        {
-          "type": "new_weekly_data",
-          "description": "BetMGM: New weekly data available",
-          "brand": "BetMGM",
-          "new_date": "2026-10-11 00:00:00",
-          "previous_date": "2026-10-04 00:00:00"
-        },
-        {
-          "type": "significant_ggr_change",
-          "description": "BetMGM: GGR changed by -20.3% ($2,671,551 \u2192 $2,128,581)",
-          "brand": "BetMGM",
-          "change_percent": -20.32414878098902,
-          "previous_ggr": 2671551.0,
-          "current_ggr": 2128581.0
-        },
-        {
-          "type": "new_weekly_data",
-          "description": "ESPN Bet: New weekly data available",
-          "brand": "ESPN Bet",
-          "new_date": "2026-10-11 00:00:00",
-          "previous_date": "2026-10-04 00:00:00"
-        },
-        {
-          "type": "new_weekly_data",
-          "description": "DraftKings Sport Book: New weekly data available",
-          "brand": "DraftKings Sport Book",
-          "new_date": "2026-10-11 00:00:00",
-          "previous_date": "2026-10-04 00:00:00"
-        },
-        {
-          "type": "significant_ggr_change",
-          "description": "DraftKings Sport Book: GGR changed by 35.6% ($13,756,092 \u2192 $18,656,465)",
-          "brand": "DraftKings Sport Book",
-          "change_percent": 35.62329330161502,
-          "previous_ggr": 13756092.0,
-          "current_ggr": 18656465.0
-        },
-        {
-          "type": "new_weekly_data",
-          "description": "Rush Street Interactive: New weekly data available",
-          "brand": "Rush Street Interactive",
-          "new_date": "2026-10-11 00:00:00",
-          "previous_date": "2026-10-04 00:00:00"
-        },
-        {
-          "type": "new_weekly_data",
-          "description": "FanDuel: New weekly data available",
-          "brand": "FanDuel",
-          "new_date": "2026-10-11 00:00:00",
-          "previous_date": "2026-10-04 00:00:00"
-        },
-        {
-          "type": "new_weekly_data",
-          "description": "Fanatics: New weekly data available",
-          "brand": "Fanatics",
-          "new_date": "2026-10-11 00:00:00",
-          "previous_date": "2026-10-04 00:00:00"
-        },
-        {
-          "type": "significant_ggr_change",
-          "description": "Fanatics: GGR changed by 36.5% ($4,894,277 \u2192 $6,679,210)",
-          "brand": "Fanatics",
-          "change_percent": 36.46979931867363,
-          "previous_ggr": 4894277.0,
-          "current_ggr": 6679210.0
-        }
-      ]
-    }
-  },
-  {
     "timestamp": "2026-10-16T15:10:36.779492",
     "comparison": {
       "is_new_data": false,
@@ -1100,6 +981,16 @@
   },
   {
     "timestamp": "2026-10-17T07:30:36.137352",
+    "comparison": {
+      "is_new_data": false,
+      "total_records": 2102,
+      "date_range": "2022-01-09 00:00:00 to 2026-10-11 00:00:00",
+      "brands": 9,
+      "changes": []
+    }
+  },
+  {
+    "timestamp": "2026-10-17T07:40:34.549055",
     "comparison": {
       "is_new_data": false,
       "total_records": 2102,

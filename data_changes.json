@@ -1,116 +1,5 @@
 [
   {
-    "timestamp": "2026-10-23T15:20:35.754454",
-    "comparison": {
-      "is_new_data": false,
-      "total_records": 2110,
-      "date_range": "2022-01-09 00:00:00 to 2026-10-18 00:00:00",
-      "brands": 9,
-      "changes": [
-        {
-          "type": "record_count",
-          "description": "Total records changed from 2092 to 2110",
-          "previous": 2092,
-          "current": 2110
-        },
-        {
-          "type": "date_range",
-          "description": "Date range changed from 2022-01-09 00:00:00 to 2026-10-11 00:00:00 to 2022-01-09 00:00:00 to 2026-10-18 00:00:00",
-          "previous": "(Timestamp('2022-01-09 00:00:00'), Timestamp('2026-10-11 00:00:00'))",
-          "current": "(Timestamp('2022-01-09 00:00:00'), Timestamp('2026-10-18 00:00:00'))"
-        },
-        {
-          "type": "new_weekly_data",
-          "description": "Bally Bet: New weekly data available",
-          "brand": "Bally Bet",
-          "new_date": "2026-10-18 00:00:00",
-          "previous_date": "2026-10-11 00:00:00"
-        },
-        {
-          "type": "new_weekly_data",
-          "description": "Rush Street Interactive: New weekly data available",
-          "brand": "Rush Street Interactive",
-          "new_date": "2026-10-18 00:00:00",
-          "previous_date": "2026-10-11 00:00:00"
-        },
-        {
-          "type": "significant_ggr_change",
-          "description": "Rush Street Interactive: GGR changed by -36.3% ($945,703 \u2192 $602,300)",
-          "brand": "Rush Street Interactive",
-          "change_percent": -36.31192879794185,
-          "previous_ggr": 945703.0,
-          "current_ggr": 602300.0
-        },
-        {
-          "type": "new_weekly_data",
-          "description": "Caesars Sport Book: New weekly data available",
-          "brand": "Caesars Sport Book",
-          "new_date": "2026-10-18 00:00:00",
-          "previous_date": "2026-10-11 00:00:00"
-        },
-        {
-          "type": "new_weekly_data",
-          "description": "ESPN Bet: New weekly data available",
-          "brand": "ESPN Bet",
-          "new_date": "2026-10-18 00:00:00",
-          "previous_date": "2026-10-11 00:00:00"
-        },
-        {
-          "type": "significant_ggr_change",
-          "description": "ESPN Bet: GGR changed by 58.4% ($758,567 \u2192 $1,201,528)",
-          "brand": "ESPN Bet",
-          "change_percent": 58.39444637059087,
-          "previous_ggr": 758567.0,
-          "current_ggr": 1201528.0
-        },
-        {
-          "type": "new_weekly_data",
-          "description": "FanDuel: New weekly data available",
-          "brand": "FanDuel",
-          "new_date": "2026-10-18 00:00:00",
-          "previous_date": "2026-10-11 00:00:00"
-        },
-        {
-          "type": "significant_ggr_change",
-          "description": "FanDuel: GGR changed by 42.7% ($19,123,120 \u2192 $27,291,404)",
-          "brand": "FanDuel",
-          "change_percent": 42.71418053121039,
-          "previous_ggr": 19123120.0,
-          "current_ggr": 27291404.0
-        },
-        {
-          "type": "new_weekly_data",
-          "description": "Fanatics: New weekly data available",
-          "brand": "Fanatics",
-          "new_date": "2026-10-18 00:00:00",
-          "previous_date": "2026-10-11 00:00:00"
-        },
-        {
-          "type": "new_weekly_data",
-          "description": "BetMGM: New weekly data available",
-          "brand": "BetMGM",
-          "new_date": "2026-10-18 00:00:00",
-          "previous_date": "2026-10-11 00:00:00"
-        },
-        {
-          "type": "significant_ggr_change",
-          "description": "BetMGM: GGR changed by 91.4% ($2,128,581 \u2192 $4,074,203)",
-          "brand": "BetMGM",
-          "change_percent": 91.4046071255145,
-          "previous_ggr": 2128581.4699999993,
-          "current_ggr": 4074203.0
-        },
-        {
-          "type": "new_weekly_data",
-          "description": "DraftKings Sport Book: New weekly data available",
-          "brand": "DraftKings Sport Book",
-          "new_date": "2026-10-18 00:00:00",
-          "previous_date": "2026-10-11 00:00:00"
-        }
-      ]
-    }
-  },
-  {
     "timestamp": "2026-10-23T15:30:37.907241",
     "comparison": {
       "is_new_data": false,
@@ -1092,6 +981,16 @@
   },
   {
     "timestamp": "2026-10-24T07:50:36.792987",
+    "comparison": {
+      "is_new_data": false,
+      "total_records": 2110,
+      "date_range": "2022-01-09 00:00:00 to 2026-10-18 00:00:00",
+      "brands": 9,
+      "changes": []
+    }
+  },
+  {
+    "timestamp": "2026-10-24T08:00:34.292620",
     "comparison": {
       "is_new_data": false,
       "total_records": 2110,

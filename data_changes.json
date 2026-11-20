@@ -1,65 +1,5 @@
 [
   {
-    "timestamp": "2026-11-19T16:40:35.510712",
-    "comparison": {
-      "is_new_data": false,
-      "total_records": 2104,
-      "date_range": "2022-01-09 00:00:00 to 2026-11-15 00:00:00",
-      "brands": 9,
-      "changes": [
-        {
-          "type": "record_count",
-          "description": "Total records changed from 2134 to 2104",
-          "previous": 2134,
-          "current": 2104
-        },
-        {
-          "type": "date_range",
-          "description": "Date range changed from 2022-01-09 00:00:00 to 2026-11-08 00:00:00 to 2022-01-09 00:00:00 to 2026-11-15 00:00:00",
-          "previous": "(Timestamp('2022-01-09 00:00:00'), Timestamp('2026-11-08 00:00:00'))",
-          "current": "(Timestamp('2022-01-09 00:00:00'), Timestamp('2026-11-15 00:00:00'))"
-        },
-        {
-          "type": "new_weekly_data",
-          "description": "BetMGM: New weekly data available",
-          "brand": "BetMGM",
-          "new_date": "2026-11-15 00:00:00",
-          "previous_date": "2026-11-08 00:00:00"
-        },
-        {
-          "type": "new_weekly_data",
-          "description": "Caesars Sport Book: New weekly data available",
-          "brand": "Caesars Sport Book",
-          "new_date": "2026-11-15 00:00:00",
-          "previous_date": "2026-11-08 00:00:00"
-        },
-        {
-          "type": "significant_ggr_change",
-          "description": "Caesars Sport Book: GGR changed by 256.0% ($560,080 \u2192 $1,993,695)",
-          "brand": "Caesars Sport Book",
-          "change_percent": 255.96606127696026,
-          "previous_ggr": 560080.0,
-          "current_ggr": 1993694.715999999
-        },
-        {
-          "type": "new_weekly_data",
-          "description": "Bally Bet: New weekly data available",
-          "brand": "Bally Bet",
-          "new_date": "2026-11-15 00:00:00",
-          "previous_date": "2026-11-08 00:00:00"
-        },
-        {
-          "type": "significant_ggr_change",
-          "description": "Bally Bet: GGR changed by 24.0% ($213,516 \u2192 $264,680)",
-          "brand": "Bally Bet",
-          "change_percent": 23.962433728619896,
-          "previous_ggr": 213516.0,
-          "current_ggr": 264679.63000000006
-        }
-      ]
-    }
-  },
-  {
     "timestamp": "2026-11-19T17:00:36.755514",
     "comparison": {
       "is_new_data": false,
@@ -1123,6 +1063,16 @@
   },
   {
     "timestamp": "2026-11-20T09:20:27.600724",
+    "comparison": {
+      "is_new_data": false,
+      "total_records": 2142,
+      "date_range": "2022-01-09 00:00:00 to 2026-11-15 00:00:00",
+      "brands": 9,
+      "changes": []
+    }
+  },
+  {
+    "timestamp": "2026-11-20T09:30:36.453910",
     "comparison": {
       "is_new_data": false,
       "total_records": 2142,

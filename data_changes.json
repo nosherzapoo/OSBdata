@@ -1,81 +1,5 @@
 [
   {
-    "timestamp": "2026-11-27T16:40:38.366279",
-    "comparison": {
-      "is_new_data": false,
-      "total_records": 2150,
-      "date_range": "2022-01-09 00:00:00 to 2026-11-22 00:00:00",
-      "brands": 9,
-      "changes": [
-        {
-          "type": "record_count",
-          "description": "Total records changed from 2101 to 2150",
-          "previous": 2101,
-          "current": 2150
-        },
-        {
-          "type": "new_weekly_data",
-          "description": "DraftKings Sport Book: New weekly data available",
-          "brand": "DraftKings Sport Book",
-          "new_date": "2026-11-22 00:00:00",
-          "previous_date": "2026-11-15 00:00:00"
-        },
-        {
-          "type": "significant_ggr_change",
-          "description": "DraftKings Sport Book: GGR changed by 46.5% ($15,375,383 \u2192 $22,526,183)",
-          "brand": "DraftKings Sport Book",
-          "change_percent": 46.50810641414022,
-          "previous_ggr": 15375383.350000001,
-          "current_ggr": 22526183.0
-        },
-        {
-          "type": "new_weekly_data",
-          "description": "Bally Bet: New weekly data available",
-          "brand": "Bally Bet",
-          "new_date": "2026-11-22 00:00:00",
-          "previous_date": "2026-11-15 00:00:00"
-        },
-        {
-          "type": "new_weekly_data",
-          "description": "FanDuel: New weekly data available",
-          "brand": "FanDuel",
-          "new_date": "2026-11-22 00:00:00",
-          "previous_date": "2026-11-15 00:00:00"
-        },
-        {
-          "type": "significant_ggr_change",
-          "description": "FanDuel: GGR changed by 25.0% ($19,943,597 \u2192 $24,939,037)",
-          "brand": "FanDuel",
-          "change_percent": 25.047836843881665,
-          "previous_ggr": 19943597.289999995,
-          "current_ggr": 24939037.0
-        },
-        {
-          "type": "new_weekly_data",
-          "description": "Rush Street Interactive: New weekly data available",
-          "brand": "Rush Street Interactive",
-          "new_date": "2026-11-22 00:00:00",
-          "previous_date": "2026-11-15 00:00:00"
-        },
-        {
-          "type": "significant_ggr_change",
-          "description": "Rush Street Interactive: GGR changed by 498.3% ($207,190 \u2192 $1,239,654)",
-          "brand": "Rush Street Interactive",
-          "change_percent": 498.31641789143066,
-          "previous_ggr": 207190.36999999976,
-          "current_ggr": 1239654.0
-        },
-        {
-          "type": "new_weekly_data",
-          "description": "ESPN Bet: New weekly data available",
-          "brand": "ESPN Bet",
-          "new_date": "2026-11-22 00:00:00",
-          "previous_date": "2026-11-15 00:00:00"
-        }
-      ]
-    }
-  },
-  {
     "timestamp": "2026-11-27T16:50:39.182429",
     "comparison": {
       "is_new_data": false,
@@ -1057,6 +981,16 @@
   },
   {
     "timestamp": "2026-11-28T09:10:33.623498",
+    "comparison": {
+      "is_new_data": false,
+      "total_records": 2150,
+      "date_range": "2022-01-09 00:00:00 to 2026-11-22 00:00:00",
+      "brands": 9,
+      "changes": []
+    }
+  },
+  {
+    "timestamp": "2026-11-28T09:20:38.730452",
     "comparison": {
       "is_new_data": false,
       "total_records": 2150,

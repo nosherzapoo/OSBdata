@@ -1,73 +1,5 @@
 [
   {
-    "timestamp": "2026-11-27T16:30:29.986468",
-    "comparison": {
-      "is_new_data": false,
-      "total_records": 2101,
-      "date_range": "2022-01-09 00:00:00 to 2026-11-22 00:00:00",
-      "brands": 9,
-      "changes": [
-        {
-          "type": "record_count",
-          "description": "Total records changed from 2142 to 2101",
-          "previous": 2142,
-          "current": 2101
-        },
-        {
-          "type": "date_range",
-          "description": "Date range changed from 2022-01-09 00:00:00 to 2026-11-15 00:00:00 to 2022-01-09 00:00:00 to 2026-11-22 00:00:00",
-          "previous": "(Timestamp('2022-01-09 00:00:00'), Timestamp('2026-11-15 00:00:00'))",
-          "current": "(Timestamp('2022-01-09 00:00:00'), Timestamp('2026-11-22 00:00:00'))"
-        },
-        {
-          "type": "new_weekly_data",
-          "description": "Fanatics: New weekly data available",
-          "brand": "Fanatics",
-          "new_date": "2026-11-22 00:00:00",
-          "previous_date": "2026-11-15 00:00:00"
-        },
-        {
-          "type": "significant_ggr_change",
-          "description": "Fanatics: GGR changed by 32.0% ($6,437,650 \u2192 $8,498,971)",
-          "brand": "Fanatics",
-          "change_percent": 32.01977429652125,
-          "previous_ggr": 6437650.0,
-          "current_ggr": 8498971.0
-        },
-        {
-          "type": "new_weekly_data",
-          "description": "BetMGM: New weekly data available",
-          "brand": "BetMGM",
-          "new_date": "2026-11-22 00:00:00",
-          "previous_date": "2026-11-15 00:00:00"
-        },
-        {
-          "type": "significant_ggr_change",
-          "description": "BetMGM: GGR changed by 41.0% ($2,817,095 \u2192 $3,973,278)",
-          "brand": "BetMGM",
-          "change_percent": 41.04167591082303,
-          "previous_ggr": 2817095.0,
-          "current_ggr": 3973278.0
-        },
-        {
-          "type": "new_weekly_data",
-          "description": "Caesars Sport Book: New weekly data available",
-          "brand": "Caesars Sport Book",
-          "new_date": "2026-11-22 00:00:00",
-          "previous_date": "2026-11-15 00:00:00"
-        },
-        {
-          "type": "significant_ggr_change",
-          "description": "Caesars Sport Book: GGR changed by 56.1% ($1,993,695 \u2192 $3,112,651)",
-          "brand": "Caesars Sport Book",
-          "change_percent": 56.12473322148072,
-          "previous_ggr": 1993695.0,
-          "current_ggr": 3112651.0
-        }
-      ]
-    }
-  },
-  {
     "timestamp": "2026-11-27T16:40:38.366279",
     "comparison": {
       "is_new_data": false,
@@ -1115,6 +1047,16 @@
   },
   {
     "timestamp": "2026-11-28T09:00:35.777876",
+    "comparison": {
+      "is_new_data": false,
+      "total_records": 2150,
+      "date_range": "2022-01-09 00:00:00 to 2026-11-22 00:00:00",
+      "brands": 9,
+      "changes": []
+    }
+  },
+  {
+    "timestamp": "2026-11-28T09:10:33.623498",
     "comparison": {
       "is_new_data": false,
       "total_records": 2150,
